@@ -55,12 +55,12 @@
 }
 
 .dirName {
-  font-weight: 700;
+  font-weight: 900;
   font-size: 14px;
   color: var(--teal-d);
-  font-family: 'Poppins', sans-serif;
-  text-transform: none;
-  letter-spacing: 0;
+  font-family: 'Montserrat', sans-serif;
+  text-transform: capitalize;
+  letter-spacing: -1px;
 }
 
 .dirRole {

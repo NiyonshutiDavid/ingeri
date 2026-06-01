@@ -29,7 +29,7 @@
 }
 
 .logoText {
-  font-family: 'Nunito', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-weight: 900;
   font-size: 19px;
   color: var(--teal);
@@ -68,7 +68,8 @@
 
 .navLink {
   padding: 8px 13px;
-  font-weight: 600;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 900;
   font-size: 14px;
   color: var(--mid);
   border-radius: var(--r-sm);
@@ -76,6 +77,8 @@
   display: flex;
   align-items: center;
   gap: 4px;
+  text-transform: capitalize;
+  letter-spacing: -1px;
 }
 
 .navLink:hover {
@@ -150,10 +153,11 @@
 }
 
 .ddTitle {
+  font-family: 'Montserrat', sans-serif;
   font-size: 0.62rem;
-  font-weight: 800;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
+  font-weight: 900;
+  letter-spacing: -1px;
+  text-transform: capitalize;
   margin-bottom: 0.45rem;
   background: linear-gradient(135deg, #4ecdc4 0%, #f093b0 50%, #f5a623 100%);
   -webkit-background-clip: text;
@@ -193,14 +197,17 @@
 .ddItem {
   display: block;
   padding: 10px 14px;
+  font-family: 'Montserrat', sans-serif;
   font-size: 13.5px;
-  font-weight: 500;
+  font-weight: 900;
   color: rgba(20, 50, 90, 0.8);
   border-radius: var(--r-sm);
   cursor: pointer;
   transition: background 0.15s, color 0.15s;
   text-decoration: none;
   white-space: nowrap;
+  text-transform: capitalize;
+  letter-spacing: -1px;
 }
 
 .ddItem:hover {
@@ -240,10 +247,13 @@
 .mobLink {
   display: block;
   padding: 11px 0;
-  font-weight: 600;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 900;
   color: var(--dark);
   border-bottom: 1px solid var(--border);
   font-size: 14px;
+  text-transform: capitalize;
+  letter-spacing: -1px;
 }
 
 .mobLink:last-child {

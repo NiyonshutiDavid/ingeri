@@ -13,10 +13,10 @@
   text-orientation: mixed;
   transform: rotate(180deg);
   color: #fff;
-  font-family: 'Poppins', sans-serif;
-  font-weight: 600;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 900;
   font-size: 12px;
-  letter-spacing: 0.05em;
+  letter-spacing: -1px;
   padding: 22px 13px;
   cursor: pointer;
   border: none;
@@ -25,6 +25,7 @@
   align-items: center;
   gap: 6px;
   text-decoration: none;
+  text-transform: capitalize;
 }
 
 .sideBtn.teal { background: var(--teal); }

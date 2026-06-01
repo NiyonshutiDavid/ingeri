@@ -9,7 +9,7 @@ A production-ready Next.js 14 website for **La P'tite Crèche Ingeri** and **Ing
 | Framework | Next.js 14 (App Router) |
 | Language | TypeScript |
 | Styling | CSS Modules + global CSS variables |
-| Fonts | Nunito + Quicksand (Google Fonts) |
+| Fonts | Montserrat + Quicksand (Google Fonts) |
 | API | Next.js Route Handlers (src/app/api/) |
 
 ---

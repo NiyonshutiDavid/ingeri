@@ -14,7 +14,7 @@
 
 .tab {
   padding: 11px 28px;
-  font-weight: 700;
+  font-weight: 900;
   font-family: 'Nunito', sans-serif;
   font-size: 14px;
   cursor: pointer;
@@ -22,6 +22,8 @@
   background: #fff;
   color: var(--mid);
   transition: 0.18s;
+  text-transform: capitalize;
+  letter-spacing: -1px;
 }
 
 .actTeal {

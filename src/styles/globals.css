@@ -1,4 +1,4 @@
-/* ── Google Fonts: Montserrat (headings) + Poppins (body) ── */
+/* ── Google Fonts: Montserrat (primary/bold) + Poppins (body) ── */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&family=Poppins:wght@400;500;600;700&display=swap');
 
 /* ── DESIGN TOKENS ── */
@@ -47,10 +47,10 @@ body {
 
 h1, h2, h3, h4 {
   font-family: 'Montserrat', sans-serif;
-  font-weight: 800;
+  font-weight: 900;
   line-height: 1.2;
-  text-transform: uppercase;
-  letter-spacing: 0.02em;
+  text-transform: capitalize;
+  letter-spacing: -1px;
 }
 
 a {
@@ -87,13 +87,13 @@ section.alt {
   background: var(--teal-l);
   color: var(--teal-d);
   font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
+  font-weight: 900;
+  letter-spacing: -1px;
+  text-transform: capitalize;
   padding: 5px 14px;
   border-radius: 99px;
   margin-bottom: 14px;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .sec-title {
@@ -123,14 +123,14 @@ section.alt {
   gap: 8px;
   padding: 13px 28px;
   border-radius: 99px;
-  font-family: 'Poppins', sans-serif;
-  font-weight: 600;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 900;
   font-size: 14px;
   cursor: pointer;
   transition: 0.18s;
   border: none;
-  text-transform: none;
-  letter-spacing: 0;
+  text-transform: capitalize;
+  letter-spacing: -1px;
 }
 
 .btn:hover {

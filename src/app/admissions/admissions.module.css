@@ -84,8 +84,8 @@
   background: var(--teal);
   color: #fff;
   border-radius: 50%;
-  font-family: 'Nunito', sans-serif;
-  font-weight: 700;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 900;
   font-size: 12px;
   display: flex;
   align-items: center;
@@ -140,8 +140,8 @@
   width: 100%;
   text-align: left;
   padding: 17px 22px;
-  font-weight: 700;
-  font-family: 'Nunito', sans-serif;
+  font-weight: 900;
+  font-family: 'Montserrat', sans-serif;
   font-size: 14px;
   cursor: pointer;
   display: flex;
@@ -151,6 +151,8 @@
   border: none;
   color: var(--dark);
   transition: background 0.15s;
+  text-transform: capitalize;
+  letter-spacing: -1px;
 }
 
 .faqQ:hover {
