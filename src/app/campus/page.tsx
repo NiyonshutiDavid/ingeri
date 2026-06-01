@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import Image from 'next/image'
+import { MapPin, Mail, Globe } from 'lucide-react'
 import styles from './campus.module.css'
 
 export default function CampusPage() {
@@ -17,7 +18,7 @@ export default function CampusPage() {
           <div className={styles.campusBlock} id="creche">
             <div className={`${styles.campusImg} ${styles.teal}`}>
               <Image src="/creche.jpg" fill style={{objectFit:'cover'}} alt="La P'tite Crèche Ingeri" />
-              📷 Photo – La P&apos;tite Crèche Ingeri
+              Photo – La P&apos;tite Crèche Ingeri
             </div>
             <div className={styles.campusBody}>
               <span className={`${styles.cbBadge} ${styles.teal}`}>Crèche</span>
@@ -27,8 +28,8 @@ export default function CampusPage() {
                 chaque étape de leur développement avec amour et douceur.
               </p>
               <div className={styles.cDetail}><strong>Âges :</strong><span>6 – 24 mois</span></div>
-              <div className={styles.cDetail}><strong>Lieu :</strong><span>Kigali, Rwanda – à compléter</span></div>
-              <div className={styles.cDetail}><strong>Email :</strong><span>creche@ingeri.rw</span></div>
+              <div className={styles.cDetail}><MapPin size={13} /><span>Kigali, Rwanda – à compléter</span></div>
+              <div className={styles.cDetail}><Mail size={13} /><span>creche@ingeri.rw</span></div>
               <Link href="/contact#creche" className="btn btn-teal" style={{ marginTop: 20, fontSize: 13, padding: '10px 20px' }}>
                 Visiter le campus
               </Link>
@@ -38,13 +39,13 @@ export default function CampusPage() {
           {/* Maternelle */}
           <div className={styles.campusBlock} id="maternelle">
             <div className={`${styles.campusImg} ${styles.pink}`}>
-              <Image src="/maternelle.jpg" fill style={{objectFit:'cover'}} alt="Ingeri International School" />
-              📷 Photo – Ingeri International School
+              <Image src="/maternelle.jpg" fill style={{objectFit:'cover'}} alt="La P'tite Crèche Ingeri" />
+              Photo – Ingeri International School
             </div>
             <div className={styles.campusBody}>
               <span className={`${styles.cbBadge} ${styles.pink}`}>Maternelle · International</span>
               <div className={styles.intlStrip}>
-                🌍 <span><strong>Programme national français</strong> · Pédagogie Montessori · Enseignement bilingue &amp; international</span>
+                <Globe size={14} /> <span><strong>Programme national français</strong> · Pédagogie Montessori · Enseignement bilingue &amp; international</span>
               </div>
               <h3>Ingeri International School</h3>
               <p>
@@ -53,8 +54,8 @@ export default function CampusPage() {
                 environnement international et ouvert.
               </p>
               <div className={styles.cDetail}><strong>Âges :</strong><span>3 – 5 ans</span></div>
-              <div className={styles.cDetail}><strong>Lieu :</strong><span>Kigali, Rwanda – à compléter</span></div>
-              <div className={styles.cDetail}><strong>Email :</strong><span>maternelle@ingeri.rw</span></div>
+              <div className={styles.cDetail}><MapPin size={13} /><span>Kigali, Rwanda – à compléter</span></div>
+              <div className={styles.cDetail}><Mail size={13} /><span>maternelle@ingeri.rw</span></div>
               <Link href="/contact#maternelle" className="btn btn-pink" style={{ marginTop: 20, fontSize: 13, padding: '10px 20px' }}>
                 Visiter le campus
               </Link>

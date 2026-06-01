@@ -19,7 +19,7 @@
   max-width: 1160px;
   margin: 0 auto;
   padding: 0 28px;
-  height: 70px;
+  height: 80px; /* increased from 70px to accommodate larger logo */
 }
 
 .logo {
@@ -47,9 +47,14 @@
   position: relative;
 }
 
-/* Show dropdown when hovering the LI (covers both trigger and menu) */
-.navDd:hover .ddMenu {
-  display: block;
+/* Show dropdown when hovering the LI */
+.navDd:hover .ddPanel {
+  display: flex;
+  animation: ddFadeIn 0.2s ease forwards;
+}
+
+.navDd:hover .caret {
+  transform: rotate(180deg);
 }
 
 .navLink {
@@ -59,7 +64,9 @@
   color: var(--mid);
   border-radius: var(--r-sm);
   transition: 0.15s;
-  display: block;
+  display: flex;
+  align-items: center;
+  gap: 4px;
 }
 
 .navLink:hover {
@@ -69,25 +76,31 @@
 
 .caret {
   font-size: 10px;
+  transition: transform 0.22s ease;
 }
 
-.ddMenu {
+/* ─── Dropdown panel ─────────────────────────────────────── */
+.ddPanel {
   display: none;
   position: absolute;
-  top: calc(100% + 0px); /* flush — no gap so hover doesn't break */
+  top: calc(100% + 0px);
   left: 0;
-  background: #fff;
-  border: 1.5px solid var(--border);
+  min-width: 320px;
+
+  background: rgba(15, 40, 80, 0.95);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: var(--r-md);
-  box-shadow: var(--sh-md);
-  min-width: 210px;
-  padding: 6px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.28), 0 2px 8px rgba(0, 0, 0, 0.16);
+
+  flex-direction: row;
+  overflow: hidden;
   z-index: 300;
-  list-style: none;
 }
 
-/* Invisible bridge fills any sub-pixel gap between trigger and menu */
-.ddMenu::before {
+/* Invisible bridge to prevent hover gap breaking the menu */
+.ddPanel::before {
   content: '';
   position: absolute;
   top: -8px;
@@ -96,18 +109,80 @@
   height: 8px;
 }
 
+@keyframes ddFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Left accent column */
+.ddLeft {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1.4rem 0.9rem;
+  background: rgba(255, 255, 255, 0.04);
+  min-width: 90px;
+  gap: 10px;
+}
+
+.ddTitle {
+  font-size: 0.65rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-align: center;
+  white-space: nowrap;
+  background: linear-gradient(135deg, #4ecdc4 0%, #f093b0 50%, #f5a623 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.ddDivider {
+  width: 2px;
+  flex: 1;
+  min-height: 20px;
+  background: linear-gradient(180deg, #4ecdc4, #f093b0, #f5a623);
+  border-radius: 2px;
+  opacity: 0.5;
+}
+
+/* Right: links list */
+.ddGrid {
+  list-style: none;
+  margin: 0;
+  padding: 0.75rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+  flex: 1;
+}
+
 .ddItem {
   display: block;
-  padding: 9px 13px;
+  padding: 9px 12px;
   font-size: 13px;
-  color: var(--dark);
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.82);
   border-radius: var(--r-sm);
   cursor: pointer;
+  transition: background 0.15s;
+  text-decoration: none;
 }
 
 .ddItem:hover {
-  background: var(--teal-l);
-  color: var(--teal-d);
+  background: rgba(255, 255, 255, 0.08);
+  background-image: linear-gradient(135deg, #4ecdc4 0%, #f093b0 50%, #f5a623 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 /* Hamburger */

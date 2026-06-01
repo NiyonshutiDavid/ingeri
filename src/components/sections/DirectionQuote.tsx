@@ -1,5 +1,6 @@
-import styles from './DirectionQuote.module.css'
+import { Quote } from 'lucide-react'
 import Image from 'next/image'
+import styles from './DirectionQuote.module.css'
 
 export default function DirectionQuote() {
   return (
@@ -10,10 +11,12 @@ export default function DirectionQuote() {
         <div className={styles.strip}>
           <div className={styles.photo}>
               <Image src="/principal.jpg" alt="Directrice Ingeri" fill style={{objectFit:'cover'}} />
-            📷 Photo de la directrice / fondatrice
+            Photo de la directrice / fondatrice
           </div>
           <div className={styles.text}>
-            <div className={styles.quoteMark}>&ldquo;</div>
+            <div className={styles.quoteMark}>
+              <Quote size={48} strokeWidth={1} />
+            </div>
             <blockquote>
               {/* TODO: replace with real quote from backend or CMS */}
               Chez Ingeri, nous croyons profondément que les premières années de la vie d&apos;un enfant sont
@@ -23,8 +26,8 @@ export default function DirectionQuote() {
               de l&apos;honorer.
             </blockquote>
             {/* TODO: replace with real name/role */}
-            <p className={styles.dirName}>John Doe</p>
-            <p className={styles.dirRole}>Directeur, Ingeri Schools</p>
+            <p className={styles.dirName}>Prénom Nom</p>
+            <p className={styles.dirRole}>Fondatrice &amp; Directrice, Ingeri Schools</p>
           </div>
         </div>
       </div>

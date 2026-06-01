@@ -1,6 +1,8 @@
 'use client'
 
 import { useState } from 'react'
+import { MapPin, Phone, Mail, Clock, MessageCircle } from 'lucide-react'
+import { FaFacebook as Facebook, FaInstagram as Instagram } from 'react-icons/fa'
 import styles from './contact.module.css'
 
 type Tab = 'creche' | 'maternelle'
@@ -20,13 +22,13 @@ export default function ContactPage() {
             className={`${styles.tab} ${activeTab === 'creche' ? styles.actTeal : ''}`}
             onClick={() => setActiveTab('creche')}
           >
-            🍼 La P&apos;tite Crèche Ingeri
+            La P&apos;tite Crèche Ingeri
           </button>
           <button
             className={`${styles.tab} ${activeTab === 'maternelle' ? styles.actPink : ''}`}
             onClick={() => setActiveTab('maternelle')}
           >
-            🎒 Ingeri International School
+            Ingeri International School
           </button>
         </div>
 
@@ -34,7 +36,6 @@ export default function ContactPage() {
           <div className={styles.panel} id="creche">
             <div className={styles.formWrap}>
               <h3>Message – La P&apos;tite Crèche</h3>
-              {/* TODO: wire up to POST /api/contact with campus: 'creche' */}
               <ContactForm campus="creche" accentClass="btn-teal" />
             </div>
             <ContactInfo
@@ -73,14 +74,11 @@ export default function ContactPage() {
   )
 }
 
-// ── Sub-components ──
-
 function ContactForm({ campus, accentClass }: { campus: string; accentClass: string }) {
   const isCreche = campus === 'creche'
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault()
-    // TODO: POST /api/contact with FormData
     const formData = new FormData(e.currentTarget)
     const body = Object.fromEntries(formData.entries())
     console.log('Form submitted:', { campus, ...body })
@@ -146,22 +144,26 @@ function ContactInfo({
     <div className={styles.cfInfo} style={bgStyle}>
       <div>
         <h3 style={{ color: headingColor }}>{campus}</h3>
-        <div className={styles.ciRow}><span>📍</span><div><strong>Adresse</strong>À compléter – Kigali, Rwanda</div></div>
-        <div className={styles.ciRow}><span>📞</span><div><strong>Téléphone</strong>À compléter</div></div>
-        <div className={styles.ciRow}><span>✉️</span><div><strong>Email</strong>{email}</div></div>
-        <div className={styles.ciRow}><span>🕐</span><div><strong>Horaires</strong>{hours}</div></div>
+        <div className={styles.ciRow}><MapPin size={15} /><div><strong>Adresse</strong>À compléter – Kigali, Rwanda</div></div>
+        <div className={styles.ciRow}><Phone size={15} /><div><strong>Téléphone</strong>À compléter</div></div>
+        <div className={styles.ciRow}><Mail size={15} /><div><strong>Email</strong>{email}</div></div>
+        <div className={styles.ciRow}><Clock size={15} /><div><strong>Horaires</strong>{hours}</div></div>
       </div>
       <div className={styles.ciSoc} style={{ background: socialBg }}>
-        <p style={{ color: socialHeadingColor }}>📲 Réseaux sociaux</p>
+        <p style={{ color: socialHeadingColor }}>Réseaux sociaux</p>
         <div className={styles.socLinks}>
-          {['Facebook', 'Instagram', 'WhatsApp'].map((s) => (
+          {[
+            { label: 'Facebook', icon: Facebook },
+            { label: 'Instagram', icon: Instagram },
+            { label: 'WhatsApp', icon: MessageCircle },
+          ].map(({ label, icon: Icon }) => (
             <a
-              key={s}
+              key={label}
               href="#"
               className={styles.socLink}
               style={{ borderColor: socialBorderColor, color: socialHeadingColor }}
             >
-              {s}
+              <Icon size={12} /> {label}
             </a>
           ))}
         </div>

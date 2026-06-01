@@ -1,4 +1,6 @@
 import Link from 'next/link'
+import { MapPin, Phone, Mail, Clock, MessageCircle } from 'lucide-react'
+import { FaFacebook as Facebook, FaInstagram as Instagram } from 'react-icons/fa'
 import styles from './Footer.module.css'
 
 export default function Footer() {
@@ -10,18 +12,18 @@ export default function Footer() {
           <div className={styles.addrBlock}>
             <span className={`${styles.abBadge} ${styles.teal}`}>La P&apos;tite Crèche Ingeri</span>
             <h4>La P&apos;tite Crèche Ingeri</h4>
-            <div className={styles.addrRow}><span>📍</span><span>Adresse à compléter, Kigali, Rwanda</span></div>
-            <div className={styles.addrRow}><span>📞</span><span>Téléphone à compléter</span></div>
-            <div className={styles.addrRow}><span>✉️</span><span>creche@ingeri.rw</span></div>
-            <div className={styles.addrRow}><span>🕐</span><span>Lun–Ven : 7h00 – 18h00</span></div>
+            <div className={styles.addrRow}><MapPin size={14} /><span>Adresse à compléter, Kigali, Rwanda</span></div>
+            <div className={styles.addrRow}><Phone size={14} /><span>Téléphone à compléter</span></div>
+            <div className={styles.addrRow}><Mail size={14} /><span>creche@ingeri.rw</span></div>
+            <div className={styles.addrRow}><Clock size={14} /><span>Lun–Ven : 7h00 – 18h00</span></div>
           </div>
           <div className={styles.addrBlock}>
             <span className={`${styles.abBadge} ${styles.pink}`}>Ingeri International School</span>
             <h4>Ingeri International School</h4>
-            <div className={styles.addrRow}><span>📍</span><span>Adresse à compléter, Kigali, Rwanda</span></div>
-            <div className={styles.addrRow}><span>📞</span><span>Téléphone à compléter</span></div>
-            <div className={styles.addrRow}><span>✉️</span><span>maternelle@ingeri.rw</span></div>
-            <div className={styles.addrRow}><span>🕐</span><span>Lun–Ven : 7h00 – 17h30</span></div>
+            <div className={styles.addrRow}><MapPin size={14} /><span>Adresse à compléter, Kigali, Rwanda</span></div>
+            <div className={styles.addrRow}><Phone size={14} /><span>Téléphone à compléter</span></div>
+            <div className={styles.addrRow}><Mail size={14} /><span>maternelle@ingeri.rw</span></div>
+            <div className={styles.addrRow}><Clock size={14} /><span>Lun–Ven : 7h00 – 17h30</span></div>
           </div>
         </div>
       </div>
@@ -32,9 +34,9 @@ export default function Footer() {
             <div className={styles.footLogo}>INGERi</div>
             <p>Grandir avec amour, foi et excellence. Deux campus à Kigali pour vos enfants de 6 mois à 5 ans.</p>
             <div className={styles.socials}>
-              <Link href="#" className={styles.socialLink}>Facebook</Link>
-              <Link href="#" className={styles.socialLink}>Instagram</Link>
-              <Link href="#" className={styles.socialLink}>WhatsApp</Link>
+              <Link href="#" className={styles.socialLink}><Facebook size={14} /> Facebook</Link>
+              <Link href="#" className={styles.socialLink}><Instagram size={14} /> Instagram</Link>
+              <Link href="#" className={styles.socialLink}><MessageCircle size={14} /> WhatsApp</Link>
             </div>
           </div>
 
@@ -73,7 +75,7 @@ export default function Footer() {
 
         <div className={styles.footBottom}>
           <span>© 2025 Ingeri Schools – Tous droits réservés</span>
-          <span>Conçu avec ❤️ à Kigali, Rwanda</span>
+          <span>Conçu avec soin à Kigali, Rwanda</span>
         </div>
       </footer>
     </>

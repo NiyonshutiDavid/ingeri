@@ -2,9 +2,9 @@
 
 import { useState } from 'react'
 import Link from 'next/link'
+import { DollarSign, ClipboardList, DoorOpen, ChevronDown, ChevronUp } from 'lucide-react'
 import styles from './admissions.module.css'
 
-// TODO: fetch from backend API (e.g. GET /api/faq)
 const faqItems = [
   {
     q: "À partir de quel âge acceptez-vous les enfants ?",
@@ -28,7 +28,6 @@ const faqItems = [
   },
 ]
 
-// TODO: fetch tuition fees from backend API (e.g. GET /api/tuition)
 const tuitionRows = [
   { programme: 'Crèche (6–24 mois)', frais: 'À compléter' },
   { programme: 'Petite section (3 ans)', frais: 'À compléter' },
@@ -50,7 +49,7 @@ export default function AdmissionsPage() {
         <div className={styles.admTop}>
           {/* Tuition */}
           <div className={styles.admBlock} id="frais">
-            <h3>💰 Frais de scolarité</h3>
+            <h3><DollarSign size={16} style={{ display:'inline', verticalAlign:'middle', marginRight:6 }} />Frais de scolarité</h3>
             <table className={styles.fraisTable}>
               <thead>
                 <tr><th>Programme</th><th>Frais / mois</th></tr>
@@ -69,7 +68,7 @@ export default function AdmissionsPage() {
 
           {/* Steps */}
           <div className={styles.admBlock} id="inscription">
-            <h3>📋 Comment s&apos;inscrire</h3>
+            <h3><ClipboardList size={16} style={{ display:'inline', verticalAlign:'middle', marginRight:6 }} />Comment s&apos;inscrire</h3>
             <div className={styles.stepsList}>
               {[
                 'Remplir le formulaire de contact',
@@ -91,15 +90,14 @@ export default function AdmissionsPage() {
 
           {/* Open days */}
           <div className={styles.admBlock} id="portes">
-            <h3>🚪 Portes ouvertes</h3>
+            <h3><DoorOpen size={16} style={{ display:'inline', verticalAlign:'middle', marginRight:6 }} />Portes ouvertes</h3>
             <p className={styles.portesDesc}>Venez visiter nos campus et rencontrer l&apos;équipe.</p>
-            {/* TODO: fetch open day dates from backend */}
             <div className={styles.portesCard}>
               <p><strong>Prochaine date</strong></p>
               <p style={{ marginTop: 5 }}>
-                📅 Date à compléter<br />
-                🕐 Heure à compléter<br />
-                📍 Adresse à compléter
+                Date à compléter<br />
+                Heure à compléter<br />
+                Adresse à compléter
               </p>
             </div>
             <Link href="/contact" className="btn btn-outline" style={{ fontSize: 13, padding: '9px 18px' }}>
@@ -120,7 +118,7 @@ export default function AdmissionsPage() {
                   onClick={() => setOpenFaq(openFaq === i ? null : i)}
                 >
                   {item.q}
-                  <span className={styles.arrow}>▼</span>
+                  {openFaq === i ? <ChevronUp size={14} className={styles.arrow} /> : <ChevronDown size={14} className={styles.arrow} />}
                 </button>
                 {openFaq === i && (
                   <div className={styles.faqA}>{item.a}</div>

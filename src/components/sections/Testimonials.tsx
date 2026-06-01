@@ -1,3 +1,4 @@
+import { Star } from 'lucide-react'
 import styles from './Testimonials.module.css'
 
 // TODO: fetch from backend API (e.g. GET /api/testimonials)
@@ -32,7 +33,11 @@ export default function Testimonials() {
         <div className={styles.echoesGrid}>
           {testimonials.map((t) => (
             <div key={t.name} className={styles.echoBlock}>
-              <div className={styles.stars}>★★★★★</div>
+              <div className={styles.stars}>
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} size={13} fill="currentColor" strokeWidth={0} />
+                ))}
+              </div>
               <blockquote>&ldquo;{t.quote}&rdquo;</blockquote>
               <div className={styles.author}>
                 <div className={styles.avatar}>{t.initials}</div>

@@ -13,44 +13,28 @@
   text-orientation: mixed;
   transform: rotate(180deg);
   color: #fff;
-  font-family: 'Nunito', sans-serif;
-  font-weight: 700;
-  font-size: 13px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 12px;
   letter-spacing: 0.05em;
   padding: 22px 13px;
   cursor: pointer;
   border: none;
   transition: background 0.18s, padding 0.18s;
-  display: block;
+  display: flex;
+  align-items: center;
+  gap: 6px;
   text-decoration: none;
 }
 
-.sideBtn.teal {
-  background: var(--teal);
-}
+.sideBtn.teal { background: var(--teal); }
+.sideBtn.teal:hover { background: var(--teal-d); padding-top: 26px; }
 
-.sideBtn.teal:hover {
-  background: var(--teal-d);
-  padding-right: 20px;
-}
+.sideBtn.pink { background: var(--pink); }
+.sideBtn.pink:hover { background: var(--pink-d); padding-top: 26px; }
 
-.sideBtn.pink {
-  background: var(--pink);
-}
-
-.sideBtn.pink:hover {
-  background: var(--pink-d);
-  padding-right: 20px;
-}
-
-.sideBtn.gold {
-  background: var(--gold);
-}
-
-.sideBtn.gold:hover {
-  background: #c8841a;
-  padding-right: 20px;
-}
+.sideBtn.gold { background: var(--gold); }
+.sideBtn.gold:hover { background: #c8841a; padding-top: 26px; }
 
 @media (max-width: 960px) {
   .sideCta {

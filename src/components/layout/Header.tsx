@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
+import { ChevronDown, Menu, X } from 'lucide-react'
 import styles from './Header.module.css'
 
 const navLinks = [
@@ -62,16 +63,15 @@ export default function Header() {
   return (
     <header className={`${styles.header} ${scrolled ? styles.scrolled : ''}`}>
       <nav className={styles.nav}>
+        {/* Logo — 72px */}
         <Link href="/" className={styles.logo}>
           <Image
             src="/logo.png"
             alt="Ingeri"
-            width={65}
-            height={46}
-            onError={() => {}} // graceful fallback
-            style={{ borderRadius: 8 }}
+            width={150}
+            height={150}
+            style={{ objectFit: 'contain' }}
           />
-          <span className={styles.logoText}>INGERI</span>
         </Link>
 
         {/* Desktop nav */}
@@ -80,18 +80,28 @@ export default function Header() {
             <li key={link.href} className={link.dropdown ? styles.navDd : ''}>
               <Link href={link.href} className={styles.navLink}>
                 {link.label}
-                {link.dropdown && <span className={styles.caret}> ▾</span>}
+                {link.dropdown && <ChevronDown size={12} className={styles.caret} />}
               </Link>
+
               {link.dropdown && (
-                <ul className={styles.ddMenu}>
-                  {link.dropdown.map((item) => (
-                    <li key={item.href}>
-                      <Link href={item.href} className={styles.ddItem}>
-                        {item.label}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
+                <div className={styles.ddPanel}>
+                  {/* Left accent column */}
+                  <div className={styles.ddLeft}>
+                    <span className={styles.ddTitle}>{link.label}</span>
+                    <div className={styles.ddDivider} />
+                  </div>
+
+                  {/* Links */}
+                  <ul className={styles.ddGrid}>
+                    {link.dropdown.map((item) => (
+                      <li key={item.href}>
+                        <Link href={item.href} className={styles.ddItem}>
+                          {item.label}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               )}
             </li>
           ))}
@@ -103,9 +113,7 @@ export default function Header() {
           onClick={() => setMobileOpen(!mobileOpen)}
           aria-label="Menu"
         >
-          <span />
-          <span />
-          <span />
+          {mobileOpen ? <X size={22} color="var(--teal)" /> : <Menu size={22} color="var(--teal)" />}
         </button>
       </nav>
 
