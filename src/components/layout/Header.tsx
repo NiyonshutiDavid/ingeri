@@ -11,6 +11,7 @@ const navLinks = [
   {
     href: '/campus',
     label: 'Campus',
+    desc: 'Découvrez nos deux campus à Kigali.',
     dropdown: [
       { href: '/campus#creche', label: "La P'tite Crèche Ingeri" },
       { href: '/campus#maternelle', label: 'Ingeri International School' },
@@ -19,6 +20,7 @@ const navLinks = [
   {
     href: '/programmes',
     label: 'Programmes',
+    desc: 'Des programmes adaptés à chaque étape du développement de votre enfant.',
     dropdown: [
       { href: '/programmes#creche', label: 'Crèche (6–24 mois)' },
       { href: '/programmes#maternelle', label: 'Maternelle (3–5 ans)' },
@@ -27,6 +29,7 @@ const navLinks = [
   {
     href: '/presentation',
     label: 'Présentation',
+    desc: 'Notre mission, notre équipe et nos valeurs pédagogiques.',
     dropdown: [
       { href: '/presentation#mission', label: 'Mission & Vision' },
       { href: '/presentation#principes', label: 'Nos grands principes' },
@@ -40,6 +43,7 @@ const navLinks = [
   {
     href: '/admissions',
     label: 'Admissions',
+    desc: 'Tout ce que vous devez savoir pour inscrire votre enfant.',
     dropdown: [
       { href: '/admissions#frais', label: 'Frais de scolarité' },
       { href: '/admissions#inscription', label: "Comment s'inscrire" },
@@ -63,7 +67,7 @@ export default function Header() {
   return (
     <header className={`${styles.header} ${scrolled ? styles.scrolled : ''}`}>
       <nav className={styles.nav}>
-        {/* Logo — 72px */}
+        {/* Logo */}
         <Link href="/" className={styles.logo}>
           <Image
             src="/logo.png"
@@ -85,22 +89,30 @@ export default function Header() {
 
               {link.dropdown && (
                 <div className={styles.ddPanel}>
-                  {/* Left accent column */}
-                  <div className={styles.ddLeft}>
-                    <span className={styles.ddTitle}>{link.label}</span>
-                    <div className={styles.ddDivider} />
-                  </div>
+                  {/* Inner constrained wrapper */}
+                  <div className={styles.ddInner}>
+                    {/* Left: label + description + divider */}
+                    <div className={styles.ddLeft}>
+                      <div className={styles.ddLeftText}>
+                        <div className={styles.ddTitle}>{link.label}</div>
+                        {link.desc && (
+                          <p className={styles.ddDesc}>{link.desc}</p>
+                        )}
+                      </div>
+                      <div className={styles.ddDivider} />
+                    </div>
 
-                  {/* Links */}
-                  <ul className={styles.ddGrid}>
-                    {link.dropdown.map((item) => (
-                      <li key={item.href}>
-                        <Link href={item.href} className={styles.ddItem}>
-                          {item.label}
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
+                    {/* Right: 2-column link grid */}
+                    <ul className={styles.ddGrid}>
+                      {link.dropdown.map((item) => (
+                        <li key={item.href}>
+                          <Link href={item.href} className={styles.ddItem}>
+                            {item.label}
+                          </Link>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
                 </div>
               )}
             </li>

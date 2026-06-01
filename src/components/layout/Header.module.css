@@ -19,7 +19,7 @@
   max-width: 1160px;
   margin: 0 auto;
   padding: 0 28px;
-  height: 80px; /* increased from 70px to accommodate larger logo */
+  height: 80px;
 }
 
 .logo {
@@ -44,17 +44,26 @@
 }
 
 .navDd {
-  position: relative;
+  position: static;
 }
 
-/* Show dropdown when hovering the LI */
-.navDd:hover .ddPanel {
+.navDd:hover .ddPanel,
+.ddPanel:hover {
   display: flex;
   animation: ddFadeIn 0.2s ease forwards;
 }
 
 .navDd:hover .caret {
   transform: rotate(180deg);
+}
+
+.navDd::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 100%;
+  height: 12px;
 }
 
 .navLink {
@@ -79,40 +88,33 @@
   transition: transform 0.22s ease;
 }
 
-/* ─── Dropdown panel ─────────────────────────────────────── */
+/* ─── Full-width mega-menu dropdown ─────────────────────────────────── */
 .ddPanel {
   display: none;
-  position: absolute;
-  top: calc(100% + 0px);
-  left: 0;
-  min-width: 320px;
 
-  background: rgba(15, 40, 80, 0.95);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: var(--r-md);
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.28), 0 2px 8px rgba(0, 0, 0, 0.16);
-
-  flex-direction: row;
-  overflow: hidden;
-  z-index: 300;
-}
-
-/* Invisible bridge to prevent hover gap breaking the menu */
-.ddPanel::before {
-  content: '';
-  position: absolute;
-  top: -8px;
+  position: fixed;
   left: 0;
   right: 0;
-  height: 8px;
+  width: 100%;
+  top: 80px;
+  padding-top: 8px; /* fills the hover gap invisibly */
+
+  background: rgba(220, 235, 248, 0.97);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-top: 1px solid rgba(100, 160, 220, 0.3);
+  border-bottom: 1px solid rgba(100, 160, 220, 0.2);
+  box-shadow: 0 16px 48px rgba(15, 40, 80, 0.15);
+
+  flex-direction: row;
+  align-items: stretch;
+  z-index: 300;
 }
 
 @keyframes ddFadeIn {
   from {
     opacity: 0;
-    transform: translateY(6px);
+    transform: translateY(-6px);
   }
   to {
     opacity: 1;
@@ -120,69 +122,91 @@
   }
 }
 
-/* Left accent column */
+/* Inner wrapper mirrors nav max-width + padding */
+.ddInner {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  max-width: 1160px;
+  margin: 0 auto;
+  padding: 0 28px;
+  width: 100%;
+}
+
+/* Left column: label + description + vertical divider */
 .ddLeft {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  flex-direction: row;
   align-items: center;
-  padding: 1.4rem 0.9rem;
-  background: rgba(255, 255, 255, 0.04);
-  min-width: 90px;
-  gap: 10px;
+  gap: 28px;
+  padding: 2.2rem 2rem 2.2rem 0;
+  min-width: 280px;
+  max-width: 340px;
+  flex-shrink: 0;
+}
+
+.ddLeftText {
+  flex: 1;
 }
 
 .ddTitle {
-  font-size: 0.65rem;
+  font-size: 0.62rem;
   font-weight: 800;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
-  text-align: center;
-  white-space: nowrap;
+  margin-bottom: 0.45rem;
   background: linear-gradient(135deg, #4ecdc4 0%, #f093b0 50%, #f5a623 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
-.ddDivider {
-  width: 2px;
-  flex: 1;
-  min-height: 20px;
-  background: linear-gradient(180deg, #4ecdc4, #f093b0, #f5a623);
-  border-radius: 2px;
-  opacity: 0.5;
+.ddDesc {
+  font-size: 13px;
+  font-weight: 400;
+  color: rgba(20, 50, 90, 0.55);
+  line-height: 1.55;
 }
 
-/* Right: links list */
+.ddDivider {
+  width: 1.5px;
+  align-self: stretch;
+  margin: 1.4rem 0;
+  background: linear-gradient(180deg, transparent, #4ecdc4 30%, #f093b0 65%, #f5a623, transparent);
+  border-radius: 2px;
+  opacity: 0.4;
+  flex-shrink: 0;
+}
+
+/* Right: links in a 2-column grid */
 .ddGrid {
   list-style: none;
   margin: 0;
-  padding: 0.75rem 1rem;
-  display: flex;
-  flex-direction: column;
-  gap: 0.1rem;
+  padding: 1.6rem 0 1.6rem 2rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.15rem 2.5rem;
   flex: 1;
+  align-content: center;
 }
 
 .ddItem {
   display: block;
-  padding: 9px 12px;
-  font-size: 13px;
+  padding: 10px 14px;
+  font-size: 13.5px;
   font-weight: 500;
-  color: rgba(255, 255, 255, 0.82);
+  color: rgba(20, 50, 90, 0.8);
   border-radius: var(--r-sm);
   cursor: pointer;
-  transition: background 0.15s;
+  transition: background 0.15s, color 0.15s;
   text-decoration: none;
+  white-space: nowrap;
 }
 
 .ddItem:hover {
-  background: rgba(255, 255, 255, 0.08);
-  background-image: linear-gradient(135deg, #4ecdc4 0%, #f093b0 50%, #f5a623 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  background: rgba(15, 40, 80, 0.06);
+  color: var(--teal-d);
+  -webkit-text-fill-color: unset;
 }
 
 /* Hamburger */
