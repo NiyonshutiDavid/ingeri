@@ -82,8 +82,7 @@
 }
 
 .navLink:hover {
-  background: var(--teal-l);
-  color: var(--teal-d);
+  color: var(--teal);
 }
 
 .caret {
