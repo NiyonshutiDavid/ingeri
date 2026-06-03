@@ -1,0 +1,18 @@
+{
+  "tag": "Notre raison d'être",
+  "title": "Mission &",
+  "titleSpan": "Vision",
+  "mission": {
+    "heading": "Notre mission",
+    "body": "Semer les graines de l'excellence dès la petite enfance. Nous accompagnons chaque enfant dans son développement global — spirituel, affectif, intellectuel, social et moteur — dans un environnement sécurisé, aimant et stimulant."
+  },
+  "vision": {
+    "heading": "Notre vision",
+    "body": "Devenir un réseau d'espaces éducatifs de référence au Rwanda et en Afrique, reconnus pour la qualité pédagogique, l'ancrage chrétien et l'innovation adaptée à notre contexte local.",
+    "items": [
+      "Excellence de l'accompagnement pédagogique",
+      "Ancrage dans les valeurs chrétiennes",
+      "Innovation éducative au service du contexte local"
+    ]
+  }
+}

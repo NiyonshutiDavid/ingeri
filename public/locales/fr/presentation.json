@@ -1,0 +1,111 @@
+{
+  "intro": {
+    "tag": "Qui sommes-nous",
+    "title": "Notre",
+    "titleSpan": "présentation",
+    "subtitle": "Tout ce qui fait l'identité profonde d'Ingeri : notre philosophie, notre équipe et nos engagements."
+  },
+
+  "missionVision": {
+    "tag": "Notre raison d'être",
+    "title": "Mission &",
+    "titleSpan": "Vision",
+    "mission": {
+      "heading": "Notre mission",
+      "body": "Semer les graines de l'excellence dès la petite enfance. Nous accompagnons chaque enfant dans son développement global — spirituel, affectif, intellectuel, social et moteur — dans un environnement sécurisé, aimant et stimulant."
+    },
+    "vision": {
+      "heading": "Notre vision",
+      "body": "Devenir un réseau d'espaces éducatifs de référence au Rwanda et en Afrique, reconnus pour la qualité pédagogique, l'ancrage chrétien et l'innovation adaptée à notre contexte local."
+    }
+  },
+
+  "principes": {
+    "tag": "Notre philosophie",
+    "title": "Nos grands",
+    "titleSpan": "principes",
+    "items": [
+      { "title": "Centré sur l'enfant", "desc": "Chaque enfant est unique. L'adulte observe, encourage et soutient sans imposer." },
+      { "title": "Fondation chrétienne", "desc": "Patience, respect, humilité, joie et pardon au cœur de chaque journée." },
+      { "title": "Le lien", "desc": "Enfant–éducateur, enfant–famille : la confiance partagée sécurise." },
+      { "title": "Lien à la nature", "desc": "Jardinage, objets naturels : la nature nourrit l'émerveillement." },
+      { "title": "Autonomie et dignité", "desc": "L'enfant apprend à « faire seul » et à se faire confiance." }
+    ]
+  },
+
+  "domaines": {
+    "tag": "Ce que nous cultivons",
+    "title": "Domaines d'",
+    "titleSpan": "apprentissage",
+    "items": [
+      "Langage & expression",
+      "Logique & premiers nombres",
+      "Créativité & sens",
+      "Vie pratique & autonomie",
+      "Vivre ensemble & foi",
+      "Éveil à la nature",
+      "Développement moteur",
+      "Musique & rythme"
+    ]
+  },
+
+  "leadership": {
+    "tag": "Direction",
+    "title": "Le",
+    "titleSpan": "Leadership",
+    "p1": "Chez Ingeri, le leadership est au service de l'enfant. Chaque décision pédagogique est guidée par une seule question : est-ce le meilleur pour l'enfant ?",
+    "p2": "Notre équipe dirigeante croit profondément que l'éducation précoce est l'investissement le plus précieux que l'on puisse faire pour une génération.",
+    "quote": "Chaque enfant est une promesse d'avenir. Notre rôle est d'honorer cette promesse.",
+    "quoteCite": "— Fondatrice, Ingeri Schools",
+    "photoAlt": "Fondatrice / Directrice"
+  },
+
+  "equipe": {
+    "tag": "Les visages d'Ingeri",
+    "title": "Notre",
+    "titleSpan": "équipe",
+    "subtitle": "Des femmes engagées, mères et professionnelles, au service de vos enfants.",
+    "members": [
+      { "name": "Prénom Nom", "role": "Directrice pédagogique" },
+      { "name": "Prénom Nom", "role": "Éducatrice crèche" },
+      { "name": "Prénom Nom", "role": "Enseignante maternelle" },
+      { "name": "Prénom Nom", "role": "Coordinatrice" }
+    ]
+  },
+
+  "localisations": {
+    "tag": "Nous trouver",
+    "title": "Nos",
+    "titleSpan": "localisations",
+    "creche": {
+      "name": "La P'tite Crèche Ingeri",
+      "address": "Adresse à compléter – Kigali",
+      "phone": "Tél : à compléter",
+      "hours": "Lun–Ven : 7h00–18h00",
+      "btn": "Nous contacter"
+    },
+    "maternelle": {
+      "name": "Ingeri International School",
+      "address": "Adresse à compléter – Kigali",
+      "phone": "Tél : à compléter",
+      "hours": "Lun–Ven : 7h00–17h30",
+      "btn": "Nous contacter"
+    }
+  },
+
+  "carrieres": {
+    "tag": "Rejoignez-nous",
+    "title": "Carrières chez",
+    "titleSpan": "Ingeri",
+    "jobsTitle": "Postes vacants",
+    "jobs": [
+      { "title": "Éducatrice de crèche", "location": "La P'tite Crèche · Kigali", "badge": "Temps plein", "type": "teal" },
+      { "title": "Enseignante maternelle", "location": "Ingeri International School", "badge": "Temps plein", "type": "teal" },
+      { "title": "Stagiaire pédagogique", "location": "Les deux campus", "badge": "Stage", "type": "pink" }
+    ],
+    "teamQuote": "Travailler chez Ingeri, c'est sentir chaque jour que son travail a du sens.",
+    "ctaTitle": "Rejoignez la famille Ingeri",
+    "ctaDesc": "Vous partagez nos valeurs de bienveillance, d'excellence et de foi ? Envoyez-nous votre candidature.",
+    "ctaBtn": "Envoyer ma candidature"
+  }
+}

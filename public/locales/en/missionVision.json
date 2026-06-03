@@ -1,0 +1,18 @@
+{
+  "tag": "Our purpose",
+  "title": "Mission &",
+  "titleSpan": "Vision",
+  "mission": {
+    "heading": "Our mission",
+    "body": "Sowing the seeds of excellence from early childhood. We support every child in their holistic development — spiritual, emotional, intellectual, social and motor — within a safe, loving and stimulating environment."
+  },
+  "vision": {
+    "heading": "Our vision",
+    "body": "To become a reference network of educational spaces in Rwanda and Africa, recognised for pedagogical quality, Christian values and innovation adapted to our local context.",
+    "items": [
+      "Excellence in pedagogical support",
+      "Grounded in Christian values",
+      "Educational innovation serving the local context"
+    ]
+  }
+}

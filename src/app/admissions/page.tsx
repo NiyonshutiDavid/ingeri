@@ -1,58 +1,46 @@
+// src/app/admissions/page.tsx
 'use client'
 
 import { useState } from 'react'
 import Link from 'next/link'
 import { DollarSign, ClipboardList, DoorOpen, ChevronDown, ChevronUp } from 'lucide-react'
+import { useTranslation } from 'react-i18next'
 import styles from './admissions.module.css'
 
-const faqItems = [
-  {
-    q: "À partir de quel âge acceptez-vous les enfants ?",
-    a: "À la crèche dès 6 mois, à la maternelle à partir de 3 ans révolus.",
-  },
-  {
-    q: "Quelle langue est utilisée ?",
-    a: "Ingeri International School suit le programme national français. Le français est la langue principale, avec une ouverture à l'anglais et au kinyarwanda.",
-  },
-  {
-    q: "Y a-t-il une restauration sur place ?",
-    a: "Oui, repas équilibrés, variés et locaux préparés chaque jour. Les enfants participent aux routines de table.",
-  },
-  {
-    q: "Comment se déroule la période d'adaptation ?",
-    a: "Adaptation progressive : visites préalables avec les parents, présences courtes qui s'allongent, respect du rythme de l'enfant.",
-  },
-  {
-    q: "Des facilités de paiement sont-elles possibles ?",
-    a: "Oui, nous examinons chaque situation. Contactez-nous confidentiellement.",
-  },
-]
-
-const tuitionRows = [
-  { programme: 'Crèche (6–24 mois)', frais: 'À compléter' },
-  { programme: 'Petite section (3 ans)', frais: 'À compléter' },
-  { programme: 'Moyenne section', frais: 'À compléter' },
-  { programme: 'Grande section', frais: 'À compléter' },
-  { programme: "Frais d'inscription", frais: 'À compléter' },
-]
-
 export default function AdmissionsPage() {
+  const { t } = useTranslation('admissions')
   const [openFaq, setOpenFaq] = useState<number | null>(null)
+
+  const tuitionRows = t('tuition.rows', { returnObjects: true }) as Array<{
+    programme: string
+    frais: string
+  }>
+  const steps = t('steps.items', { returnObjects: true }) as string[]
+  const faqItems = t('faq.items', { returnObjects: true }) as Array<{
+    q: string
+    a: string
+  }>
 
   return (
     <section className={styles.section} id="admissions">
       <div className="container">
-        <span className="tag">Rejoindre Ingeri</span>
-        <h2 className="sec-title"><span>Admissions</span></h2>
-        <p className="sec-sub">Tout ce que vous devez savoir pour inscrire votre enfant.</p>
+        <span className="tag">{t('tag')}</span>
+        <h2 className="sec-title"><span>{t('title')}</span></h2>
+        <p className="sec-sub">{t('subtitle')}</p>
 
         <div className={styles.admTop}>
           {/* Tuition */}
           <div className={styles.admBlock} id="frais">
-            <h3><DollarSign size={16} style={{ display:'inline', verticalAlign:'middle', marginRight:6 }} />Frais de scolarité</h3>
+            <h3>
+              <DollarSign size={16} style={{ display: 'inline', verticalAlign: 'middle', marginRight: 6 }} />
+              {t('tuition.heading')}
+            </h3>
             <table className={styles.fraisTable}>
               <thead>
-                <tr><th>Programme</th><th>Frais / mois</th></tr>
+                <tr>
+                  <th>{t('tuition.colProgramme')}</th>
+                  <th>{t('tuition.colFees')}</th>
+                </tr>
               </thead>
               <tbody>
                 {tuitionRows.map((r) => (
@@ -63,53 +51,55 @@ export default function AdmissionsPage() {
                 ))}
               </tbody>
             </table>
-            <p className={styles.note}>* Des facilités de paiement sont possibles.</p>
+            <p className={styles.note}>{t('tuition.note')}</p>
           </div>
 
           {/* Steps */}
           <div className={styles.admBlock} id="inscription">
-            <h3><ClipboardList size={16} style={{ display:'inline', verticalAlign:'middle', marginRight:6 }} />Comment s&apos;inscrire</h3>
+            <h3>
+              <ClipboardList size={16} style={{ display: 'inline', verticalAlign: 'middle', marginRight: 6 }} />
+              {t('steps.heading')}
+            </h3>
             <div className={styles.stepsList}>
-              {[
-                'Remplir le formulaire de contact',
-                'RDV de visite du campus',
-                "Déposer le dossier d'inscription",
-                'Confirmation de la place',
-                "Période d'adaptation progressive",
-              ].map((step, i) => (
+              {steps.map((step, i) => (
                 <div key={i} className={styles.stepItem}>
                   <span className={styles.stepNum}>{i + 1}</span>
                   <p>{step}</p>
                 </div>
               ))}
             </div>
-            <Link href="/contact" className="btn btn-teal" style={{ marginTop: 18, fontSize: 13, padding: '10px 18px' }}>
-              Commencer l&apos;inscription
+            <Link
+              href="/contact"
+              className="btn btn-teal"
+              style={{ marginTop: 18, fontSize: 13, padding: '10px 18px' }}
+            >
+              {t('steps.btn')}
             </Link>
           </div>
 
           {/* Open days */}
           <div className={styles.admBlock} id="portes">
-            <h3><DoorOpen size={16} style={{ display:'inline', verticalAlign:'middle', marginRight:6 }} />Portes ouvertes</h3>
-            <p className={styles.portesDesc}>Venez visiter nos campus et rencontrer l&apos;équipe.</p>
+            <h3>
+              <DoorOpen size={16} style={{ display: 'inline', verticalAlign: 'middle', marginRight: 6 }} />
+              {t('openDays.heading')}
+            </h3>
+            <p className={styles.portesDesc}>{t('openDays.desc')}</p>
             <div className={styles.portesCard}>
-              <p><strong>Prochaine date</strong></p>
-              <p style={{ marginTop: 5 }}>
-                Date à compléter<br />
-                Heure à compléter<br />
-                Adresse à compléter
+              <p><strong>{t('openDays.nextDate')}</strong></p>
+              <p style={{ marginTop: 5, whiteSpace: 'pre-line' }}>
+                {t('openDays.placeholder')}
               </p>
             </div>
             <Link href="/contact" className="btn btn-outline" style={{ fontSize: 13, padding: '9px 18px' }}>
-              Réserver ma place
+              {t('openDays.btn')}
             </Link>
           </div>
         </div>
 
         {/* FAQ */}
         <div style={{ marginTop: 56 }} id="faq">
-          <span className="tag">Questions fréquentes</span>
-          <h2 className="sec-title" style={{ marginBottom: 8 }}>FAQ</h2>
+          <span className="tag">{t('faq.tag')}</span>
+          <h2 className="sec-title" style={{ marginBottom: 8 }}>{t('faq.title')}</h2>
           <div className={styles.faqList}>
             {faqItems.map((item, i) => (
               <div key={i} className={`${styles.faqItem} ${openFaq === i ? styles.open : ''}`}>
@@ -118,7 +108,9 @@ export default function AdmissionsPage() {
                   onClick={() => setOpenFaq(openFaq === i ? null : i)}
                 >
                   {item.q}
-                  {openFaq === i ? <ChevronUp size={14} className={styles.arrow} /> : <ChevronDown size={14} className={styles.arrow} />}
+                  {openFaq === i
+                    ? <ChevronUp size={14} className={styles.arrow} />
+                    : <ChevronDown size={14} className={styles.arrow} />}
                 </button>
                 {openFaq === i && (
                   <div className={styles.faqA}>{item.a}</div>

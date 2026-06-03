@@ -1,0 +1,23 @@
+{
+  "tag": "What we believe in",
+  "title": "Our",
+  "titleSpan": "values",
+  "items": [
+    {
+      "title": "Love",
+      "description": "Every child is welcomed unconditionally, as a precious gift."
+    },
+    {
+      "title": "Faith",
+      "description": "Christian faith inspires every interaction, every daily gesture."
+    },
+    {
+      "title": "Excellence",
+      "description": "Always aiming for the best — for every child, every family."
+    },
+    {
+      "title": "Community",
+      "description": "Parents, children and educators, together for peaceful growth."
+    }
+  ]
+}

@@ -1,0 +1,66 @@
+{
+  "tag": "Join Ingeri",
+  "title": "Admissions",
+  "subtitle": "Everything you need to know to enrol your child.",
+
+  "tuition": {
+    "heading": "Tuition fees",
+    "colProgramme": "Programme",
+    "colFees": "Fees / month",
+    "note": "* Payment plans are available.",
+    "rows": [
+      { "programme": "Nursery (6–24 months)", "frais": "To complete" },
+      { "programme": "Little section (3 years)", "frais": "To complete" },
+      { "programme": "Middle section", "frais": "To complete" },
+      { "programme": "Upper section", "frais": "To complete" },
+      { "programme": "Registration fee", "frais": "To complete" }
+    ]
+  },
+
+  "steps": {
+    "heading": "How to enrol",
+    "items": [
+      "Fill in the contact form",
+      "Campus visit appointment",
+      "Submit the enrolment file",
+      "Place confirmation",
+      "Progressive settling-in period"
+    ],
+    "btn": "Start enrolment"
+  },
+
+  "openDays": {
+    "heading": "Open days",
+    "desc": "Come and visit our campuses and meet the team.",
+    "nextDate": "Next date",
+    "placeholder": "Date to complete\nTime to complete\nAddress to complete",
+    "btn": "Book my spot"
+  },
+
+  "faq": {
+    "tag": "Frequently asked questions",
+    "title": "FAQ",
+    "items": [
+      {
+        "q": "From what age do you accept children?",
+        "a": "At the nursery from 6 months, at kindergarten from 3 years old."
+      },
+      {
+        "q": "What language is used?",
+        "a": "Ingeri International School follows the French national curriculum. French is the main language, with an opening to English and Kinyarwanda."
+      },
+      {
+        "q": "Is there catering on site?",
+        "a": "Yes, balanced, varied and locally sourced meals are prepared every day. Children take part in table routines."
+      },
+      {
+        "q": "How does the settling-in period work?",
+        "a": "Progressive settling-in: prior visits with parents, short stays that gradually lengthen, respecting the child's own pace."
+      },
+      {
+        "q": "Are payment plans available?",
+        "a": "Yes, we consider each situation individually. Contact us confidentially."
+      }
+    ]
+  }
+}

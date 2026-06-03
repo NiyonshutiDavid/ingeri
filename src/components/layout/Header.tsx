@@ -1,68 +1,92 @@
+// src/components/layout/Header.tsx
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { ChevronDown, Menu, X } from 'lucide-react'
+import { useTranslation } from 'react-i18next'
+import LanguageSwitcher from './LanguageSwitcher'
 import styles from './Header.module.css'
 
-const navLinks = [
-  { href: '/', label: 'Accueil' },
-  {
-    href: '/campus',
-    label: 'Campus',
-    desc: 'Découvrez nos deux campus à Kigali.',
-    dropdown: [
-      { href: '/campus#creche', label: "La P'tite Crèche Ingeri" },
-      { href: '/campus#maternelle', label: 'Ingeri International School' },
-    ],
-  },
-  {
-    href: '/programmes',
-    label: 'Programmes',
-    desc: 'Des programmes adaptés à chaque étape du développement de votre enfant.',
-    dropdown: [
-      { href: '/programmes#creche', label: 'Crèche (6–24 mois)' },
-      { href: '/programmes#maternelle', label: 'Maternelle (3–5 ans)' },
-    ],
-  },
-  {
-    href: '/presentation',
-    label: 'Présentation',
-    desc: 'Notre mission, notre équipe et nos valeurs pédagogiques.',
-    dropdown: [
-      { href: '/presentation#mission', label: 'Mission & Vision' },
-      { href: '/presentation#principes', label: 'Nos grands principes' },
-      { href: '/presentation#domaines', label: "Domaines d'apprentissage" },
-      { href: '/presentation#leadership', label: 'Le Leadership' },
-      { href: '/presentation#equipe', label: 'Notre équipe' },
-      { href: '/presentation#localisations', label: 'Nos localisations' },
-      { href: '/presentation#carrieres', label: 'Carrières' },
-    ],
-  },
-  {
-    href: '/admissions',
-    label: 'Admissions',
-    desc: 'Tout ce que vous devez savoir pour inscrire votre enfant.',
-    dropdown: [
-      { href: '/admissions#frais', label: 'Frais de scolarité' },
-      { href: '/admissions#inscription', label: "Comment s'inscrire" },
-      { href: '/admissions#portes', label: 'Portes ouvertes' },
-      { href: '/admissions#faq', label: 'FAQ' },
-    ],
-  },
-  { href: '/contact', label: 'Contactez-nous' },
-]
-
 export default function Header() {
+  const { t } = useTranslation('header')
   const [mobileOpen, setMobileOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null)
+  const closeTimer = useRef<ReturnType<typeof setTimeout> | null>(null)
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 10)
     window.addEventListener('scroll', handleScroll)
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
+
+  useEffect(() => {
+    const handleClickOutside = () => setActiveDropdown(null)
+    document.addEventListener('click', handleClickOutside)
+    return () => document.removeEventListener('click', handleClickOutside)
+  }, [])
+
+  const handleMouseEnter = (href: string) => {
+    if (closeTimer.current) clearTimeout(closeTimer.current)
+    setActiveDropdown(href)
+  }
+
+  const handleMouseLeave = () => {
+    closeTimer.current = setTimeout(() => setActiveDropdown(null), 80)
+  }
+
+  // ---------------------------------------------------------------------------
+  // Nav config – labels come from i18n, structure stays here
+  // ---------------------------------------------------------------------------
+  const navLinks = [
+    { href: '/', label: t('links.home') },
+    {
+      href: '/campus',
+      label: t('links.campus'),
+      desc: t('dropdowns.campus.desc'),
+      dropdown: [
+        { href: '/campus#creche', label: t('dropdowns.campus.creche') },
+        { href: '/campus#maternelle', label: t('dropdowns.campus.maternelle') },
+      ],
+    },
+    {
+      href: '/programmes',
+      label: t('links.programmes'),
+      desc: t('dropdowns.programmes.desc'),
+      dropdown: [
+        { href: '/programmes#creche', label: t('dropdowns.programmes.creche') },
+        { href: '/programmes#maternelle', label: t('dropdowns.programmes.maternelle') },
+      ],
+    },
+    {
+      href: '/presentation',
+      label: t('links.presentation'),
+      desc: t('dropdowns.presentation.desc'),
+      dropdown: [
+        { href: '/presentation#mission', label: t('dropdowns.presentation.mission') },
+        { href: '/presentation#principes', label: t('dropdowns.presentation.principes') },
+        { href: '/presentation#domaines', label: t('dropdowns.presentation.domaines') },
+        { href: '/presentation#leadership', label: t('dropdowns.presentation.leadership') },
+        { href: '/presentation#equipe', label: t('dropdowns.presentation.equipe') },
+        { href: '/presentation#localisations', label: t('dropdowns.presentation.localisations') },
+        { href: '/presentation#carrieres', label: t('dropdowns.presentation.carrieres') },
+      ],
+    },
+    {
+      href: '/admissions',
+      label: t('links.admissions'),
+      desc: t('dropdowns.admissions.desc'),
+      dropdown: [
+        { href: '/admissions#frais', label: t('dropdowns.admissions.frais') },
+        { href: '/admissions#inscription', label: t('dropdowns.admissions.inscription') },
+        { href: '/admissions#portes', label: t('dropdowns.admissions.portes') },
+        { href: '/admissions#faq', label: t('dropdowns.admissions.faq') },
+      ],
+    },
+    { href: '/contact', label: t('links.contact') },
+  ]
 
   return (
     <header className={`${styles.header} ${scrolled ? styles.scrolled : ''}`}>
@@ -81,32 +105,45 @@ export default function Header() {
         {/* Desktop nav */}
         <ul className={styles.navLinks}>
           {navLinks.map((link) => (
-            <li key={link.href} className={link.dropdown ? styles.navDd : ''}>
+            <li
+              key={link.href}
+              className={link.dropdown ? styles.navDd : ''}
+              onMouseEnter={() => link.dropdown && handleMouseEnter(link.href)}
+              onMouseLeave={() => link.dropdown && handleMouseLeave()}
+              onClick={(e) => e.stopPropagation()}
+            >
               <Link href={link.href} className={styles.navLink}>
                 {link.label}
-                {link.dropdown && <ChevronDown size={12} className={styles.caret} />}
+                {link.dropdown && (
+                  <ChevronDown
+                    size={12}
+                    className={`${styles.caret} ${activeDropdown === link.href ? styles.caretOpen : ''}`}
+                  />
+                )}
               </Link>
 
               {link.dropdown && (
-                <div className={styles.ddPanel}>
-                  {/* Inner constrained wrapper */}
+                <div
+                  className={`${styles.ddPanel} ${activeDropdown === link.href ? styles.ddPanelOpen : ''}`}
+                  onMouseEnter={() => handleMouseEnter(link.href)}
+                  onMouseLeave={handleMouseLeave}
+                >
                   <div className={styles.ddInner}>
-                    {/* Left: label + description + divider */}
                     <div className={styles.ddLeft}>
                       <div className={styles.ddLeftText}>
                         <div className={styles.ddTitle}>{link.label}</div>
-                        {link.desc && (
-                          <p className={styles.ddDesc}>{link.desc}</p>
-                        )}
+                        {link.desc && <p className={styles.ddDesc}>{link.desc}</p>}
                       </div>
                       <div className={styles.ddDivider} />
                     </div>
-
-                    {/* Right: 2-column link grid */}
                     <ul className={styles.ddGrid}>
                       {link.dropdown.map((item) => (
                         <li key={item.href}>
-                          <Link href={item.href} className={styles.ddItem}>
+                          <Link
+                            href={item.href}
+                            className={styles.ddItem}
+                            onClick={() => setActiveDropdown(null)}
+                          >
                             {item.label}
                           </Link>
                         </li>
@@ -118,6 +155,11 @@ export default function Header() {
             </li>
           ))}
         </ul>
+
+        {/* Language switcher (desktop) */}
+        <div className={styles.langWrap}>
+          <LanguageSwitcher />
+        </div>
 
         {/* Hamburger */}
         <button
@@ -142,6 +184,10 @@ export default function Header() {
               {link.label}
             </Link>
           ))}
+          {/* Language switcher in mobile menu */}
+          <div className={styles.mobLang}>
+            <LanguageSwitcher />
+          </div>
         </div>
       )}
     </header>

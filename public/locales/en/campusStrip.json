@@ -1,0 +1,14 @@
+{
+  "creche": {
+    "badge": "Nursery",
+    "name": "La P'tite Crèche Ingeri",
+    "desc": "A cosy, safe space for little ones — emotional security, autonomy and gentle stimulation.",
+    "ages": "6 – 24 months"
+  },
+  "maternelle": {
+    "badge": "Kindergarten · International",
+    "name": "Ingeri International School",
+    "desc": "French national curriculum · Montessori pedagogy · Christian values · International outlook.",
+    "ages": "3 – 5 years"
+  }
+}

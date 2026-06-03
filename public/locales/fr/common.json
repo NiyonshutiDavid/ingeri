@@ -1,0 +1,47 @@
+{
+  "tag": {
+    "welcome": "Bienvenue chez Ingeri",
+    "ourCampuses": "Nos deux campus",
+    "ourPurpose": "Notre raison d'être",
+    "webelieve": "Ce en quoi nous croyons",
+    "direction": "Direction",
+    "community": "Notre communauté",
+    "joinIngeri": "Rejoindre Ingeri",
+    "frequentQuestions": "Questions fréquentes",
+    "whoWeAre": "Qui sommes-nous",
+    "ourPhilosophy": "Notre philosophie",
+    "whatWeCultivate": "Ce que nous cultivons",
+    "findUs": "Nous trouver",
+    "joinUs": "Rejoignez-nous",
+    "talkToUs": "Parlons-nous",
+    "whatWeTeach": "Ce que nous enseignons"
+  },
+  "btn": {
+    "enrollChild": "Inscrire mon enfant",
+    "discoverIngeri": "Découvrir Ingeri",
+    "startEnrolment": "Commencer l'inscription",
+    "bookMySpot": "Réserver ma place",
+    "visitCampus": "Visiter le campus",
+    "contactUs": "Nous contacter",
+    "sendApplication": "Envoyer ma candidature",
+    "sendMessage": "Envoyer le message"
+  },
+  "ages": {
+    "creche": "6 – 24 mois",
+    "maternelle": "3 – 5 ans"
+  },
+  "campus": {
+    "creche": "Crèche",
+    "maternelle": "Maternelle · International",
+    "crecheName": "La P'tite Crèche Ingeri",
+    "maternelleName": "Ingeri International School"
+  },
+  "nav": {
+    "home": "Accueil",
+    "campus": "Campus",
+    "programmes": "Programmes",
+    "presentation": "Présentation",
+    "admissions": "Admissions",
+    "contact": "Contactez-nous"
+  }
+}

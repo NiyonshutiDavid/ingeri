@@ -1,0 +1,14 @@
+{
+  "creche": {
+    "badge": "Crèche",
+    "name": "La P'tite Crèche Ingeri",
+    "desc": "Un espace douillet pour les tout-petits — sécurité affective, autonomie et stimulation douce.",
+    "ages": "6 – 24 mois"
+  },
+  "maternelle": {
+    "badge": "Maternelle · International",
+    "name": "Ingeri International School",
+    "desc": "Programme national français · Pédagogie Montessori · Valeurs chrétiennes · Ouverture internationale.",
+    "ages": "3 – 5 ans"
+  }
+}

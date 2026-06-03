@@ -28,13 +28,13 @@
   text-transform: capitalize;
 }
 
-.sideBtn.teal { background: var(--teal); }
+.sideBtn.teal { background: var(--teal); border-radius: 0 0 10px 0;}
 .sideBtn.teal:hover { background: var(--teal-d); padding-top: 26px; }
 
 .sideBtn.pink { background: var(--pink); }
 .sideBtn.pink:hover { background: var(--pink-d); padding-top: 26px; }
 
-.sideBtn.gold { background: var(--gold); }
+.sideBtn.gold { background: var(--gold); border-radius: 0 10px 0 0;}
 .sideBtn.gold:hover { background: #c8841a; padding-top: 26px; }
 
 @media (max-width: 960px) {

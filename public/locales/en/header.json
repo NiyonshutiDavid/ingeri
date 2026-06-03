@@ -1,0 +1,39 @@
+{
+  "links": {
+    "home": "Home",
+    "campus": "Campus",
+    "programmes": "Programmes",
+    "presentation": "About",
+    "admissions": "Admissions",
+    "contact": "Contact us"
+  },
+  "dropdowns": {
+    "campus": {
+      "desc": "Discover our two campuses in Kigali.",
+      "creche": "La P'tite Crèche Ingeri",
+      "maternelle": "Ingeri International School"
+    },
+    "programmes": {
+      "desc": "Tailored educational programmes for every stage of your child's development.",
+      "creche": "Nursery (6–24 months)",
+      "maternelle": "Kindergarten (3–5 years)"
+    },
+    "presentation": {
+      "desc": "Our mission, our team and our educational values.",
+      "mission": "Mission & Vision",
+      "principes": "Our core principles",
+      "domaines": "Learning areas",
+      "leadership": "Leadership",
+      "equipe": "Our team",
+      "localisations": "Our locations",
+      "carrieres": "Careers"
+    },
+    "admissions": {
+      "desc": "Everything you need to know to enrol your child.",
+      "frais": "Tuition fees",
+      "inscription": "How to enrol",
+      "portes": "Open days",
+      "faq": "FAQ"
+    }
+  }
+}

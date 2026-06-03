@@ -1,0 +1,66 @@
+{
+  "tag": "Rejoindre Ingeri",
+  "title": "Admissions",
+  "subtitle": "Tout ce que vous devez savoir pour inscrire votre enfant.",
+
+  "tuition": {
+    "heading": "Frais de scolarité",
+    "colProgramme": "Programme",
+    "colFees": "Frais / mois",
+    "note": "* Des facilités de paiement sont possibles.",
+    "rows": [
+      { "programme": "Crèche (6–24 mois)", "frais": "À compléter" },
+      { "programme": "Petite section (3 ans)", "frais": "À compléter" },
+      { "programme": "Moyenne section", "frais": "À compléter" },
+      { "programme": "Grande section", "frais": "À compléter" },
+      { "programme": "Frais d'inscription", "frais": "À compléter" }
+    ]
+  },
+
+  "steps": {
+    "heading": "Comment s'inscrire",
+    "items": [
+      "Remplir le formulaire de contact",
+      "RDV de visite du campus",
+      "Déposer le dossier d'inscription",
+      "Confirmation de la place",
+      "Période d'adaptation progressive"
+    ],
+    "btn": "Commencer l'inscription"
+  },
+
+  "openDays": {
+    "heading": "Portes ouvertes",
+    "desc": "Venez visiter nos campus et rencontrer l'équipe.",
+    "nextDate": "Prochaine date",
+    "placeholder": "Date à compléter\nHeure à compléter\nAdresse à compléter",
+    "btn": "Réserver ma place"
+  },
+
+  "faq": {
+    "tag": "Questions fréquentes",
+    "title": "FAQ",
+    "items": [
+      {
+        "q": "À partir de quel âge acceptez-vous les enfants ?",
+        "a": "À la crèche dès 6 mois, à la maternelle à partir de 3 ans révolus."
+      },
+      {
+        "q": "Quelle langue est utilisée ?",
+        "a": "Ingeri International School suit le programme national français. Le français est la langue principale, avec une ouverture à l'anglais et au kinyarwanda."
+      },
+      {
+        "q": "Y a-t-il une restauration sur place ?",
+        "a": "Oui, repas équilibrés, variés et locaux préparés chaque jour. Les enfants participent aux routines de table."
+      },
+      {
+        "q": "Comment se déroule la période d'adaptation ?",
+        "a": "Adaptation progressive : visites préalables avec les parents, présences courtes qui s'allongent, respect du rythme de l'enfant."
+      },
+      {
+        "q": "Des facilités de paiement sont-elles possibles ?",
+        "a": "Oui, nous examinons chaque situation. Contactez-nous confidentiellement."
+      }
+    ]
+  }
+}

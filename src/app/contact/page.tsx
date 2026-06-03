@@ -1,72 +1,95 @@
+// src/app/contact/page.tsx
 'use client'
 
 import { useState } from 'react'
+import Image from 'next/image'
 import { MapPin, Phone, Mail, Clock, MessageCircle } from 'lucide-react'
 import { FaFacebook as Facebook, FaInstagram as Instagram } from 'react-icons/fa'
+import { useTranslation } from 'react-i18next'
 import styles from './contact.module.css'
 
 type Tab = 'creche' | 'maternelle'
+const CONTACT_EMAIL = 'contact@ingeri.rw'
 
 export default function ContactPage() {
+  const { t } = useTranslation('contact')
   const [activeTab, setActiveTab] = useState<Tab>('creche')
 
   return (
     <section className={styles.section} id="contact">
       <div className="container">
-        <span className="tag">Parlons-nous</span>
-        <h2 className="sec-title">Contactez-<span>nous</span></h2>
-        <p className="sec-sub">Choisissez le campus que vous souhaitez contacter.</p>
+        <span className="tag">{t('tag')}</span>
+        <h2 className="sec-title">
+          {t('title')}<span>{t('titleSpan')}</span>
+        </h2>
+        <p className="sec-sub">{t('subtitle')}</p>
 
         <div className={styles.tabs}>
           <button
             className={`${styles.tab} ${activeTab === 'creche' ? styles.actTeal : ''}`}
             onClick={() => setActiveTab('creche')}
           >
-            La P&apos;tite Crèche Ingeri
+            {t('tabs.creche')}
           </button>
           <button
             className={`${styles.tab} ${activeTab === 'maternelle' ? styles.actPink : ''}`}
             onClick={() => setActiveTab('maternelle')}
           >
-            Ingeri International School
+            {t('tabs.maternelle')}
           </button>
         </div>
 
         {activeTab === 'creche' && (
           <div className={styles.panel} id="creche">
             <div className={styles.formWrap}>
-              <h3>Message – La P&apos;tite Crèche</h3>
+              <h3>{t('form.headingCreche')}</h3>
               <ContactForm campus="creche" accentClass="btn-teal" />
             </div>
-            <ContactInfo
-              campus="La P'tite Crèche Ingeri"
-              email="creche@ingeri.rw"
-              hours="Lun–Ven : 7h00–18h00"
-              bgStyle={{}}
-              headingColor="var(--teal-d)"
-              socialBg="var(--teal-l)"
-              socialHeadingColor="var(--teal-d)"
-              socialBorderColor="var(--teal)"
-            />
+            <div className={styles.infoCol}>
+              <div className={`${styles.contactImg} ${styles.teal}`}>
+                <Image
+                  src="/campus.jpg"
+                  fill
+                  style={{ objectFit: 'cover' }}
+                  alt={t('info.crecheImgAlt')}
+                />
+              </div>
+              <ContactInfo
+                campus="creche"
+                headingColor="var(--teal-d)"
+                socialBg="var(--teal-l)"
+                socialHeadingColor="var(--teal-d)"
+                socialBorderColor="var(--teal)"
+                bgStyle={{}}
+              />
+            </div>
           </div>
         )}
 
         {activeTab === 'maternelle' && (
           <div className={styles.panel} id="maternelle">
             <div className={styles.formWrap}>
-              <h3 style={{ color: 'var(--pink-d)' }}>Message – Ingeri International School</h3>
+              <h3 style={{ color: 'var(--pink-d)' }}>{t('form.headingMaternelle')}</h3>
               <ContactForm campus="maternelle" accentClass="btn-pink" />
             </div>
-            <ContactInfo
-              campus="Ingeri International School"
-              email="maternelle@ingeri.rw"
-              hours="Lun–Ven : 7h00–17h30"
-              bgStyle={{ background: '#fff8fb' }}
-              headingColor="var(--pink-d)"
-              socialBg="var(--pink-l)"
-              socialHeadingColor="var(--pink-d)"
-              socialBorderColor="var(--pink)"
-            />
+            <div className={styles.infoCol}>
+              <div className={`${styles.contactImg} ${styles.pink}`}>
+                <Image
+                  src="/campus.jpg"
+                  fill
+                  style={{ objectFit: 'cover' }}
+                  alt={t('info.maternelleImgAlt')}
+                />
+              </div>
+              <ContactInfo
+                campus="maternelle"
+                headingColor="var(--pink-d)"
+                socialBg="var(--pink-l)"
+                socialHeadingColor="var(--pink-d)"
+                socialBorderColor="var(--pink)"
+                bgStyle={{ background: '#fff8fb' }}
+              />
+            </div>
           </div>
         )}
       </div>
@@ -75,82 +98,116 @@ export default function ContactPage() {
 }
 
 function ContactForm({ campus, accentClass }: { campus: string; accentClass: string }) {
+  const { t } = useTranslation('contact')
   const isCreche = campus === 'creche'
 
-  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+  const ageOptions = t('form.ageOptions', { returnObjects: true }) as string[]
+  const sectionOptions = t('form.sectionOptions', { returnObjects: true }) as string[]
+  const labels = t('form.emailBodyLabels', { returnObjects: true }) as Record<string, string>
+
+  function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault()
-    const formData = new FormData(e.currentTarget)
-    const body = Object.fromEntries(formData.entries())
-    console.log('Form submitted:', { campus, ...body })
-    alert('Message envoyé ! Nous vous répondrons sous peu.')
+    const data = new FormData(e.currentTarget)
+    const get = (k: string) => (data.get(k) as string) || ''
+
+    const subject = encodeURIComponent(
+      isCreche ? t('form.subjectCreche') : t('form.subjectMaternelle')
+    )
+    const body = encodeURIComponent(
+      [
+        `${labels.firstName} : ${get('prenom')}`,
+        `${labels.lastName} : ${get('nom')}`,
+        `${labels.email} : ${get('email')}`,
+        `${labels.phone} : ${get('tel') || '—'}`,
+        isCreche
+          ? `${labels.childAge} : ${get('age') || '—'}`
+          : `${labels.section} : ${get('section') || '—'}`,
+        ``,
+        `${labels.message} :`,
+        get('message') || '—',
+      ].join('\n')
+    )
+
+    window.location.href = `mailto:${CONTACT_EMAIL}?subject=${subject}&body=${body}`
   }
 
   return (
     <form onSubmit={handleSubmit} className={styles.form}>
       <div className={styles.formRow}>
         <div className={styles.fg}>
-          <label>Prénom</label>
-          <input type="text" name="prenom" placeholder="Votre prénom" required />
+          <label>{t('form.firstName')}</label>
+          <input type="text" name="prenom" placeholder={t('form.firstNamePlaceholder')} required />
         </div>
         <div className={styles.fg}>
-          <label>Nom</label>
-          <input type="text" name="nom" placeholder="Votre nom" required />
+          <label>{t('form.lastName')}</label>
+          <input type="text" name="nom" placeholder={t('form.lastNamePlaceholder')} required />
         </div>
       </div>
       <div className={styles.fg}>
-        <label>Email</label>
-        <input type="email" name="email" placeholder="votre@email.com" required />
+        <label>{t('form.email')}</label>
+        <input type="email" name="email" placeholder={t('form.emailPlaceholder')} required />
       </div>
       <div className={styles.fg}>
-        <label>Téléphone</label>
-        <input type="tel" name="tel" placeholder="+250 xxx xxx xxx" />
+        <label>{t('form.phone')}</label>
+        <input type="tel" name="tel" placeholder={t('form.phonePlaceholder')} />
       </div>
       <div className={styles.fg}>
-        <label>{isCreche ? "Âge de l'enfant" : 'Section souhaitée'}</label>
+        <label>{isCreche ? t('form.childAge') : t('form.section')}</label>
         <select name={isCreche ? 'age' : 'section'}>
-          <option value="">Sélectionner…</option>
-          {isCreche ? (
-            <>
-              <option>6–12 mois</option>
-              <option>12–18 mois</option>
-              <option>18–24 mois</option>
-            </>
-          ) : (
-            <>
-              <option>Petite section (3 ans)</option>
-              <option>Moyenne section</option>
-              <option>Grande section</option>
-            </>
-          )}
+          <option value="">{t('form.selectPlaceholder')}</option>
+          {(isCreche ? ageOptions : sectionOptions).map((opt) => (
+            <option key={opt}>{opt}</option>
+          ))}
         </select>
       </div>
       <div className={styles.fg}>
-        <label>Message</label>
-        <textarea name="message" placeholder="Votre message…" />
+        <label>{t('form.message')}</label>
+        <textarea name="message" placeholder={t('form.messagePlaceholder')} />
       </div>
-      <button type="submit" className={`btn ${accentClass}`}>Envoyer le message</button>
+      <button type="submit" className={`btn ${accentClass}`}>{t('form.submit')}</button>
     </form>
   )
 }
 
 function ContactInfo({
-  campus, email, hours, bgStyle, headingColor, socialBg, socialHeadingColor, socialBorderColor,
+  campus, headingColor, socialBg, socialHeadingColor, socialBorderColor, bgStyle,
 }: {
-  campus: string; email: string; hours: string;
-  bgStyle: React.CSSProperties; headingColor: string;
-  socialBg: string; socialHeadingColor: string; socialBorderColor: string;
+  campus: 'creche' | 'maternelle'
+  headingColor: string
+  socialBg: string
+  socialHeadingColor: string
+  socialBorderColor: string
+  bgStyle: React.CSSProperties
 }) {
+  const { t } = useTranslation('contact')
+  const isCreche = campus === 'creche'
+  const campusName = isCreche ? t('info.crecheName') : t('info.maternelleName')
+  const hours = isCreche ? t('info.hoursCreche') : t('info.hoursMaternelle')
+  const email = isCreche ? 'creche@ingeri.rw' : 'maternelle@ingeri.rw'
+
   return (
     <div className={styles.cfInfo} style={bgStyle}>
       <div>
-        <h3 style={{ color: headingColor }}>{campus}</h3>
-        <div className={styles.ciRow}><MapPin size={15} /><div><strong>Adresse</strong>À compléter – Kigali, Rwanda</div></div>
-        <div className={styles.ciRow}><Phone size={15} /><div><strong>Téléphone</strong>À compléter</div></div>
-        <div className={styles.ciRow}><Mail size={15} /><div><strong>Email</strong>{email}</div></div>
-        <div className={styles.ciRow}><Clock size={15} /><div><strong>Horaires</strong>{hours}</div></div>
+        <h3 style={{ color: headingColor }}>{campusName}</h3>
+        <div className={styles.ciRow}>
+          <MapPin size={15} />
+          <div><strong>{t('info.address')}</strong>{t('info.addressValue')}</div>
+        </div>
+        <div className={styles.ciRow}>
+          <Phone size={15} />
+          <div><strong>{t('info.phone')}</strong>{t('info.phoneValue')}</div>
+        </div>
+        <div className={styles.ciRow}>
+          <Mail size={15} />
+          <div><strong>{t('info.email')}</strong>{email}</div>
+        </div>
+        <div className={styles.ciRow}>
+          <Clock size={15} />
+          <div><strong>{t('info.hours')}</strong>{hours}</div>
+        </div>
       </div>
       <div className={styles.ciSoc} style={{ background: socialBg }}>
-        <p style={{ color: socialHeadingColor }}>Réseaux sociaux</p>
+        <p style={{ color: socialHeadingColor }}>{t('info.social')}</p>
         <div className={styles.socLinks}>
           {[
             { label: 'Facebook', icon: Facebook },

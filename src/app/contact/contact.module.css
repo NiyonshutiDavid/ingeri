@@ -38,6 +38,28 @@
   overflow: hidden;
 }
 
+/* Right column: image stacked above contact info */
+.infoCol {
+  display: flex;
+  flex-direction: column;
+}
+
+.contactImg {
+  height: 220px;
+  position: relative;
+  overflow: hidden;
+  border-bottom: 1.5px solid var(--border);
+  flex-shrink: 0;
+}
+
+.contactImg.teal {
+  background: var(--teal-l);
+}
+
+.contactImg.pink {
+  background: var(--pink-l);
+}
+
 .formWrap {
   background: #fff;
   padding: 40px 36px;
@@ -106,6 +128,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  flex: 1;
 }
 
 .cfInfo h3 {
@@ -172,5 +195,9 @@
 
   .formRow {
     grid-template-columns: 1fr;
+  }
+
+  .contactImg {
+    height: 200px;
   }
 }

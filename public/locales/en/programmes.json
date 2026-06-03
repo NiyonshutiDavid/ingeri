@@ -1,0 +1,69 @@
+{
+  "tag": "What we teach",
+  "title": "Our",
+  "titleSpan": "programmes",
+  "subtitle": "Tailored educational experiences for every age.",
+
+  "tabs": {
+    "creche": "Nursery — 6 to 24 months",
+    "maternelle": "Kindergarten — 3 to 5 years"
+  },
+
+  "creche": {
+    "imgAlt": "La P'tite Crèche Ingeri",
+    "imgLabel": "Photo – nursery activity",
+    "name": "La P'tite Crèche Ingeri",
+    "ages": "Children aged 6 to 24 months",
+    "intro": "The first step in a unique journey of discovery. Personalised welcome, respect for each child's own rhythm.",
+    "pillars": [
+      {
+        "title": "Love and emotional security",
+        "desc": "A stable, caring bond that continues the family cocoon."
+      },
+      {
+        "title": "Autonomy from an early age",
+        "desc": "Drinking from a cup, exploring, choosing an activity, moving freely."
+      },
+      {
+        "title": "Gentle, progressive stimulation",
+        "desc": "Sensory play, nursery rhymes, motor exploration, first interactions."
+      }
+    ],
+    "calendar": "Mon–Fri. Parent meetings & mini-workshops held regularly.",
+    "btn": "Enrol my child"
+  },
+
+  "maternelle": {
+    "imgAlt": "Ingeri International School",
+    "imgLabel": "Photo – kindergarten activity",
+    "name": "Ingeri International School",
+    "ages": "Children aged 3 to 5 years",
+    "intro": "French national curriculum + Montessori pedagogy + Biblical approach for harmonious, international development.",
+    "pillars": [
+      {
+        "title": "Language & Expression",
+        "desc": "Stories, songs, prayers and guided exchanges."
+      },
+      {
+        "title": "Logic & First Numbers",
+        "desc": "Objects, shapes and quantities to discover the order of the world."
+      },
+      {
+        "title": "Creativity & Meaning",
+        "desc": "Painting, singing, modelling, dance."
+      },
+      {
+        "title": "Practical Life & Autonomy",
+        "desc": "Getting dressed, tidying up, serving, taking care of oneself and others."
+      }
+    ],
+    "levels": [
+      "Little section (3 years)",
+      "Middle section (3–4 years)",
+      "Upper section (4–5 years)"
+    ],
+    "btn": "Enrol my child"
+  },
+
+  "calendarLabel": "Calendar:"
+}

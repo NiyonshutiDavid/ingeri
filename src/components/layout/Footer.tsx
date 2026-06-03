@@ -1,38 +1,23 @@
+// src/components/layout/Footer.tsx
+'use client'
+
 import Link from 'next/link'
 import { MapPin, Phone, Mail, Clock, MessageCircle } from 'lucide-react'
 import { FaFacebook as Facebook, FaInstagram as Instagram } from 'react-icons/fa'
+import { useTranslation } from 'react-i18next'
 import styles from './Footer.module.css'
 
 export default function Footer() {
+  const { t } = useTranslation('footer')
+
   return (
     <>
-      {/* Address bar */}
-      <div className={styles.addressBar}>
-        <div className={styles.addrGrid}>
-          <div className={styles.addrBlock}>
-            <span className={`${styles.abBadge} ${styles.teal}`}>La P&apos;tite Crèche Ingeri</span>
-            <h4>La P&apos;tite Crèche Ingeri</h4>
-            <div className={styles.addrRow}><MapPin size={14} /><span>Adresse à compléter, Kigali, Rwanda</span></div>
-            <div className={styles.addrRow}><Phone size={14} /><span>Téléphone à compléter</span></div>
-            <div className={styles.addrRow}><Mail size={14} /><span>creche@ingeri.rw</span></div>
-            <div className={styles.addrRow}><Clock size={14} /><span>Lun–Ven : 7h00 – 18h00</span></div>
-          </div>
-          <div className={styles.addrBlock}>
-            <span className={`${styles.abBadge} ${styles.pink}`}>Ingeri International School</span>
-            <h4>Ingeri International School</h4>
-            <div className={styles.addrRow}><MapPin size={14} /><span>Adresse à compléter, Kigali, Rwanda</span></div>
-            <div className={styles.addrRow}><Phone size={14} /><span>Téléphone à compléter</span></div>
-            <div className={styles.addrRow}><Mail size={14} /><span>maternelle@ingeri.rw</span></div>
-            <div className={styles.addrRow}><Clock size={14} /><span>Lun–Ven : 7h00 – 17h30</span></div>
-          </div>
-        </div>
-      </div>
 
       <footer className={styles.footer}>
         <div className={styles.footGrid}>
           <div className={styles.footBrand}>
             <div className={styles.footLogo}>INGERi</div>
-            <p>Grandir avec amour, foi et excellence. Deux campus à Kigali pour vos enfants de 6 mois à 5 ans.</p>
+            <p>{t('brand.tagline')}</p>
             <div className={styles.socials}>
               <Link href="#" className={styles.socialLink}><Facebook size={14} /> Facebook</Link>
               <Link href="#" className={styles.socialLink}><Instagram size={14} /> Instagram</Link>
@@ -41,41 +26,41 @@ export default function Footer() {
           </div>
 
           <div className={styles.footCol}>
-            <h4>Accueil</h4>
+            <h4>{t('cols.home.title')}</h4>
             <ul>
-              <li><Link href="/#accueil">Bienvenue</Link></li>
-              <li><Link href="/#mission">Mission &amp; Vision</Link></li>
-              <li><Link href="/#valeurs">Nos valeurs</Link></li>
-              <li><Link href="/#direction">Mot de la direction</Link></li>
-              <li><Link href="/#temoignages">Témoignages</Link></li>
+              <li><Link href="/#accueil">{t('cols.home.welcome')}</Link></li>
+              <li><Link href="/#mission">{t('cols.home.mission')}</Link></li>
+              <li><Link href="/#valeurs">{t('cols.home.values')}</Link></li>
+              <li><Link href="/#direction">{t('cols.home.direction')}</Link></li>
+              <li><Link href="/#temoignages">{t('cols.home.testimonials')}</Link></li>
             </ul>
           </div>
 
           <div className={styles.footCol}>
-            <h4>Campus &amp; Programmes</h4>
+            <h4>{t('cols.campus.title')}</h4>
             <ul>
-              <li><Link href="/campus#creche">La P&apos;tite Crèche</Link></li>
-              <li><Link href="/campus#maternelle">Ingeri International School</Link></li>
-              <li><Link href="/programmes#creche">Programme crèche</Link></li>
-              <li><Link href="/programmes#maternelle">Programme maternelle</Link></li>
+              <li><Link href="/campus#creche">{t('cols.campus.creche')}</Link></li>
+              <li><Link href="/campus#maternelle">{t('cols.campus.maternelle')}</Link></li>
+              <li><Link href="/programmes#creche">{t('cols.campus.progCreche')}</Link></li>
+              <li><Link href="/programmes#maternelle">{t('cols.campus.progMaternelle')}</Link></li>
             </ul>
           </div>
 
           <div className={styles.footCol}>
-            <h4>Informations</h4>
+            <h4>{t('cols.info.title')}</h4>
             <ul>
-              <li><Link href="/presentation">Présentation</Link></li>
-              <li><Link href="/admissions">Admissions</Link></li>
-              <li><Link href="/admissions#faq">FAQ</Link></li>
-              <li><Link href="/contact">Contactez-nous</Link></li>
-              <li><Link href="/espace-parents">Espace parents</Link></li>
+              <li><Link href="/presentation">{t('cols.info.presentation')}</Link></li>
+              <li><Link href="/admissions">{t('cols.info.admissions')}</Link></li>
+              <li><Link href="/admissions#faq">{t('cols.info.faq')}</Link></li>
+              <li><Link href="/contact">{t('cols.info.contact')}</Link></li>
+              <li><Link href="/espace-parents">{t('cols.info.parents')}</Link></li>
             </ul>
           </div>
         </div>
 
         <div className={styles.footBottom}>
-          <span>© 2025 Ingeri Schools – Tous droits réservés</span>
-          <span>Conçu avec soin à Kigali, Rwanda</span>
+          <span>{t('bottom.rights')}</span>
+          <span>{t('bottom.credit')}</span>
         </div>
       </footer>
     </>

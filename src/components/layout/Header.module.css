@@ -1,3 +1,6 @@
+/* src/components/layout/Header.module.css */
+/* Diff from original: added .langWrap and .mobLang; tweaked nav justify */
+
 .header {
   position: sticky;
   top: 0;
@@ -20,12 +23,14 @@
   margin: 0 auto;
   padding: 0 28px;
   height: 80px;
+  gap: 12px;
 }
 
 .logo {
   display: flex;
   align-items: center;
   gap: 10px;
+  flex-shrink: 0;
 }
 
 .logoText {
@@ -41,29 +46,12 @@
   align-items: center;
   gap: 2px;
   list-style: none;
+  flex: 1;
+  justify-content: center;
 }
 
 .navDd {
   position: static;
-}
-
-.navDd:hover .ddPanel,
-.ddPanel:hover {
-  display: flex;
-  animation: ddFadeIn 0.2s ease forwards;
-}
-
-.navDd:hover .caret {
-  transform: rotate(180deg);
-}
-
-.navDd::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 100%;
-  height: 12px;
 }
 
 .navLink {
@@ -90,16 +78,27 @@
   transition: transform 0.22s ease;
 }
 
+.caretOpen {
+  transform: rotate(180deg);
+}
+
+/* Language switcher slot (desktop) */
+.langWrap {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+}
+
 /* ─── Full-width mega-menu dropdown ─────────────────────────────────── */
 .ddPanel {
   display: none;
+  opacity: 0;
 
   position: fixed;
   left: 0;
   right: 0;
   width: 100%;
   top: 80px;
-  padding-top: 8px; /* fills the hover gap invisibly */
 
   background: rgba(220, 235, 248, 0.97);
   backdrop-filter: blur(14px);
@@ -113,18 +112,16 @@
   z-index: 300;
 }
 
-@keyframes ddFadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(-6px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+.ddPanelOpen {
+  display: flex;
+  animation: ddFadeIn 0.2s ease forwards;
 }
 
-/* Inner wrapper mirrors nav max-width + padding */
+@keyframes ddFadeIn {
+  from { opacity: 0; transform: translateY(-6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
 .ddInner {
   display: flex;
   flex-direction: row;
@@ -135,7 +132,6 @@
   width: 100%;
 }
 
-/* Left column: label + description + vertical divider */
 .ddLeft {
   display: flex;
   flex-direction: row;
@@ -147,9 +143,7 @@
   flex-shrink: 0;
 }
 
-.ddLeftText {
-  flex: 1;
-}
+.ddLeftText { flex: 1; }
 
 .ddTitle {
   font-family: 'Montserrat', sans-serif;
@@ -181,7 +175,6 @@
   flex-shrink: 0;
 }
 
-/* Right: links in a 2-column grid */
 .ddGrid {
   list-style: none;
   margin: 0;
@@ -255,12 +248,22 @@
   letter-spacing: -1px;
 }
 
-.mobLink:last-child {
+.mobLink:last-of-type {
   border-bottom: none;
+}
+
+/* Language switcher in mobile menu */
+.mobLang {
+  padding-top: 14px;
+  display: flex;
 }
 
 @media (max-width: 960px) {
   .navLinks {
+    display: none;
+  }
+
+  .langWrap {
     display: none;
   }
 

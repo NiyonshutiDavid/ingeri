@@ -1,0 +1,59 @@
+{
+  "tag": "Let's talk",
+  "title": "Contact",
+  "titleSpan": "us",
+  "subtitle": "Choose the campus you wish to contact.",
+
+  "tabs": {
+    "creche": "La P'tite Crèche Ingeri",
+    "maternelle": "Ingeri International School"
+  },
+
+  "form": {
+    "headingCreche": "Message – La P'tite Crèche",
+    "headingMaternelle": "Message – Ingeri International School",
+    "firstName": "First name",
+    "firstNamePlaceholder": "Your first name",
+    "lastName": "Last name",
+    "lastNamePlaceholder": "Your last name",
+    "email": "Email",
+    "emailPlaceholder": "your@email.com",
+    "phone": "Phone",
+    "phonePlaceholder": "+250 xxx xxx xxx",
+    "childAge": "Child's age",
+    "section": "Desired section",
+    "selectPlaceholder": "Select…",
+    "ageOptions": ["6–12 months", "12–18 months", "18–24 months"],
+    "sectionOptions": ["Little section (3 years)", "Middle section", "Upper section"],
+    "message": "Message",
+    "messagePlaceholder": "Your message…",
+    "submit": "Send message",
+    "subjectCreche": "[Ingeri – Nursery] Information request",
+    "subjectMaternelle": "[Ingeri – Kindergarten] Information request",
+    "emailBodyLabels": {
+      "firstName": "First name",
+      "lastName": "Last name",
+      "email": "Email",
+      "phone": "Phone",
+      "childAge": "Child's age",
+      "section": "Desired section",
+      "message": "Message"
+    }
+  },
+
+  "info": {
+    "crecheName": "La P'tite Crèche Ingeri",
+    "maternelleName": "Ingeri International School",
+    "address": "Address",
+    "addressValue": "To complete – Kigali, Rwanda",
+    "phone": "Phone",
+    "phoneValue": "To complete",
+    "email": "Email",
+    "hours": "Hours",
+    "hoursCreche": "Mon–Fri: 7:00 am – 6:00 pm",
+    "hoursMaternelle": "Mon–Fri: 7:00 am – 5:30 pm",
+    "social": "Social media",
+    "crecheImgAlt": "La P'tite Crèche Ingeri building",
+    "maternelleImgAlt": "Ingeri International School building"
+  }
+}

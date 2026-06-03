@@ -1,0 +1,44 @@
+{
+  "addressBar": {
+    "crecheName": "La P'tite Crèche Ingeri",
+    "maternelleName": "Ingeri International School",
+    "address": "Adresse à compléter, Kigali, Rwanda",
+    "phone": "Téléphone à compléter",
+    "hours": {
+      "creche": "Lun–Ven : 7h00 – 18h00",
+      "maternelle": "Lun–Ven : 7h00 – 17h30"
+    }
+  },
+  "brand": {
+    "tagline": "Grandir avec amour, foi et excellence. Deux campus à Kigali pour vos enfants de 6 mois à 5 ans."
+  },
+  "cols": {
+    "home": {
+      "title": "Accueil",
+      "welcome": "Bienvenue",
+      "mission": "Mission & Vision",
+      "values": "Nos valeurs",
+      "direction": "Mot de la direction",
+      "testimonials": "Témoignages"
+    },
+    "campus": {
+      "title": "Campus & Programmes",
+      "creche": "La P'tite Crèche",
+      "maternelle": "Ingeri International School",
+      "progCreche": "Programme crèche",
+      "progMaternelle": "Programme maternelle"
+    },
+    "info": {
+      "title": "Informations",
+      "presentation": "Présentation",
+      "admissions": "Admissions",
+      "faq": "FAQ",
+      "contact": "Contactez-nous",
+      "parents": "Espace parents"
+    }
+  },
+  "bottom": {
+    "rights": "© 2025 Ingeri Schools – Tous droits réservés",
+    "credit": "Conçu avec soin à Kigali, Rwanda"
+  }
+}

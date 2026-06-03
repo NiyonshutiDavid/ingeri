@@ -1,0 +1,23 @@
+{
+  "tag": "Ce en quoi nous croyons",
+  "title": "Nos",
+  "titleSpan": "valeurs",
+  "items": [
+    {
+      "title": "Amour",
+      "description": "Chaque enfant est accueilli inconditionnellement, comme un don précieux."
+    },
+    {
+      "title": "Foi",
+      "description": "La foi chrétienne inspire chaque interaction, chaque geste du quotidien."
+    },
+    {
+      "title": "Excellence",
+      "description": "Toujours viser le meilleur — pour chaque enfant, chaque famille."
+    },
+    {
+      "title": "Communauté",
+      "description": "Parents, enfants et éducateurs, ensemble pour grandir sereinement."
+    }
+  ]
+}

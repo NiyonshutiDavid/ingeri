@@ -1,0 +1,111 @@
+{
+  "intro": {
+    "tag": "Who we are",
+    "title": "Our",
+    "titleSpan": "presentation",
+    "subtitle": "Everything that makes up Ingeri's deep identity: our philosophy, our team and our commitments."
+  },
+
+  "missionVision": {
+    "tag": "Our purpose",
+    "title": "Mission &",
+    "titleSpan": "Vision",
+    "mission": {
+      "heading": "Our mission",
+      "body": "Sowing the seeds of excellence from early childhood. We support every child in their holistic development — spiritual, emotional, intellectual, social and motor — within a safe, loving and stimulating environment."
+    },
+    "vision": {
+      "heading": "Our vision",
+      "body": "To become a reference network of educational spaces in Rwanda and Africa, recognised for pedagogical quality, Christian values and innovation adapted to our local context."
+    }
+  },
+
+  "principes": {
+    "tag": "Our philosophy",
+    "title": "Our core",
+    "titleSpan": "principles",
+    "items": [
+      { "title": "Child-centred", "desc": "Every child is unique. The adult observes, encourages and supports without imposing." },
+      { "title": "Christian foundation", "desc": "Patience, respect, humility, joy and forgiveness at the heart of every day." },
+      { "title": "The bond", "desc": "Child–educator, child–family: shared trust creates security." },
+      { "title": "Connection to nature", "desc": "Gardening, natural objects: nature nurtures wonder." },
+      { "title": "Autonomy and dignity", "desc": "The child learns to 'do it alone' and to trust themselves." }
+    ]
+  },
+
+  "domaines": {
+    "tag": "What we cultivate",
+    "title": "Learning",
+    "titleSpan": "areas",
+    "items": [
+      "Language & expression",
+      "Logic & first numbers",
+      "Creativity & meaning",
+      "Practical life & autonomy",
+      "Living together & faith",
+      "Nature awareness",
+      "Motor development",
+      "Music & rhythm"
+    ]
+  },
+
+  "leadership": {
+    "tag": "Leadership",
+    "title": "The",
+    "titleSpan": "Leadership",
+    "p1": "At Ingeri, leadership is in the service of the child. Every pedagogical decision is guided by a single question: is this the best for the child?",
+    "p2": "Our leadership team deeply believes that early childhood education is the most precious investment one can make for a generation.",
+    "quote": "Every child is a promise of the future. Our role is to honour that promise.",
+    "quoteCite": "— Founder, Ingeri Schools",
+    "photoAlt": "Founder / Director"
+  },
+
+  "equipe": {
+    "tag": "The faces of Ingeri",
+    "title": "Our",
+    "titleSpan": "team",
+    "subtitle": "Committed women — mothers and professionals — in the service of your children.",
+    "members": [
+      { "name": "First Last", "role": "Pedagogical Director" },
+      { "name": "First Last", "role": "Nursery educator" },
+      { "name": "First Last", "role": "Kindergarten teacher" },
+      { "name": "First Last", "role": "Coordinator" }
+    ]
+  },
+
+  "localisations": {
+    "tag": "Find us",
+    "title": "Our",
+    "titleSpan": "locations",
+    "creche": {
+      "name": "La P'tite Crèche Ingeri",
+      "address": "Address to complete – Kigali",
+      "phone": "Phone: to complete",
+      "hours": "Mon–Fri: 7:00 am – 6:00 pm",
+      "btn": "Contact us"
+    },
+    "maternelle": {
+      "name": "Ingeri International School",
+      "address": "Address to complete – Kigali",
+      "phone": "Phone: to complete",
+      "hours": "Mon–Fri: 7:00 am – 5:30 pm",
+      "btn": "Contact us"
+    }
+  },
+
+  "carrieres": {
+    "tag": "Join us",
+    "title": "Careers at",
+    "titleSpan": "Ingeri",
+    "jobsTitle": "Open positions",
+    "jobs": [
+      { "title": "Nursery educator", "location": "La P'tite Crèche · Kigali", "badge": "Full time", "type": "teal" },
+      { "title": "Kindergarten teacher", "location": "Ingeri International School", "badge": "Full time", "type": "teal" },
+      { "title": "Pedagogical intern", "location": "Both campuses", "badge": "Internship", "type": "pink" }
+    ],
+    "teamQuote": "Working at Ingeri means feeling every day that your work has meaning.",
+    "ctaTitle": "Join the Ingeri family",
+    "ctaDesc": "Do you share our values of kindness, excellence and faith? Send us your application.",
+    "ctaBtn": "Send my application"
+  }
+}

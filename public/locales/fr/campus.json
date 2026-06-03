@@ -1,0 +1,37 @@
+{
+  "tag": "Nos deux campus",
+  "title": "Nos",
+  "titleSpan": "campus",
+  "subtitle": "Deux environnements pensés pour chaque tranche d'âge, réunis sous la même philosophie.",
+
+  "creche": {
+    "badge": "Crèche",
+    "imgAlt": "La P'tite Crèche Ingeri",
+    "imgLabel": "Photo – La P'tite Crèche Ingeri",
+    "name": "La P'tite Crèche Ingeri",
+    "desc": "Un espace douillet et sécurisé pour les tout-petits de 6 à 24 mois — conçu pour soutenir chaque étape de leur développement avec amour et douceur.",
+    "ages": "6 – 24 mois",
+    "address": "Kigali, Rwanda – à compléter",
+    "email": "creche@ingeri.rw",
+    "btn": "Visiter le campus"
+  },
+
+  "maternelle": {
+    "badge": "Maternelle · International",
+    "imgAlt": "Ingeri International School",
+    "imgLabel": "Photo – Ingeri International School",
+    "intlStrip": "Programme national français · Pédagogie Montessori · Enseignement bilingue & international",
+    "name": "Ingeri International School",
+    "desc": "Un campus dynamique pour les enfants de 3 à 5 ans. Nous suivons le programme national français tout en intégrant une pédagogie active et des valeurs chrétiennes dans un environnement international et ouvert.",
+    "ages": "3 – 5 ans",
+    "address": "Kigali, Rwanda – à compléter",
+    "email": "maternelle@ingeri.rw",
+    "btn": "Visiter le campus"
+  },
+
+  "labels": {
+    "ages": "Âges :",
+    "address": "Adresse",
+    "email": "Email"
+  }
+}

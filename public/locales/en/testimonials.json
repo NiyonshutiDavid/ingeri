@@ -1,0 +1,26 @@
+{
+  "tag": "Our community",
+  "title": "Echoes of our",
+  "titleSpan": "community",
+  "subtitle": "What Ingeri families say about their experience.",
+  "items": [
+    {
+      "quote": "Since our daughter joined La P'tite Crèche Ingeri, she blossoms every day. The team is attentive, caring, and we truly feel our child is in good hands.",
+      "initials": "AM",
+      "name": "Amina M.",
+      "detail": "Parent – Nursery"
+    },
+    {
+      "quote": "The Montessori approach combined with Christian values — that is exactly what we were looking for our son. He comes home from school happy, curious and confident.",
+      "initials": "JK",
+      "name": "Jean K.",
+      "detail": "Parent – Kindergarten"
+    },
+    {
+      "quote": "What won me over was the genuine attention given to each child. Not a number, but a unique person. Ingeri is a family.",
+      "initials": "GN",
+      "name": "Gisèle N.",
+      "detail": "Parent – Nursery"
+    }
+  ]
+}

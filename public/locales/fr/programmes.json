@@ -1,0 +1,69 @@
+{
+  "tag": "Ce que nous enseignons",
+  "title": "Nos",
+  "titleSpan": "programmes",
+  "subtitle": "Des expériences pédagogiques adaptées à chaque âge.",
+
+  "tabs": {
+    "creche": "Crèche — 6 à 24 mois",
+    "maternelle": "Maternelle — 3 à 5 ans"
+  },
+
+  "creche": {
+    "imgAlt": "La P'tite Crèche Ingeri",
+    "imgLabel": "Photo activité crèche",
+    "name": "La P'tite Crèche Ingeri",
+    "ages": "Enfants de 6 à 24 mois",
+    "intro": "La première étape d'une aventure d'éveil unique. Accueil individualisé, respect du rythme de chaque enfant.",
+    "pillars": [
+      {
+        "title": "L'amour et la sécurité affective",
+        "desc": "Lien stable et bienveillant dans la continuité du cocon familial."
+      },
+      {
+        "title": "L'autonomie dès le plus jeune âge",
+        "desc": "Boire à la tasse, explorer, choisir une activité, se déplacer librement."
+      },
+      {
+        "title": "Stimulation douce et progressive",
+        "desc": "Jeux sensoriels, comptines, exploration motrice, premières interactions."
+      }
+    ],
+    "calendar": "Lun–Ven. Réunions parents & mini-ateliers réguliers.",
+    "btn": "Inscrire mon enfant"
+  },
+
+  "maternelle": {
+    "imgAlt": "Ingeri International School",
+    "imgLabel": "Photo activité maternelle",
+    "name": "Ingeri International School",
+    "ages": "Enfants de 3 à 5 ans",
+    "intro": "Programme national français + pédagogie Montessori + approche biblique pour un épanouissement harmonieux et international.",
+    "pillars": [
+      {
+        "title": "Langage & Expression",
+        "desc": "Histoires, chansons, prières et échanges guidés."
+      },
+      {
+        "title": "Logique & Premiers nombres",
+        "desc": "Objets, formes et quantités pour découvrir l'ordre du monde."
+      },
+      {
+        "title": "Créativité & Sens",
+        "desc": "Peinture, chant, modelage, danse."
+      },
+      {
+        "title": "Vie Pratique & Autonomie",
+        "desc": "S'habiller, ranger, servir, prendre soin de soi et des autres."
+      }
+    ],
+    "levels": [
+      "Petite section (3 ans)",
+      "Moyenne section (3–4 ans)",
+      "Grande section (4–5 ans)"
+    ],
+    "btn": "Inscrire mon enfant"
+  },
+
+  "calendarLabel": "Calendrier :"
+}

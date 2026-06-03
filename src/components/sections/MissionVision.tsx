@@ -1,37 +1,40 @@
-import { Target, Eye, CheckCircle2 } from 'lucide-react'
+// src/components/sections/MissionVision.tsx
+'use client'
+
+import { CheckCircle2 } from 'lucide-react'
+import { useTranslation } from 'react-i18next'
 import styles from './MissionVision.module.css'
 
 export default function MissionVision() {
+  const { t } = useTranslation('missionVision')
+  const visionItems = t('vision.items', { returnObjects: true }) as string[]
+
   return (
     <div id="mission" className={styles.wrapper}>
       <div className="container">
-        <span className="tag">Notre raison d&apos;être</span>
-        <h2 className="sec-title">Mission &amp; <span>Vision</span></h2>
+        <span className="tag">{t('tag')}</span>
+        <h2 className="sec-title">
+          {t('title')} <span>{t('titleSpan')}</span>
+        </h2>
         <div className={styles.mvGrid}>
           <div className={styles.mvBlock}>
             <h3>
-              <Target size={18} style={{ display: 'inline', marginRight: 8, verticalAlign: 'middle' }} />
-              Notre mission
+              {t('mission.heading')}
             </h3>
-            <p>
-              Semer les graines de l&apos;excellence dès la petite enfance. Nous accompagnons chaque enfant
-              dans son développement global — spirituel, affectif, intellectuel, social et moteur — dans
-              un environnement sécurisé, aimant et stimulant.
-            </p>
+            <p>{t('mission.body')}</p>
           </div>
           <div className={`${styles.mvBlock} ${styles.pink}`}>
             <h3>
-              <Eye size={18} style={{ display: 'inline', marginRight: 8, verticalAlign: 'middle' }} />
-              Notre vision
+              {t('vision.heading')}
             </h3>
-            <p>
-              Devenir un réseau d&apos;espaces éducatifs de référence au Rwanda et en Afrique, reconnus pour
-              la qualité pédagogique, l&apos;ancrage chrétien et l&apos;innovation adaptée à notre contexte local.
-            </p>
+            <p>{t('vision.body')}</p>
             <ul className={styles.mvList}>
-              <li><CheckCircle2 size={14} style={{ flexShrink: 0, marginTop: 3 }} />Excellence de l&apos;accompagnement pédagogique</li>
-              <li><CheckCircle2 size={14} style={{ flexShrink: 0, marginTop: 3 }} />Ancrage dans les valeurs chrétiennes</li>
-              <li><CheckCircle2 size={14} style={{ flexShrink: 0, marginTop: 3 }} />Innovation éducative au service du contexte local</li>
+              {visionItems.map((item, i) => (
+                <li key={i}>
+                  <CheckCircle2 size={14} style={{ flexShrink: 0, marginTop: 3 }} />
+                  {item}
+                </li>
+              ))}
             </ul>
           </div>
         </div>
