@@ -1,65 +1,14 @@
-.addressBar {
-  background: var(--dark);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-}
-
-.addrGrid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  max-width: 1160px;
-  margin: 0 auto;
-}
-
-.addrBlock {
-  padding: 36px 44px;
-  border-right: 1px solid rgba(255, 255, 255, 0.08);
-}
-
-.addrBlock:last-child {
-  border-right: none;
-}
-
-.addrBlock h4 {
-  font-size: 16px;
-  color: #fff;
-  margin-bottom: 10px;
-}
-
-.abBadge {
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 0.07em;
-  text-transform: uppercase;
-  padding: 3px 10px;
-  border-radius: 99px;
-  margin-bottom: 12px;
-  display: inline-block;
-}
-
-.abBadge.teal {
-  background: rgba(62, 200, 200, 0.15);
-  color: var(--teal);
-}
-
-.abBadge.pink {
-  background: rgba(244, 114, 168, 0.15);
-  color: var(--pink);
-}
-
-.addrRow {
-  display: flex;
-  gap: 10px;
-  font-size: 13px;
-  color: rgba(255, 255, 255, 0.6);
-  margin-bottom: 6px;
-  align-items: flex-start;
-}
-
-/* Footer */
+/* Footer floats as a frosted card above the texture */
 .footer {
-  background: var(--dark);
+  margin: 0 28px 36px;
+  background: rgba(255, 255, 255, 0.10);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: var(--r-xl);
   color: #fff;
-  padding: 44px 0 24px;
+  padding: 44px 0 0;
+  box-shadow: 0 8px 40px rgba(0,0,0,0.12);
 }
 
 .footGrid {
@@ -68,12 +17,13 @@
   gap: 36px;
   max-width: 1160px;
   margin: 0 auto 36px;
-  padding: 0 28px;
+  padding: 0 44px;
 }
 
+/* Brand column */
 .footBrand p {
   font-size: 13px;
-  opacity: 0.6;
+  color: rgba(255, 255, 255, 0.70);
   margin-top: 8px;
   max-width: 240px;
   line-height: 1.7;
@@ -83,60 +33,74 @@
   font-family: 'Montserrat', sans-serif;
   font-weight: 900;
   font-size: 19px;
-  color: var(--teal);
+  color: #fff;
+  letter-spacing: -1px;
 }
 
 .socials {
   display: flex;
-  gap: 10px;
-  margin-top: 12px;
+  gap: 8px;
+  margin-top: 14px;
+  flex-wrap: wrap;
 }
 
 .socialLink {
-  font-size: 13px;
-  color: var(--teal);
-  opacity: 0.7;
-  transition: opacity 0.15s;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 5px 12px;
+  border-radius: 99px;
+  border: 1px solid rgba(255,255,255,0.30);
+  color: #fff;
+  background: rgba(255,255,255,0.10);
+  transition: background 0.18s, border-color 0.18s;
+  font-family: 'Montserrat', sans-serif;
+  letter-spacing: -0.5px;
 }
 
 .socialLink:hover {
-  opacity: 1;
+  background: rgba(255,255,255,0.22);
+  border-color: rgba(255,255,255,0.50);
 }
 
+/* Nav columns */
 .footCol h4 {
-  font-size: 11px;
+  font-size: 10px;
   letter-spacing: 0.09em;
   text-transform: uppercase;
-  color: var(--teal);
-  margin-bottom: 12px;
+  color: rgba(255,255,255,0.50);
+  margin-bottom: 14px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
 }
 
 .footCol ul {
   display: flex;
   flex-direction: column;
-  gap: 7px;
+  gap: 8px;
   list-style: none;
 }
 
 .footCol ul li a {
   font-size: 13px;
-  opacity: 0.6;
-  transition: opacity 0.15s;
-  color: #fff;
+  color: rgba(255, 255, 255, 0.72);
+  transition: color 0.15s;
 }
 
 .footCol ul li a:hover {
-  opacity: 1;
-  color: var(--teal);
+  color: #fff;
 }
 
+/* Bottom bar */
 .footBottom {
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
-  padding: 18px 28px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.14);
+  padding: 16px 44px;
   display: flex;
   justify-content: space-between;
   font-size: 12px;
-  opacity: 0.45;
+  color: rgba(255,255,255,0.45);
   flex-wrap: wrap;
   gap: 8px;
   max-width: 1160px;
@@ -144,12 +108,17 @@
 }
 
 @media (max-width: 960px) {
-  .addrGrid {
-    grid-template-columns: 1fr;
+  .footer {
+    margin: 0 16px 24px;
   }
 
   .footGrid {
     grid-template-columns: 1fr 1fr;
+    padding: 0 28px;
+  }
+
+  .footBottom {
+    padding: 16px 28px;
   }
 }
 

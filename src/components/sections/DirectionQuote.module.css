@@ -1,53 +1,99 @@
+/* Section sits on texture */
 .wrapper {
-  background: #fff;
-  border-top: 1.5px solid var(--border);
-  padding: 56px 0;
+  padding: 72px 0;
 }
 
+/* Single wide floating card — 1fr photo : 1.7fr text */
 .strip {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1.5px;
-  background: var(--border);
-  border: 1.5px solid var(--border);
-  border-radius: var(--r-lg);
+  grid-template-columns: 1fr 1.7fr;
+  border-radius: var(--r-xl);
   overflow: hidden;
-  margin-top: 28px;
+  box-shadow: var(--sh-up);
+  margin-top: 36px;
 }
 
+/* Left: photo panel — teal with the school image */
 .photo {
-  background: var(--teal-l);
+  background-color: var(--teal-d);
+  background-image: url('/background.png');
+  background-size: cover;
+  background-position: center;
   min-height: 340px;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 13px;
-  font-weight: 600;
-  color: var(--teal-d);
+  align-items: flex-end;
+  justify-content: flex-start;
+  padding: 24px;
   position: relative;
   overflow: hidden;
 }
 
+/* Next/Image fills the panel */
+.photo :global(img) {
+  object-fit: cover;
+}
+
+/* Frosted name badge over the photo */
+.photoLabel {
+  position: relative;
+  z-index: 2;
+  background: rgba(255,255,255,0.18);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255,255,255,0.35);
+  border-radius: var(--r-md);
+  padding: 10px 14px;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  font-family: 'Montserrat', sans-serif;
+  letter-spacing: -0.5px;
+}
+
+.photoLabel span {
+  font-size: 11px;
+  opacity: 0.80;
+  font-weight: 400;
+  font-family: 'Poppins', sans-serif;
+  letter-spacing: 0;
+}
+
+/* Right: white text panel */
 .text {
   background: #fff;
-  padding: 48px 40px;
+  padding: 52px 48px;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
 .quoteMark {
+  font-size: 80px;
+  line-height: 0.6;
   color: var(--teal-l);
-  margin-bottom: 16px;
-  line-height: 1;
+  font-family: Georgia, serif;
+  margin-bottom: 20px;
+}
+
+.quoteMarkEnd {
+  font-size: 80px;
+  line-height: 0.6;
+  color: var(--teal-l);
+  font-family: Georgia, serif;
+  /* margin-bottom: 20px; */
+  align-self: flex-end;
+  transform: rotate(180deg);
 }
 
 .text blockquote {
   font-size: 16px;
-  color: var(--dark);
+  color: var(--body);
   font-style: italic;
-  line-height: 1.65;
-  margin-bottom: 24px;
+  line-height: 1.75;
+  margin-bottom: 28px;
   font-family: 'Poppins', sans-serif;
   font-weight: 400;
   text-transform: none;
@@ -56,16 +102,17 @@
 
 .dirName {
   font-weight: 900;
-  font-size: 14px;
+  font-size: 15px;
   color: var(--teal-d);
   font-family: 'Montserrat', sans-serif;
-  text-transform: capitalize;
   letter-spacing: -1px;
+  text-transform: capitalize;
 }
 
 .dirRole {
   font-size: 13px;
-  color: var(--mid);
+  color: var(--hint);
+  margin-top: 2px;
   font-family: 'Poppins', sans-serif;
   text-transform: none;
   letter-spacing: 0;
@@ -74,5 +121,14 @@
 @media (max-width: 960px) {
   .strip {
     grid-template-columns: 1fr;
+  }
+
+  .photo {
+    min-height: 260px;
+    align-items: flex-end;
+  }
+
+  .text {
+    padding: 36px 28px;
   }
 }

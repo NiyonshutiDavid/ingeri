@@ -1,30 +1,34 @@
+/* Section sits on texture — white text headers */
 .wrapper {
-  background: #fff;
-  border-top: 1.5px solid var(--border);
-  padding: 56px 0;
+  padding: 72px 0;
 }
 
 .mvGrid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 1.5px;
-  background: var(--border);
-  border: 1.5px solid var(--border);
-  border-radius: var(--r-lg);
-  overflow: hidden;
-  margin-top: 28px;
+  gap: 20px;
+  margin-top: 36px;
 }
 
+/* Floating white card */
 .mvBlock {
   background: #fff;
+  border-radius: var(--r-lg);
+  box-shadow: var(--sh);
   padding: 48px 44px;
+  transition: box-shadow 0.22s, transform 0.22s;
+}
+
+.mvBlock:hover {
+  box-shadow: var(--sh-up);
+  transform: translateY(-3px);
 }
 
 .mvBlock h3 {
-  font-size: 20px;
+  font-size: 19px;
   color: var(--teal-d);
   margin-bottom: 14px;
-  padding-bottom: 10px;
+  padding-bottom: 12px;
   border-bottom: 2px solid var(--teal-l);
 }
 
@@ -34,24 +38,29 @@
 }
 
 .mvBlock p {
-  color: var(--mid);
+  color: var(--body);
   font-size: 15px;
 }
 
 .mvList {
-  margin-top: 14px;
+  margin-top: 16px;
   display: flex;
   flex-direction: column;
-  gap: 7px;
+  gap: 8px;
   list-style: none;
 }
 
 .mvList li {
   font-size: 14px;
-  color: var(--mid);
+  color: var(--body);
   display: flex;
   gap: 8px;
   align-items: flex-start;
+}
+
+/* CheckCircle icon inherits pink-d in the pink card */
+.mvBlock.pink .mvList li svg {
+  color: var(--pink-d);
 }
 
 @media (max-width: 960px) {

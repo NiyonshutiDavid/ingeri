@@ -3,25 +3,31 @@
 
 /* ── DESIGN TOKENS ── */
 :root {
-  --teal: #3EC8C8;
-  --teal-l: #B8ECEC;
-  --teal-d: #2A9898;
-  --pink: #F472A8;
-  --pink-l: #FDDAEC;
+  /* Logo gradient palette: cyan → pink → orange/gold */
+  --teal:   #4ECDC4;
+  --teal-l: #C5F0EE;
+  --teal-d: #1A8C86;   /* darkened for stronger heading contrast */
+  --pink:   #F093B0;
+  --pink-l: #FDDAE9;
   --pink-d: #C8336E;
-  --gold: #F5A623;
-  --white: #fff;
-  --off: #F7FAFA;
-  --dark: #142424;
-  --mid: #456060;
-  --light: #7A9898;
-  --border: #D8EEEE;
-  --r-sm: 6px;
-  --r-md: 14px;
-  --r-lg: 22px;
-  --r-xl: 36px;
-  --sh-sm: 0 2px 10px rgba(62, 200, 200, 0.10);
-  --sh-md: 0 6px 28px rgba(62, 200, 200, 0.16);
+  --gold:   #F5A623;
+  --gold-l: #FDEBC8;
+  --white:  #fff;
+  --off:    #F6FAFA;
+  --dark:   #2D3A3A;
+  --mid:    #4A6060;
+  --light:  #7A9898;
+  --body:   #2E6B68;   /* all body / paragraph text — dark teal, never black */
+  --hint:   #5A9490;   /* captions, details, placeholders */
+  --border: #D4EDEB;
+  --r-sm:   6px;
+  --r-md:   14px;
+  --r-lg:   22px;
+  --r-xl:   36px;
+  --sh-sm:  0 2px 10px rgba(78, 205, 196, 0.10);
+  --sh-md:  0 6px 28px rgba(78, 205, 196, 0.20);
+  --sh:     0 4px 24px rgba(0,0,0,0.09), 0 1px 4px rgba(0,0,0,0.05);
+  --sh-up:  0 14px 44px rgba(0,0,0,0.15), 0 2px 8px rgba(0,0,0,0.07);
 }
 
 /* ── RESET ── */
@@ -40,8 +46,11 @@ html {
 body {
   font-family: 'Poppins', sans-serif;
   font-size: 16px;
-  color: var(--dark);
-  background: var(--white);
+  color: var(--body);
+  background-image: url('/background.png');
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
   line-height: 1.7;
 }
 
@@ -79,41 +88,72 @@ section {
 }
 
 section.alt {
-  background: var(--off);
+  background: transparent;
 }
 
+/* Tag on texture: white pill with frosted border */
 .tag {
   display: inline-block;
-  background: var(--teal-l);
-  color: var(--teal-d);
+  background: rgba(255,255,255,0.18);
+  color: #fff;
   font-size: 11px;
   font-weight: 900;
-  letter-spacing: -1px;
+  letter-spacing: -0.5px;
   text-transform: capitalize;
   padding: 5px 14px;
   border-radius: 99px;
   margin-bottom: 14px;
   font-family: 'Montserrat', sans-serif;
+  border: 1px solid rgba(255,255,255,0.32);
+}
+
+/* Tag inside a white card: revert to teal */
+.card-body .tag,
+.tag-on-white {
+  background: var(--teal-l);
+  color: var(--teal-d);
+  border: none;
 }
 
 .sec-title {
   font-size: clamp(22px, 3.5vw, 34px);
   margin-bottom: 10px;
+  color: #fff;
+  text-shadow: 0 2px 10px rgba(0,0,0,0.12);
 }
 
 .sec-title span {
+  color: rgba(255,255,255,0.72);
+}
+
+/* sec-title inside white cards */
+.card-body .sec-title,
+.sec-title-dark {
+  color: var(--teal-d);
+  text-shadow: none;
+}
+
+.card-body .sec-title span,
+.sec-title-dark span {
   color: var(--teal);
 }
 
 .sec-sub {
   font-size: 14px;
-  color: var(--mid);
+  color: rgba(255,255,255,0.80);
   max-width: 540px;
   margin-bottom: 44px;
   font-family: 'Poppins', sans-serif;
   font-weight: 400;
   text-transform: none;
   letter-spacing: 0;
+  font-style: italic;
+}
+
+/* sec-sub inside white cards */
+.card-body .sec-sub,
+.sec-sub-dark {
+  color: var(--body);
 }
 
 /* ── BUTTONS ── */
@@ -135,15 +175,16 @@ section.alt {
 
 .btn:hover {
   transform: translateY(-2px);
-  box-shadow: var(--sh-md);
+  box-shadow: 0 6px 24px rgba(0,0,0,0.16);
 }
 
-.btn-teal { background: var(--teal); color: #fff; }
-.btn-pink { background: var(--pink); color: #fff; }
-.btn-outline { background: transparent; color: var(--teal); border: 2px solid var(--teal); }
+.btn-teal    { background: var(--teal);  color: #fff; }
+.btn-pink    { background: var(--pink);  color: #fff; }
+.btn-gold    { background: var(--gold);  color: #fff; }
+.btn-outline { background: transparent; color: var(--teal-d); border: 2px solid var(--teal); }
 .btn-outline:hover { background: var(--teal); color: #fff; }
-.btn-white { background: #fff; color: var(--teal-d); }
-.btn-dark { background: var(--dark); color: #fff; }
+.btn-white   { background: #fff; color: var(--teal-d); }
+.btn-dark    { background: var(--dark);  color: #fff; }
 
 /* ── RESPONSIVE ── */
 @media (max-width: 960px) {

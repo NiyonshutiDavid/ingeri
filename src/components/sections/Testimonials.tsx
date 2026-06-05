@@ -17,17 +17,19 @@ export default function Testimonials() {
   return (
     <div id="temoignages" className={styles.wrapper}>
       <div className="container">
+        {/* headers on texture → white globals */}
         <span className="tag">{t('tag')}</span>
         <h2 className="sec-title">
           {t('title')} <span>{t('titleSpan')}</span>
         </h2>
         <p className="sec-sub">{t('subtitle')}</p>
+
         <div className={styles.echoesGrid}>
-          {items.map((item) => (
+          {items.map((item, idx) => (
             <div key={item.name} className={styles.echoBlock}>
               <div className={styles.stars}>
                 {[...Array(5)].map((_, i) => (
-                  <Star key={i} size={13} fill="currentColor" strokeWidth={0} />
+                  <Star key={i} size={13} fill="var(--gold)" strokeWidth={0} />
                 ))}
               </div>
               <blockquote>&ldquo;{item.quote}&rdquo;</blockquote>

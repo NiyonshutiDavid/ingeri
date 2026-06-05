@@ -11,31 +11,37 @@ export default function CampusStrip() {
 
   return (
     <div className={styles.campusStrip}>
-      <Link href="/campus#creche" className={styles.csBlock}>
-        <div className={`${styles.csThumb} ${styles.teal}`}>
-          <Baby size={32} />
-        </div>
-        <div className={styles.csText}>
-          <span className={`${styles.csBadge} ${styles.teal}`}>{t('creche.badge')}</span>
-          <h3>{t('creche.name')}</h3>
-          <p>{t('creche.desc')}</p>
-          <span className={`${styles.csAge} ${styles.teal}`}>{t('creche.ages')}</span>
-        </div>
-        <ArrowRight size={18} className={`${styles.csArrow} ${styles.teal}`} />
-      </Link>
+      <div className="container">
+        <div className={styles.campusGrid}>
 
-      <Link href="/campus#maternelle" className={styles.csBlock}>
-        <div className={`${styles.csThumb} ${styles.pink}`}>
-          <GraduationCap size={32} />
+          <Link href="/campus#creche" className={`${styles.csBlock} ${styles.teal}`}>
+            <div className={`${styles.csThumb} ${styles.teal}`}>
+              <Baby size={28} />
+            </div>
+            <div className={styles.csText}>
+              <span className={`${styles.csBadge} ${styles.teal}`}>{t('creche.badge')}</span>
+              <h3>{t('creche.name')}</h3>
+              <p>{t('creche.desc')}</p>
+              <span className={`${styles.csAge} ${styles.teal}`}>{t('creche.ages')}</span>
+            </div>
+            <ArrowRight size={20} className={`${styles.csArrow} ${styles.teal}`} />
+          </Link>
+
+          <Link href="/campus#maternelle" className={`${styles.csBlock} ${styles.pink}`}>
+            <div className={`${styles.csThumb} ${styles.pink}`}>
+              <GraduationCap size={28} />
+            </div>
+            <div className={styles.csText}>
+              <span className={`${styles.csBadge} ${styles.pink}`}>{t('maternelle.badge')}</span>
+              <h3>{t('maternelle.name')}</h3>
+              <p>{t('maternelle.desc')}</p>
+              <span className={`${styles.csAge} ${styles.pink}`}>{t('maternelle.ages')}</span>
+            </div>
+            <ArrowRight size={20} className={`${styles.csArrow} ${styles.pink}`} />
+          </Link>
+
         </div>
-        <div className={styles.csText}>
-          <span className={`${styles.csBadge} ${styles.pink}`}>{t('maternelle.badge')}</span>
-          <h3>{t('maternelle.name')}</h3>
-          <p>{t('maternelle.desc')}</p>
-          <span className={`${styles.csAge} ${styles.pink}`}>{t('maternelle.ages')}</span>
-        </div>
-        <ArrowRight size={18} className={`${styles.csArrow} ${styles.pink}`} />
-      </Link>
+      </div>
     </div>
   )
 }
