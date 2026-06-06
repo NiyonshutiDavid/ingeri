@@ -1,9 +1,8 @@
-/* Section sits on texture */
 .wrapper {
+  background: var(--off);
   padding: 72px 0;
 }
 
-/* Single wide floating card — 1fr photo : 1.7fr text */
 .strip {
   display: grid;
   grid-template-columns: 1fr 1.7fr;
@@ -11,14 +10,12 @@
   overflow: hidden;
   box-shadow: var(--sh-up);
   margin-top: 36px;
+  border: 1.5px solid var(--border);
 }
 
-/* Left: photo panel — teal with the school image */
+/* Photo panel — real image, naturally uses background.png as a fallback color */
 .photo {
   background-color: var(--teal-d);
-  background-image: url('/background.png');
-  background-size: cover;
-  background-position: center;
   min-height: 340px;
   display: flex;
   align-items: flex-end;
@@ -28,12 +25,9 @@
   overflow: hidden;
 }
 
-/* Next/Image fills the panel */
-.photo :global(img) {
-  object-fit: cover;
-}
+.photo :global(img) { object-fit: cover; }
 
-/* Frosted name badge over the photo */
+/* Frosted name badge */
 .photoLabel {
   position: relative;
   z-index: 2;
@@ -61,7 +55,7 @@
   letter-spacing: 0;
 }
 
-/* Right: white text panel */
+/* Right: white quote panel */
 .text {
   background: #fff;
   padding: 52px 48px;
@@ -76,16 +70,6 @@
   color: var(--teal-l);
   font-family: Georgia, serif;
   margin-bottom: 20px;
-}
-
-.quoteMarkEnd {
-  font-size: 80px;
-  line-height: 0.6;
-  color: var(--teal-l);
-  font-family: Georgia, serif;
-  /* margin-bottom: 20px; */
-  align-self: flex-end;
-  transform: rotate(180deg);
 }
 
 .text blockquote {
@@ -119,16 +103,7 @@
 }
 
 @media (max-width: 960px) {
-  .strip {
-    grid-template-columns: 1fr;
-  }
-
-  .photo {
-    min-height: 260px;
-    align-items: flex-end;
-  }
-
-  .text {
-    padding: 36px 28px;
-  }
+  .strip { grid-template-columns: 1fr; }
+  .photo { min-height: 260px; }
+  .text  { padding: 36px 28px; }
 }

@@ -1,5 +1,5 @@
-/* Section sits on texture */
 .wrapper {
+  background: #fff;
   padding: 72px 0;
 }
 
@@ -10,12 +10,12 @@
   margin-top: 36px;
 }
 
-/* Floating white card */
 .echoBlock {
   background: #fff;
   border-radius: var(--r-lg);
   box-shadow: var(--sh);
-  padding: 34px 28px;
+  border: 1.5px solid var(--border);
+  overflow: hidden;
   transition: box-shadow 0.22s, transform 0.22s;
 }
 
@@ -24,11 +24,30 @@
   transform: translateY(-3px);
 }
 
+/* Texture accent bar */
+.echoAccent {
+  height: 5px;
+  background-image: url('/background.png');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.echoBlock:nth-child(1) .echoAccent::after,
+.echoBlock:nth-child(4) .echoAccent::after { content: ''; position: absolute; inset: 0; background: rgba(78,205,196,0.55); }
+.echoBlock:nth-child(2) .echoAccent::after,
+.echoBlock:nth-child(5) .echoAccent::after { content: ''; position: absolute; inset: 0; background: rgba(200,51,110,0.45); }
+.echoBlock:nth-child(3) .echoAccent::after,
+.echoBlock:nth-child(6) .echoAccent::after { content: ''; position: absolute; inset: 0; background: rgba(245,166,35,0.50); }
+
+.echoBody {
+  padding: 28px;
+}
+
 .stars {
   color: var(--gold);
   font-size: 13px;
   margin-bottom: 14px;
-  letter-spacing: 2px;
   display: flex;
   gap: 2px;
 }
@@ -47,7 +66,6 @@
   gap: 12px;
 }
 
-/* Avatar cycles: teal / pink / gold */
 .avatar {
   width: 38px;
   height: 38px;
@@ -60,39 +78,31 @@
   flex-shrink: 0;
 }
 
-.echoBlock:nth-child(1) .avatar { background: var(--teal-l); color: var(--teal-d); }
-.echoBlock:nth-child(2) .avatar { background: var(--pink-l); color: var(--pink-d); }
-.echoBlock:nth-child(3) .avatar { background: var(--gold-l);  color: var(--gold);   }
+.echoBlock:nth-child(1) .avatar,
 .echoBlock:nth-child(4) .avatar { background: var(--teal-l); color: var(--teal-d); }
+.echoBlock:nth-child(2) .avatar,
 .echoBlock:nth-child(5) .avatar { background: var(--pink-l); color: var(--pink-d); }
+.echoBlock:nth-child(3) .avatar,
 .echoBlock:nth-child(6) .avatar { background: var(--gold-l);  color: var(--gold);   }
 
-/* Author name cycles through brand colors */
 .name {
   font-size: 13px;
   font-weight: 700;
 }
 
-.echoBlock:nth-child(1) .name { color: var(--teal-d); }
-.echoBlock:nth-child(2) .name { color: var(--pink-d); }
-.echoBlock:nth-child(3) .name { color: var(--gold);   }
+.echoBlock:nth-child(1) .name,
 .echoBlock:nth-child(4) .name { color: var(--teal-d); }
+.echoBlock:nth-child(2) .name,
 .echoBlock:nth-child(5) .name { color: var(--pink-d); }
+.echoBlock:nth-child(3) .name,
 .echoBlock:nth-child(6) .name { color: var(--gold);   }
 
-.detail {
-  font-size: 12px;
-  color: var(--hint);
-}
+.detail { font-size: 12px; color: var(--hint); }
 
 @media (max-width: 960px) {
-  .echoesGrid {
-    grid-template-columns: 1fr 1fr;
-  }
+  .echoesGrid { grid-template-columns: 1fr 1fr; }
 }
 
 @media (max-width: 600px) {
-  .echoesGrid {
-    grid-template-columns: 1fr;
-  }
+  .echoesGrid { grid-template-columns: 1fr; }
 }

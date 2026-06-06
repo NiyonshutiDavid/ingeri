@@ -20,19 +20,19 @@ export default function ContactPage() {
       <div className="container">
         <span className="tag">{t('tag')}</span>
         <h2 className="sec-title">
-          {t('title')}<span>{t('titleSpan')}</span>
+          {t('title')} <span>{t('titleSpan')}</span>
         </h2>
         <p className="sec-sub">{t('subtitle')}</p>
 
         <div className={styles.tabs}>
           <button
-            className={`${styles.tab} ${activeTab === 'creche' ? styles.actTeal : ''}`}
+            className={`${styles.tab} ${activeTab === 'creche' ? styles.actTeal : styles.inactTeal}`}
             onClick={() => setActiveTab('creche')}
           >
             {t('tabs.creche')}
           </button>
           <button
-            className={`${styles.tab} ${activeTab === 'maternelle' ? styles.actPink : ''}`}
+            className={`${styles.tab} ${activeTab === 'maternelle' ? styles.actPink : styles.inactPink}`}
             onClick={() => setActiveTab('maternelle')}
           >
             {t('tabs.maternelle')}

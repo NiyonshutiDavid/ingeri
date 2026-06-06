@@ -1,6 +1,7 @@
-/* Sits on the texture — no background of its own */
+/* Sits on a white section — no background */
 .campusStrip {
-  padding: 0 0 64px;
+  background: var(--white);
+  padding: 64px 0;
 }
 
 .campusGrid {
@@ -9,58 +10,75 @@
   gap: 20px;
 }
 
-/* Floating white card */
+/* Floating card */
 .csBlock {
   background: #fff;
   border-radius: var(--r-lg);
   box-shadow: var(--sh);
-  padding: 36px 44px 36px 36px;
+  overflow: hidden;
   display: flex;
-  align-items: flex-start;
-  gap: 22px;
+  flex-direction: column;
   cursor: pointer;
   transition: box-shadow 0.22s, transform 0.22s;
   position: relative;
-  overflow: hidden;
   color: var(--body);
   text-decoration: none;
+  border: 1.5px solid var(--border);
 }
-
-/* Decorative corner accent */
-.csBlock::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 100px;
-  height: 100px;
-  border-radius: 0 var(--r-lg) 0 100%;
-  pointer-events: none;
-}
-
-.csBlock.teal::after { background: var(--teal-l); }
-.csBlock.pink::after { background: var(--pink-l); }
 
 .csBlock:hover {
   box-shadow: var(--sh-up);
   transform: translateY(-3px);
 }
 
-/* Icon thumb */
-.csThumb {
-  width: 60px;
-  height: 60px;
-  border-radius: var(--r-md);
+/* Texture accent strip at the top of the card */
+.csAccent {
+  height: 90px;
+  background-image: url('/background.png');
+  background-size: cover;
+  background-position: center;
+  position: relative;
   flex-shrink: 0;
+}
+
+/* Tinted overlay so each card has its own color identity */
+.csBlock.teal .csAccent::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(78, 205, 196, 0.45);
+}
+
+.csBlock.pink .csAccent::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(200, 51, 110, 0.38);
+}
+
+/* Icon badge sits over the accent */
+.csThumb {
+  position: absolute;
+  bottom: -22px;
+  left: 24px;
+  width: 48px;
+  height: 48px;
+  border-radius: var(--r-md);
   display: flex;
   align-items: center;
   justify-content: center;
+  box-shadow: var(--sh);
+  z-index: 1;
 }
 
-.csThumb.teal { background: var(--teal-l); color: var(--teal-d); }
-.csThumb.pink { background: var(--pink-l); color: var(--pink-d); }
+.csThumb.teal { background: var(--teal-d); color: #fff; }
+.csThumb.pink { background: var(--pink-d); color: #fff; }
 
-.csText { flex: 1; }
+/* Card body */
+.csText {
+  flex: 1;
+  padding: 36px 24px 24px;
+}
 
 .csBadge {
   display: inline-block;
@@ -78,7 +96,7 @@
 
 .csText h3 {
   font-size: 17px;
-  margin-bottom: 4px;
+  margin-bottom: 6px;
 }
 
 .csBlock.teal .csText h3 { color: var(--teal-d); }
@@ -105,16 +123,13 @@
 .csArrow {
   position: absolute;
   right: 20px;
-  top: 50%;
-  transform: translateY(-50%);
-  opacity: 0.35;
+  bottom: 24px;
+  opacity: 0.4;
 }
 
 .csArrow.teal { color: var(--teal-d); }
 .csArrow.pink { color: var(--pink-d); }
 
 @media (max-width: 960px) {
-  .campusGrid {
-    grid-template-columns: 1fr;
-  }
+  .campusGrid { grid-template-columns: 1fr; }
 }

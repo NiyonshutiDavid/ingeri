@@ -17,7 +17,6 @@ export default function Testimonials() {
   return (
     <div id="temoignages" className={styles.wrapper}>
       <div className="container">
-        {/* headers on texture → white globals */}
         <span className="tag">{t('tag')}</span>
         <h2 className="sec-title">
           {t('title')} <span>{t('titleSpan')}</span>
@@ -25,19 +24,22 @@ export default function Testimonials() {
         <p className="sec-sub">{t('subtitle')}</p>
 
         <div className={styles.echoesGrid}>
-          {items.map((item, idx) => (
+          {items.map((item) => (
             <div key={item.name} className={styles.echoBlock}>
-              <div className={styles.stars}>
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} size={13} fill="var(--gold)" strokeWidth={0} />
-                ))}
-              </div>
-              <blockquote>&ldquo;{item.quote}&rdquo;</blockquote>
-              <div className={styles.author}>
-                <div className={styles.avatar}>{item.initials}</div>
-                <div>
-                  <p className={styles.name}>{item.name}</p>
-                  <p className={styles.detail}>{item.detail}</p>
+              <div className={styles.echoAccent} />
+              <div className={styles.echoBody}>
+                <div className={styles.stars}>
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} size={13} fill="var(--gold)" strokeWidth={0} />
+                  ))}
+                </div>
+                <blockquote>&ldquo;{item.quote}&rdquo;</blockquote>
+                <div className={styles.author}>
+                  <div className={styles.avatar}>{item.initials}</div>
+                  <div>
+                    <p className={styles.name}>{item.name}</p>
+                    <p className={styles.detail}>{item.detail}</p>
+                  </div>
                 </div>
               </div>
             </div>

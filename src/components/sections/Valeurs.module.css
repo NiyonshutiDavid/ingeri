@@ -1,5 +1,6 @@
-/* Section sits on texture */
+/* Plain white section */
 .wrapper {
+  background: #fff;
   padding: 72px 0;
 }
 
@@ -10,15 +11,14 @@
   margin-top: 36px;
 }
 
-/* Floating white card */
 .vBlock {
-  background: rgba(255,255,255,0.18);
+  background: #fff;
+  border: 1.5px solid var(--border);
   border-radius: var(--r-lg);
   box-shadow: var(--sh);
-  padding: 36px 24px;
+  overflow: hidden;
   text-align: center;
   transition: box-shadow 0.22s, transform 0.22s;
-  border: 1px solid rgba(255, 255, 255, 0.978);
 }
 
 .vBlock:hover {
@@ -26,52 +26,69 @@
   transform: translateY(-4px);
 }
 
-/* Icon circle — cycles through brand colors */
+/* Texture accent strip at top, tinted per card */
+.vAccent {
+  height: 70px;
+  background-image: url('/background.png');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding-bottom: 0;
+}
+
+/* Color tint overlays */
+.vBlock:nth-child(1) .vAccent::after { content: ''; position: absolute; inset: 0; background: rgba(78,205,196,0.50); }
+.vBlock:nth-child(2) .vAccent::after { content: ''; position: absolute; inset: 0; background: rgba(200,51,110,0.42); }
+.vBlock:nth-child(3) .vAccent::after { content: ''; position: absolute; inset: 0; background: rgba(245,166,35,0.45); }
+.vBlock:nth-child(4) .vAccent::after { content: ''; position: absolute; inset: 0; background: rgba(78,205,196,0.50); }
+
+/* Icon circle sits at the bottom of the accent, half-overlapping */
 .vIcon {
-  width: 56px;
-  height: 56px;
+  width: 52px;
+  height: 52px;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0 auto 16px;
+  position: relative;
+  z-index: 1;
+  transform: translateY(50%);
+  box-shadow: var(--sh);
 }
 
-.vBlock:nth-child(1) .vIcon { background: var(--teal-l); color: var(--teal-d); }
-.vBlock:nth-child(2) .vIcon { background: var(--pink-l); color: var(--pink-d); }
-.vBlock:nth-child(3) .vIcon { background: var(--gold-l);  color: var(--gold);   }
-.vBlock:nth-child(4) .vIcon { background: var(--teal-l); color: var(--teal-d); }
+.vBlock:nth-child(1) .vIcon { background: var(--teal-d); color: #fff; }
+.vBlock:nth-child(2) .vIcon { background: var(--pink-d); color: #fff; }
+.vBlock:nth-child(3) .vIcon { background: var(--gold);   color: #fff; }
+.vBlock:nth-child(4) .vIcon { background: var(--teal-d); color: #fff; }
 
-/* Title cycles through brand colors */
+/* Card body */
+.vBody {
+  padding: 40px 20px 28px;
+}
+
 .vBlock h4 {
   font-size: 15px;
   margin-bottom: 8px;
 }
 
-/* .vBlock:nth-child(1) h4 { color: var(--teal-d); }
+.vBlock:nth-child(1) h4 { color: var(--teal-d); }
 .vBlock:nth-child(2) h4 { color: var(--pink-d); }
 .vBlock:nth-child(3) h4 { color: var(--gold);   }
-.vBlock:nth-child(4) h4 { color: var(--teal-d); } */
-.vBlock:nth-child(1) h4 { color: #ffffffe0; }
-.vBlock:nth-child(2) h4 { color: #ffffffe0; }
-.vBlock:nth-child(3) h4 { color: #ffffffe0;   }
-.vBlock:nth-child(4) h4 { color: #ffffffe0; }
+.vBlock:nth-child(4) h4 { color: var(--teal-d); }
 
 .vBlock p {
   font-size: 13px;
   color: var(--body);
   line-height: 1.6;
-  color: #fff;
 }
 
 @media (max-width: 960px) {
-  .valeursGrid {
-    grid-template-columns: 1fr 1fr;
-  }
+  .valeursGrid { grid-template-columns: 1fr 1fr; }
 }
 
 @media (max-width: 600px) {
-  .valeursGrid {
-    grid-template-columns: 1fr;
-  }
+  .valeursGrid { grid-template-columns: 1fr; }
 }

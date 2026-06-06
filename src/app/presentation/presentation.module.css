@@ -1,13 +1,19 @@
+/* Each section alternates white / off-white — no texture here */
+
 .intro {
+  background: #fff;
   padding: 80px 0 40px;
 }
 
+/* Base section — white by default */
 .section {
+  background: #fff;
   padding: 60px 0;
 }
 
-.altBg {
-  background: transparent;
+/* Alternate section — off-white */
+.section.alt {
+  background: var(--off);
 }
 
 /* Mission & Vision */
@@ -22,14 +28,12 @@
   background: #fff;
   border-radius: var(--r-lg);
   box-shadow: var(--sh);
+  border: 1.5px solid var(--border);
   padding: 44px 38px;
   transition: box-shadow 0.22s, transform 0.22s;
 }
 
-.mvBlock:hover {
-  box-shadow: var(--sh-up);
-  transform: translateY(-3px);
-}
+.mvBlock:hover { box-shadow: var(--sh-up); transform: translateY(-3px); }
 
 .mvBlock h3 {
   font-size: 20px;
@@ -39,11 +43,7 @@
   border-bottom: 2px solid var(--teal-l);
 }
 
-.mvBlock.pk h3 {
-  color: var(--pink-d);
-  border-bottom-color: var(--pink-l);
-}
-
+.mvBlock.pk h3 { color: var(--pink-d); border-bottom-color: var(--pink-l); }
 .mvBlock p { color: var(--body); font-size: 15px; }
 
 /* Principes */
@@ -58,15 +58,13 @@
   background: #fff;
   border-radius: var(--r-lg);
   box-shadow: var(--sh);
+  border: 1.5px solid var(--border);
   padding: 30px 20px;
   text-align: center;
   transition: box-shadow 0.22s, transform 0.22s;
 }
 
-.ppBlock:hover {
-  box-shadow: var(--sh-up);
-  transform: translateY(-4px);
-}
+.ppBlock:hover { box-shadow: var(--sh-up); transform: translateY(-4px); }
 
 .pbIcon {
   width: 52px;
@@ -80,20 +78,10 @@
   color: var(--teal-d);
 }
 
-.ppBlock:nth-child(even) .pbIcon {
-  background: var(--pink-l);
-  color: var(--pink-d);
-}
+.ppBlock:nth-child(even) .pbIcon { background: var(--pink-l); color: var(--pink-d); }
 
-.ppBlock h4 {
-  font-size: 13px;
-  font-weight: 700;
-  color: var(--teal-d);
-  margin-bottom: 6px;
-}
-
+.ppBlock h4 { font-size: 13px; font-weight: 700; color: var(--teal-d); margin-bottom: 6px; }
 .ppBlock:nth-child(even) h4 { color: var(--pink-d); }
-
 .ppBlock p { font-size: 11px; color: var(--body); }
 
 /* Domaines */
@@ -108,15 +96,13 @@
   background: #fff;
   border-radius: var(--r-lg);
   box-shadow: var(--sh);
+  border: 1.5px solid var(--border);
   padding: 26px 18px;
   text-align: center;
   transition: box-shadow 0.22s, transform 0.22s;
 }
 
-.domBlock:hover {
-  box-shadow: var(--sh-up);
-  transform: translateY(-3px);
-}
+.domBlock:hover { box-shadow: var(--sh-up); transform: translateY(-3px); }
 
 .di {
   width: 52px;
@@ -130,15 +116,11 @@
   margin: 0 auto 10px;
 }
 
-.domBlock:nth-child(even) .di {
-  background: var(--pink-l);
-  color: var(--pink-d);
-}
-
+.domBlock:nth-child(even) .di { background: var(--pink-l); color: var(--pink-d); }
 .domBlock h4 { font-size: 13px; font-weight: 700; color: var(--teal-d); }
 .domBlock:nth-child(even) h4 { color: var(--pink-d); }
 
-/* Leadership */
+/* Leadership — full-width card */
 .ldGrid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -173,19 +155,8 @@
   margin-top: 4px;
 }
 
-.ldQuote p {
-  font-style: italic;
-  color: var(--teal-d) !important;
-  font-size: 15px;
-  margin-bottom: 8px;
-}
-
-.ldQuote cite {
-  font-size: 12px;
-  font-weight: 700;
-  color: var(--teal-d);
-  font-style: normal;
-}
+.ldQuote p { font-style: italic; color: var(--teal-d) !important; font-size: 15px; margin-bottom: 8px; }
+.ldQuote cite { font-size: 12px; font-weight: 700; color: var(--teal-d); font-style: normal; }
 
 /* Équipe */
 .equipeGrid {
@@ -199,38 +170,25 @@
   background: #fff;
   border-radius: var(--r-lg);
   box-shadow: var(--sh);
+  border: 1.5px solid var(--border);
   overflow: hidden;
   transition: box-shadow 0.22s, transform 0.22s;
 }
 
-.teamBlock:hover {
-  box-shadow: var(--sh-up);
-  transform: translateY(-3px);
-}
+.teamBlock:hover { box-shadow: var(--sh-up); transform: translateY(-3px); }
 
 .teamPhoto {
   height: 160px;
   background: var(--teal-l);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 11px;
-  color: var(--teal-d);
-  font-weight: 600;
   position: relative;
   overflow: hidden;
 }
 
-.teamBlock:nth-child(even) .teamPhoto {
-  background: var(--pink-l);
-  color: var(--pink-d);
-}
+.teamBlock:nth-child(even) .teamPhoto { background: var(--pink-l); }
 
 .teamInfo { padding: 16px 18px; }
-
 .teamInfo h4 { font-size: 14px; margin-bottom: 2px; color: var(--teal-d); }
 .teamBlock:nth-child(even) .teamInfo h4 { color: var(--pink-d); }
-
 .teamInfo p { font-size: 12px; color: var(--hint); }
 
 /* Localisations */
@@ -245,14 +203,12 @@
   background: #fff;
   border-radius: var(--r-lg);
   box-shadow: var(--sh);
+  border: 1.5px solid var(--border);
   overflow: hidden;
   transition: box-shadow 0.22s, transform 0.22s;
 }
 
-.locBlock:hover {
-  box-shadow: var(--sh-up);
-  transform: translateY(-3px);
-}
+.locBlock:hover { box-shadow: var(--sh-up); transform: translateY(-3px); }
 
 .locMap {
   height: 200px;
@@ -267,18 +223,8 @@
 .locMap.pink { background: var(--pink-l); color: var(--pink-d); }
 
 .locInfo { padding: 26px; }
-
-.locInfo h3 {
-  font-size: 17px;
-  color: var(--teal-d);
-  margin-bottom: 8px;
-}
-
-.locDetail {
-  font-size: 13px;
-  color: var(--body);
-  margin-bottom: 4px;
-}
+.locInfo h3 { font-size: 17px; color: var(--teal-d); margin-bottom: 8px; }
+.locDetail { font-size: 13px; color: var(--body); margin-bottom: 4px; }
 
 /* Carrières */
 .carGrid {
@@ -290,17 +236,9 @@
   margin-top: 44px;
 }
 
-.carJobs {
-  background: #fff;
-  padding: 36px 30px;
-}
+.carJobs { background: #fff; padding: 36px 30px; }
 
-.jobsTitle {
-  font-size: 16px;
-  margin-bottom: 18px;
-  color: var(--hint);
-  font-weight: 600;
-}
+.jobsTitle { font-size: 16px; margin-bottom: 18px; color: var(--hint); font-weight: 600; }
 
 .jobRow {
   display: flex;
@@ -311,7 +249,6 @@
 }
 
 .jobRow:last-of-type { border-bottom: none; }
-
 .jobRow h4 { font-size: 14px; margin-bottom: 2px; color: var(--teal-d); }
 .jobRow p  { font-size: 12px; color: var(--hint); }
 
@@ -335,18 +272,8 @@
   border-left: 3px solid var(--pink-d);
 }
 
-.teamQuote p {
-  font-style: italic;
-  color: var(--body);
-  font-size: 13px;
-}
-
-.tqAuthor {
-  font-weight: 700;
-  font-size: 12px;
-  margin-top: 6px;
-  color: var(--pink-d) !important;
-}
+.teamQuote p { font-style: italic; color: var(--body); font-size: 13px; }
+.tqAuthor { font-weight: 700; font-size: 12px; margin-top: 6px; color: var(--pink-d) !important; }
 
 .carCta {
   background: var(--teal-d);
@@ -362,19 +289,7 @@
 .carCta p  { font-size: 14px; color: rgba(255,255,255,0.85); }
 
 @media (max-width: 960px) {
-  .mvGrid,
-  .ldGrid,
-  .locsGrid,
-  .carGrid {
-    grid-template-columns: 1fr;
-  }
-
-  .principesGrid,
-  .equipeGrid {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .domainesGrid {
-    grid-template-columns: 1fr 1fr;
-  }
+  .mvGrid, .ldGrid, .locsGrid, .carGrid { grid-template-columns: 1fr; }
+  .principesGrid, .equipeGrid { grid-template-columns: 1fr 1fr; }
+  .domainesGrid { grid-template-columns: 1fr 1fr; }
 }

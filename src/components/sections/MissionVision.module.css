@@ -1,5 +1,5 @@
-/* Section sits on texture — white text headers */
 .wrapper {
+  background: var(--off);
   padding: 72px 0;
 }
 
@@ -10,18 +10,41 @@
   margin-top: 36px;
 }
 
-/* Floating white card */
 .mvBlock {
   background: #fff;
   border-radius: var(--r-lg);
   box-shadow: var(--sh);
-  padding: 48px 44px;
+  overflow: hidden;
   transition: box-shadow 0.22s, transform 0.22s;
 }
 
 .mvBlock:hover {
   box-shadow: var(--sh-up);
   transform: translateY(-3px);
+}
+
+/* Texture accent bar at the top */
+.mvAccent {
+  height: 6px;
+  background-image: url('/background.png');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.mvAccent::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(78, 205, 196, 0.55);
+}
+
+.mvBlock.pink .mvAccent::after {
+  background: rgba(200, 51, 110, 0.45);
+}
+
+.mvBody {
+  padding: 36px 44px;
 }
 
 .mvBlock h3 {
@@ -37,10 +60,7 @@
   border-bottom-color: var(--pink-l);
 }
 
-.mvBlock p {
-  color: var(--body);
-  font-size: 15px;
-}
+.mvBlock p { color: var(--body); font-size: 15px; }
 
 .mvList {
   margin-top: 16px;
@@ -58,13 +78,6 @@
   align-items: flex-start;
 }
 
-/* CheckCircle icon inherits pink-d in the pink card */
-.mvBlock.pink .mvList li svg {
-  color: var(--pink-d);
-}
-
 @media (max-width: 960px) {
-  .mvGrid {
-    grid-template-columns: 1fr;
-  }
+  .mvGrid { grid-template-columns: 1fr; }
 }

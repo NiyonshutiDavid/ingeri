@@ -1,5 +1,6 @@
 .section {
   padding: 80px 0;
+  background: var(--off);
 }
 
 /* Section headers sit on texture — white globals apply */
@@ -128,6 +129,10 @@
 }
 
 /* FAQ */
+#faq{
+  background: var(--white);
+}
+
 .faqList {
   display: flex;
   flex-direction: column;

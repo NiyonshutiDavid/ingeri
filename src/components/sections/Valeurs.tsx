@@ -17,7 +17,6 @@ export default function Valeurs() {
   return (
     <div id="valeurs" className={styles.wrapper}>
       <div className="container">
-        {/* headers on texture → white globals */}
         <span className="tag">{t('tag')}</span>
         <h2 className="sec-title">
           {t('title')} <span>{t('titleSpan')}</span>
@@ -28,11 +27,15 @@ export default function Valeurs() {
             const Icon = ICONS[i]
             return (
               <div key={v.title} className={styles.vBlock}>
-                <div className={styles.vIcon}>
-                  <Icon size={26} strokeWidth={1.5} />
+                <div className={styles.vAccent}>
+                  <div className={styles.vIcon}>
+                    <Icon size={24} strokeWidth={1.5} />
+                  </div>
                 </div>
-                <h4>{v.title}</h4>
-                <p>{v.description}</p>
+                <div className={styles.vBody}>
+                  <h4>{v.title}</h4>
+                  <p>{v.description}</p>
+                </div>
               </div>
             )
           })}

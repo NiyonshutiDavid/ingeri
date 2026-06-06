@@ -33,13 +33,13 @@ export default function ProgrammesPage() {
 
         <div className={styles.tabs}>
           <button
-            className={`${styles.tab} ${activeTab === 'creche' ? styles.actTeal : ''}`}
+            className={`${styles.tab} ${activeTab === 'creche' ? styles.actTeal : styles.inactTeal}`}
             onClick={() => setActiveTab('creche')}
           >
             {t('tabs.creche')}
           </button>
           <button
-            className={`${styles.tab} ${activeTab === 'maternelle' ? styles.actPink : ''}`}
+            className={`${styles.tab} ${activeTab === 'maternelle' ? styles.actPink : styles.inactPink}`}
             onClick={() => setActiveTab('maternelle')}
           >
             {t('tabs.maternelle')}

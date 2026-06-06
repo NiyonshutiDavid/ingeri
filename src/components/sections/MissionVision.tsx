@@ -12,7 +12,7 @@ export default function MissionVision() {
   return (
     <div id="mission" className={styles.wrapper}>
       <div className="container">
-        {/* tag + titles are on texture → use default white global classes */}
+        {/* On off-white bg → standard dark tag/title */}
         <span className="tag">{t('tag')}</span>
         <h2 className="sec-title">
           {t('title')} <span>{t('titleSpan')}</span>
@@ -20,25 +20,31 @@ export default function MissionVision() {
 
         <div className={styles.mvGrid}>
           <div className={styles.mvBlock}>
-            <h3>{t('mission.heading')}</h3>
-            <p>{t('mission.body')}</p>
+            <div className={styles.mvAccent} />
+            <div className={styles.mvBody}>
+              <h3>{t('mission.heading')}</h3>
+              <p>{t('mission.body')}</p>
+            </div>
           </div>
 
           <div className={`${styles.mvBlock} ${styles.pink}`}>
-            <h3>{t('vision.heading')}</h3>
-            <p>{t('vision.body')}</p>
-            <ul className={styles.mvList}>
-              {visionItems.map((item, i) => (
-                <li key={i}>
-                  <CheckCircle2
-                    size={14}
-                    color="var(--pink-d)"
-                    style={{ flexShrink: 0, marginTop: 4 }}
-                  />
-                  {item}
-                </li>
-              ))}
-            </ul>
+            <div className={styles.mvAccent} />
+            <div className={styles.mvBody}>
+              <h3>{t('vision.heading')}</h3>
+              <p>{t('vision.body')}</p>
+              <ul className={styles.mvList}>
+                {visionItems.map((item, i) => (
+                  <li key={i}>
+                    <CheckCircle2
+                      size={14}
+                      color="var(--pink-d)"
+                      style={{ flexShrink: 0, marginTop: 4 }}
+                    />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
         </div>
       </div>
