@@ -20,7 +20,7 @@ export default function ContactPage() {
       <div className="container">
         <span className="tag">{t('tag')}</span>
         <h2 className="sec-title">
-          {t('title')}<span>{t('titleSpan')}</span>
+          {t('title')} <span>{t('titleSpan')}</span>
         </h2>
         <p className="sec-sub">{t('subtitle')}</p>
 

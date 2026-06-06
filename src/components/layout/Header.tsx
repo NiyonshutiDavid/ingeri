@@ -4,6 +4,7 @@
 import { useState, useEffect, useRef } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
+import { usePathname } from 'next/navigation'
 import { ChevronDown, Menu, X } from 'lucide-react'
 import { useTranslation } from 'react-i18next'
 import LanguageSwitcher from './LanguageSwitcher'
@@ -11,6 +12,7 @@ import styles from './Header.module.css'
 
 export default function Header() {
   const { t } = useTranslation('header')
+  const pathname = usePathname()
   const [mobileOpen, setMobileOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null)
@@ -37,9 +39,10 @@ export default function Header() {
     closeTimer.current = setTimeout(() => setActiveDropdown(null), 80)
   }
 
-  // ---------------------------------------------------------------------------
-  // Nav config – labels come from i18n, structure stays here
-  // ---------------------------------------------------------------------------
+  // A link is active if its href exactly matches (for '/') or the pathname starts with it
+  const isActive = (href: string) =>
+    href === '/' ? pathname === '/' : pathname.startsWith(href)
+
   const navLinks = [
     { href: '/', label: t('links.home') },
     {
@@ -112,7 +115,10 @@ export default function Header() {
               onMouseLeave={() => link.dropdown && handleMouseLeave()}
               onClick={(e) => e.stopPropagation()}
             >
-              <Link href={link.href} className={styles.navLink}>
+              <Link
+                href={link.href}
+                className={`${styles.navLink} ${isActive(link.href) ? styles.active : ''}`}
+              >
                 {link.label}
                 {link.dropdown && (
                   <ChevronDown
@@ -167,7 +173,7 @@ export default function Header() {
           onClick={() => setMobileOpen(!mobileOpen)}
           aria-label="Menu"
         >
-          {mobileOpen ? <X size={22} color="var(--teal)" /> : <Menu size={22} color="var(--teal)" />}
+          {mobileOpen ? <X size={22} color="var(--teal-d)" /> : <Menu size={22} color="var(--teal-d)" />}
         </button>
       </nav>
 
@@ -178,13 +184,12 @@ export default function Header() {
             <Link
               key={link.href}
               href={link.href}
-              className={styles.mobLink}
+              className={`${styles.mobLink} ${isActive(link.href) ? styles.active : ''}`}
               onClick={() => setMobileOpen(false)}
             >
               {link.label}
             </Link>
           ))}
-          {/* Language switcher in mobile menu */}
           <div className={styles.mobLang}>
             <LanguageSwitcher />
           </div>
