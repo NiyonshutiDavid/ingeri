@@ -3,7 +3,7 @@
 
 import { useState } from 'react'
 import Link from 'next/link'
-import { DollarSign, ClipboardList, DoorOpen, ChevronDown, ChevronUp } from 'lucide-react'
+import { ChevronDown, ChevronUp } from 'lucide-react'
 import { useTranslation } from 'react-i18next'
 import styles from './admissions.module.css'
 
@@ -32,7 +32,6 @@ export default function AdmissionsPage() {
           {/* Tuition */}
           <div className={styles.admBlock} id="frais">
             <h3>
-              <DollarSign size={16} style={{ display: 'inline', verticalAlign: 'middle', marginRight: 6 }} />
               {t('tuition.heading')}
             </h3>
             <table className={styles.fraisTable}>
@@ -57,7 +56,6 @@ export default function AdmissionsPage() {
           {/* Steps */}
           <div className={styles.admBlock} id="inscription">
             <h3>
-              <ClipboardList size={16} style={{ display: 'inline', verticalAlign: 'middle', marginRight: 6 }} />
               {t('steps.heading')}
             </h3>
             <div className={styles.stepsList}>
@@ -80,7 +78,6 @@ export default function AdmissionsPage() {
           {/* Open days */}
           <div className={styles.admBlock} id="portes">
             <h3>
-              <DoorOpen size={16} style={{ display: 'inline', verticalAlign: 'middle', marginRight: 6 }} />
               {t('openDays.heading')}
             </h3>
             <p className={styles.portesDesc}>{t('openDays.desc')}</p>

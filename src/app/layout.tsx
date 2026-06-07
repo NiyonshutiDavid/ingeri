@@ -31,7 +31,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           All children can safely call useTranslation() anywhere in the tree.
         */}
         <I18nProvider>
-          <SideCTA />
+          {/* <SideCTA /> */}
           <Header />
           <main>{children}</main>
           <Footer />
