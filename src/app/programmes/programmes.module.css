@@ -35,11 +35,11 @@
 
 .inactTeal { 
   color: var(--off);
-  background: var(--teal-l);
+  background: var(--teal);
 }
 .inactPink { 
   color: var(--off);
-  background: var(--pink-l);
+  background: var(--pink);
 }
 
 .actTeal { background: var(--teal-d); color: #fff; }

@@ -14,6 +14,9 @@ export default function Testimonials() {
     detail: string
   }>
 
+  // Duplicate items for seamless infinite loop
+  const loopItems = [...items, ...items]
+
   return (
     <div id="temoignages" className={styles.wrapper}>
       <div className="container">
@@ -22,15 +25,17 @@ export default function Testimonials() {
           {t('title')} <span>{t('titleSpan')}</span>
         </h2>
         <p className="sec-sub">{t('subtitle')}</p>
+      </div>
 
-        <div className={styles.echoesGrid}>
-          {items.map((item) => (
-            <div key={item.name} className={styles.echoBlock}>
+      <div className={styles.carousel}>
+        <div className={styles.track}>
+          {loopItems.map((item, i) => (
+            <div key={i} className={styles.echoBlock}>
               <div className={styles.echoAccent} />
               <div className={styles.echoBody}>
                 <div className={styles.stars}>
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} size={13} fill="var(--gold)" strokeWidth={0} />
+                  {[...Array(5)].map((_, j) => (
+                    <Star key={j} size={13} fill="var(--gold)" strokeWidth={0} />
                   ))}
                 </div>
                 <blockquote>&ldquo;{item.quote}&rdquo;</blockquote>

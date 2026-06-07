@@ -24,6 +24,15 @@
   position: relative;
   overflow: hidden;
 }
+.quoteMarkEnd {
+  font-size: 80px;
+  line-height: 0.6;
+  color: var(--teal-l);
+  font-family: Georgia, serif;
+  /* margin-bottom: 20px; */
+  align-self: flex-end;
+  transform: rotate(180deg);
+}
 
 .photo :global(img) { object-fit: cover; }
 

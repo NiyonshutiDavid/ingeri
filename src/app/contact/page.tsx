@@ -4,7 +4,7 @@
 import { useState } from 'react'
 import Image from 'next/image'
 import { MapPin, Phone, Mail, Clock, MessageCircle } from 'lucide-react'
-import { FaFacebook as Facebook, FaInstagram as Instagram } from 'react-icons/fa'
+import { FaXTwitter as XTwitter, FaInstagram as Instagram } from 'react-icons/fa6'
 import { useTranslation } from 'react-i18next'
 import styles from './contact.module.css'
 
@@ -210,15 +210,14 @@ function ContactInfo({
         <p style={{ color: socialHeadingColor }}>{t('info.social')}</p>
         <div className={styles.socLinks}>
           {[
-            { label: 'Facebook', icon: Facebook },
+            { label: 'X(Twitter)', icon: XTwitter },
             { label: 'Instagram', icon: Instagram },
             { label: 'WhatsApp', icon: MessageCircle },
           ].map(({ label, icon: Icon }) => (
             <a
               key={label}
               href="#"
-              className={styles.socLink}
-              style={{ borderColor: socialBorderColor, color: socialHeadingColor }}
+              className={`${styles.socLink} ${isCreche ? styles.socTeal : styles.socPink}`}
             >
               <Icon size={12} /> {label}
             </a>

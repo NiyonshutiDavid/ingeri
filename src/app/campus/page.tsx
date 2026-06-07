@@ -3,7 +3,7 @@
 
 import Link from 'next/link'
 import Image from 'next/image'
-import { MapPin, Mail, Globe } from 'lucide-react'
+import { MapPin, Mail } from 'lucide-react'
 import { useTranslation } from 'react-i18next'
 import styles from './campus.module.css'
 
@@ -40,10 +40,10 @@ export default function CampusPage() {
                 <span>{t('creche.ages')}</span>
               </div>
               <div className={styles.cDetail}>
-                <MapPin size={13} /><span>{t('creche.address')}</span>
+                <MapPin size={13} style={{ marginRight: 4, flexShrink: 0 }} /><span>{t('creche.address')}</span>
               </div>
               <div className={styles.cDetail}>
-                <Mail size={13} /><span>{t('creche.email')}</span>
+                <Mail size={13} style={{ marginRight: 4, flexShrink: 0 }} /><span>{t('creche.email')}</span>
               </div>
               <Link
                 href="/contact#creche"
@@ -68,10 +68,6 @@ export default function CampusPage() {
             </div>
             <div className={styles.campusBody}>
               <span className={`${styles.cbBadge} ${styles.pink}`}>{t('maternelle.badge')}</span>
-              <div className={styles.intlStrip}>
-                <Globe size={14} />
-                <span>{t('maternelle.intlStrip')}</span>
-              </div>
               <h3>{t('maternelle.name')}</h3>
               <p>{t('maternelle.desc')}</p>
               <div className={styles.cDetail}>
@@ -79,10 +75,10 @@ export default function CampusPage() {
                 <span>{t('maternelle.ages')}</span>
               </div>
               <div className={styles.cDetail}>
-                <MapPin size={13} /><span>{t('maternelle.address')}</span>
+                <MapPin size={13} style={{ marginRight: 4, flexShrink: 0 }} /><span>{t('maternelle.address')}</span>
               </div>
               <div className={styles.cDetail}>
-                <Mail size={13} /><span>{t('maternelle.email')}</span>
+                <Mail size={13} style={{ marginRight: 4, flexShrink: 0 }} /><span>{t('maternelle.email')}</span>
               </div>
               <Link
                 href="/contact#maternelle"

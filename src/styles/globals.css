@@ -56,7 +56,7 @@ h1, h2, h3, h4 {
   font-weight: 900;
   line-height: 1.2;
   text-transform: capitalize;
-  letter-spacing: -1px;
+  letter-spacing: -0.5px;
 }
 
 a { text-decoration: none; color: inherit; }
@@ -65,9 +65,8 @@ ul { list-style: none; }
 
 /* ── UTILITIES ── */
 .container {
-  max-width: 1160px;
-  margin: 0 auto;
-  padding: 0 28px;
+  width: 100%;
+  padding: 0 48px;
 }
 
 section { padding: 80px 0; }
@@ -145,7 +144,7 @@ section { padding: 80px 0; }
   font-weight: 900;
   line-height: 1.2;
   text-transform: capitalize;
-  letter-spacing: -1px;
+  letter-spacing: -0.5px;
 }
 
 .sec-title-texture span { color: rgba(255,255,255,0.75); }
@@ -209,5 +208,5 @@ section { padding: 80px 0; }
 .btn-dark    { background: var(--dark);  color: #fff; }
 
 /* ── RESPONSIVE ── */
-@media (max-width: 960px) { section { padding: 60px 0; } }
-@media (max-width: 600px) { section { padding: 50px 0; } }
+@media (max-width: 960px) { section { padding: 60px 0; } .container { padding: 0 28px; } }
+@media (max-width: 600px) { section { padding: 50px 0; } .container { padding: 0 16px; } }

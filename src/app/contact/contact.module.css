@@ -35,11 +35,11 @@
 
 .inactTeal { 
   color: var(--off);
-  background: var(--teal-l);
+  background: var(--teal);
 }
 .inactPink { 
   color: var(--off);
-  background: var(--pink-l);
+  background: var(--pink);
 }
 
 .actTeal { background: var(--teal-d); color: #fff; }
@@ -198,10 +198,26 @@
   gap: 4px;
 }
 
+.socLink.socTeal {
+  color: var(--teal-d);
+  border-color: var(--teal);
+}
+
+.socLink.socPink {
+  color: var(--pink-d);
+  border-color: var(--pink);
+}
+
 .socLink:hover {
   background: var(--teal-d);
-  color: #fff;
+  color: #fff !important;
   border-color: var(--teal-d);
+}
+
+.socLink.socPink:hover {
+  background: var(--pink-d);
+  color: #fff !important;
+  border-color: var(--pink-d);
 }
 
 @media (max-width: 960px) {

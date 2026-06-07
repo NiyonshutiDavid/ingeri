@@ -107,9 +107,10 @@ export default function PresentationPage() {
               <p>{t('leadership.p1')}</p>
               <p>{t('leadership.p2')}</p>
               <div className={styles.ldQuote}>
-                <Quote size={18} style={{ marginBottom:8, color:'var(--teal-d)' }} />
+                
                 <p>&ldquo;{t('leadership.quote')}&rdquo;</p>
                 <cite>{t('leadership.quoteCite')}</cite>
+    
               </div>
             </div>
           </div>
