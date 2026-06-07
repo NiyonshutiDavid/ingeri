@@ -4,12 +4,20 @@
 }
 
 /* Tab switcher */
+.headerRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 36px;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
 .tabs {
   display: flex;
   border: 1.5px solid var(--border);
   border-radius: 99px;
   overflow: hidden;
-  margin-bottom: 36px;
   width: fit-content;
   background: rgba(255,255,255,0.15);
 }

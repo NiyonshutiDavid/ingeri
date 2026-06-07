@@ -29,21 +29,22 @@ export default function ProgrammesPage() {
         <h2 className="sec-title">
           {t('title')} <span>{t('titleSpan')}</span>
         </h2>
-        <p className="sec-sub">{t('subtitle')}</p>
-
-        <div className={styles.tabs}>
-          <button
-            className={`${styles.tab} ${activeTab === 'creche' ? styles.actTeal : styles.inactTeal}`}
-            onClick={() => setActiveTab('creche')}
-          >
-            {t('tabs.creche')}
-          </button>
-          <button
-            className={`${styles.tab} ${activeTab === 'maternelle' ? styles.actPink : styles.inactPink}`}
-            onClick={() => setActiveTab('maternelle')}
-          >
-            {t('tabs.maternelle')}
-          </button>
+        <div className={styles.headerRow}>
+          <p className="sec-sub" style={{ marginBottom: 0 }}>{t('subtitle')}</p>
+          <div className={styles.tabs}>
+            <button
+              className={`${styles.tab} ${activeTab === 'creche' ? styles.actTeal : styles.inactTeal}`}
+              onClick={() => setActiveTab('creche')}
+            >
+              {t('tabs.creche')}
+            </button>
+            <button
+              className={`${styles.tab} ${activeTab === 'maternelle' ? styles.actPink : styles.inactPink}`}
+              onClick={() => setActiveTab('maternelle')}
+            >
+              {t('tabs.maternelle')}
+            </button>
+          </div>
         </div>
 
         {activeTab === 'creche' && (

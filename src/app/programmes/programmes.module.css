@@ -4,12 +4,24 @@
 }
 
 /* Tab switcher — on texture so glass style */
+.headerRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.headerRow .sec-sub {
+  margin-bottom: 0;
+}
+
 .tabs {
   display: flex;
   border: 1.5px solid rgba(255,255,255,0.30);
   border-radius: 99px;
   overflow: hidden;
-  margin-bottom: 40px;
   width: fit-content;
   background: rgba(255,255,255,0.12);
 }
