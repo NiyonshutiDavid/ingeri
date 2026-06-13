@@ -10,6 +10,7 @@ import styles from './Footer.module.css'
 
 export default function Footer() {
   const { t } = useTranslation('footer')
+  const year = new Date().getFullYear()
 
   return (
     <footer className={styles.footer}>
@@ -70,8 +71,8 @@ export default function Footer() {
       </div>
 
       <div className={styles.footBottom}>
-        <span>{t('bottom.rights')}</span>
-        <span>{t('bottom.credit')}</span>
+        <span>&copy;{year} {t('bottom.rights')} </span>
+        {/* <span>{t('bottom.credit')}</span> */}
       </div>
     </footer>
   )
