@@ -25,11 +25,11 @@ export default function HeroSection() {
             </h1>
             <p className={styles.heroSubtitle}>{t('subtitle')}</p>
             <div className={styles.heroBtns}>
-              <Link href="/admissions" className="btn btn-teal">
+              <Link href="/admissions" className="btn btn-any">
                 <BookOpen size={16} />
                 {t('btnEnrol')}
               </Link>
-              <Link href="/presentation" className="btn btn-outline">
+              <Link href="/presentation" className="btn btn-any">
                 <Compass size={16} />
                 {t('btnDiscover')}
               </Link>

@@ -11,7 +11,7 @@ export default function Home() {
       <HeroSection />
       <CampusStrip />
       <MissionVision />
-      <Valeurs />
+      {/* <Valeurs /> */}
       <DirectionQuote />
       <Testimonials />
     </>

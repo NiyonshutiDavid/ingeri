@@ -1,6 +1,6 @@
 /* Sits on a white section — no background */
 .campusStrip {
-  background: var(--white);
+  background: var(--off);
   padding: 64px 0;
 }
 
