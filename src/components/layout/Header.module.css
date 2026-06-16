@@ -56,29 +56,30 @@
 }
 
 .navLink {
-  padding: 8px 13px;
+  padding: 10px 14px;
   font-family: 'Montserrat', sans-serif;
-  font-weight: 900;
-  font-size: 13px;
-  color: var(--hint);
+  font-weight: 700;
+  font-size: 13.5px;
+  color: var(--body);
   border-radius: var(--r-sm);
   transition: color 0.15s;
   display: flex;
   align-items: center;
   gap: 4px;
   text-transform: capitalize;
-  letter-spacing: -0.8px;
+  letter-spacing: -1px;
   background: transparent;
   position: relative;
+  text-decoration: none;
+  white-space: nowrap;
+  cursor: pointer;
 }
 
-/* Hover: text brightens to teal-d only, no background fill */
 .navLink:hover {
-  color: var(--pink);
+  color: var(--teal-d);
   background: transparent;
 }
 
-/* Active page: teal-d text + underline accent */
 .navLink.active {
   color: var(--teal-d);
 }
@@ -87,8 +88,8 @@
   content: '';
   position: absolute;
   bottom: -2px;
-  left: 13px;
-  right: 13px;
+  left: 14px;
+  right: 14px;
   height: 2.5px;
   background: linear-gradient(90deg, var(--teal), var(--pink));
   border-radius: 99px;

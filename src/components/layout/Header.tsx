@@ -99,8 +99,8 @@ export default function Header() {
           <Image
             src="/logo.png"
             alt="Ingeri"
-            width={150}
-            height={150}
+            width={180}
+            height={180}
             style={{ objectFit: 'contain' }}
           />
         </Link>
@@ -109,8 +109,8 @@ export default function Header() {
           <Image
             src="/creche-logo.png"
             alt="Ingeri"
-            width={150}
-            height={130}
+            width={180}
+            height={160}
             style={{ objectFit: 'contain' }}
           />
         </Link>
