@@ -65,31 +65,14 @@
   margin-bottom: 10px;
 }
 
+
 .hlTeal {
-  color: var(--gold);
-  position: relative;
-  display: inline;
-}
-
-.hlTeal::after {
-  content: '';
-  position: absolute;
-  bottom: 3px;
-  left: 0;
-  width: 100%;
-  height: 9px;
-  background: var(--gold-l);
-  z-index: -1;
-  border-radius: 3px;
-}
-
-.hlPink {
   color: var(--teal-d);
   position: relative;
   display: inline;
 }
 
-.hlPink::after {
+.hlTeal::after {
   content: '';
   position: absolute;
   bottom: 3px;

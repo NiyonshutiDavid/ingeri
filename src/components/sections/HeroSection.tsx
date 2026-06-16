@@ -21,7 +21,7 @@ export default function HeroSection() {
             <h1 className={styles.heroTitle}>
               {t('title1')}<br />
               <span className={styles.hlTeal}>{t('title2')}</span>{t('title3')}<br />
-              {t('title4')} <span className={styles.hlPink}>{t('title5')}</span>
+              {t('title4')} <span className={styles.hlTeal}>{t('title5')}</span>
             </h1>
             <p className={styles.heroSubtitle}>{t('subtitle')}</p>
             <div className={styles.heroBtns}>
