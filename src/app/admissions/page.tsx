@@ -54,7 +54,7 @@ export default function AdmissionsPage() {
         <p className="sec-sub">{t('subtitle')}</p>
 
         <div className={styles.admTop}>
-          {/* Tuition Creche — full width row, age groups side by side */}
+          {/* LEFT COLUMN — Creche, spans full height */}
           <div className={`${styles.admBlock} ${styles.crecheBlock}`} id="frais-creche">
             <h3>{t('tuition.heading-creche')}</h3>
 
@@ -87,58 +87,61 @@ export default function AdmissionsPage() {
             <p className={styles.note}>{t('tuition.note-creche')}</p>
           </div>
 
-          {/* Tuition Maternelle */}
-          <div className={styles.admBlock} id="frais-maternelle">
-            <h3>{t('tuition.heading-maternelle')}</h3>
+          {/* RIGHT COLUMN — Maternelle + Steps stacked */}
+          <div className={styles.rightCol}>
+            {/* Maternelle */}
+            <div className={styles.admBlock} id="frais-maternelle">
+              <h3>{t('tuition.heading-maternelle')}</h3>
 
-            <table className={styles.fraisTable}>
-              <thead>
-                <tr>
-                  <th>{t('tuition.colType')}</th>
-                  <th>{t('tuition.colCompanyRate')}</th>
-                  <th>{t('tuition.colParentRate')}</th>
-                </tr>
-              </thead>
-              <tbody>
-                {maternelle.rates.map((r) => (
-                  <tr key={r.label}>
-                    <td>{r.label}</td>
-                    <td>{r.company}</td>
-                    <td>{r.parent}</td>
+              <table className={styles.fraisTable}>
+                <thead>
+                  <tr>
+                    <th>{t('tuition.colType')}</th>
+                    <th>{t('tuition.colCompanyRate')}</th>
+                    <th>{t('tuition.colParentRate')}</th>
                   </tr>
-                ))}
-              </tbody>
-            </table>
+                </thead>
+                <tbody>
+                  {maternelle.rates.map((r) => (
+                    <tr key={r.label}>
+                      <td>{r.label}</td>
+                      <td>{r.company}</td>
+                      <td>{r.parent}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
 
-            <div className={styles.regFee}>
-              <div>
-                <strong>{maternelle.registrationLabel}</strong>
-                <p className={styles.note} style={{ marginTop: 2 }}>
-                  {maternelle.registrationNote}
-                </p>
-              </div>
-              <span className={styles.rateAmount}>{maternelle.registrationFee}</span>
-            </div>
-          </div>
-
-          {/* Steps */}
-          <div className={styles.admBlock} id="inscription">
-            <h3>{t('steps.heading')}</h3>
-            <div className={styles.stepsList}>
-              {steps.map((step, i) => (
-                <div key={i} className={styles.stepItem}>
-                  <span className={styles.stepNum}>{i + 1}</span>
-                  <p>{step}</p>
+              <div className={styles.regFee}>
+                <div>
+                  <strong>{maternelle.registrationLabel}</strong>
+                  <p className={styles.note} style={{ marginTop: 2 }}>
+                    {maternelle.registrationNote}
+                  </p>
                 </div>
-              ))}
+                <span className={styles.rateAmount}>{maternelle.registrationFee}</span>
+              </div>
             </div>
-            <Link
-              href="/contact"
-              className="btn btn-teal"
-              style={{ marginTop: 18, fontSize: 13, padding: '10px 18px' }}
-            >
-              {t('steps.btn')}
-            </Link>
+
+            {/* Steps */}
+            <div className={styles.admBlock} id="inscription">
+              <h3>{t('steps.heading')}</h3>
+              <div className={styles.stepsList}>
+                {steps.map((step, i) => (
+                  <div key={i} className={styles.stepItem}>
+                    <span className={styles.stepNum}>{i + 1}</span>
+                    <p>{step}</p>
+                  </div>
+                ))}
+              </div>
+              <Link
+                href="/contact"
+                className="btn btn-teal"
+                style={{ marginTop: 18, fontSize: 13, padding: '10px 18px' }}
+              >
+                {t('steps.btn')}
+              </Link>
+            </div>
           </div>
         </div>
 

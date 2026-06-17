@@ -3,32 +3,41 @@
   background: var(--off);
 }
 
-/* Section headers sit on texture — white globals apply */
-
+/* 2-column grid: creche left, right column for maternelle + steps */
 .admTop {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 20px;
   margin-top: 44px;
+  align-items: start;
 }
 
+/* Creche fills the full left column height */
 .crecheBlock {
-  grid-column: 1 / -1;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Right column stacks maternelle and steps vertically */
+.rightCol {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 /* Floating white card */
 .admBlock {
   background: #fff;
-  /* border-radius: var(--r-lg); */
   box-shadow: var(--sh);
   padding: 34px 28px;
   transition: box-shadow 0.22s, transform 0.22s;
 }
 
-.admBlock:hover {
+/* .admBlock:hover {
   box-shadow: var(--sh-up);
   transform: translateY(-3px);
-}
+} */
 
 .admBlock h3 {
   font-size: 17px;
@@ -38,10 +47,12 @@
   border-bottom: 2px solid var(--teal-l);
 }
 
-/* Creche age groups, laid out as columns */
+/* Creche age groups stacked vertically within the left card */
 .crecheGroups {
   display: flex;
-  gap: 24px;
+  flex-direction: column;
+  /* gap: 5px; */
+  flex: 1;
 }
 
 .crecheGroupCol {
@@ -132,7 +143,7 @@
   text-align: center;
   padding: 7px 10px;
   border-radius: var(--r-sm);
-  margin-bottom: 8px;
+  margin-bottom: 15px;
 }
 
 /* Maternelle */
@@ -271,11 +282,10 @@
   }
 
   .crecheBlock {
-    grid-column: auto;
+    height: auto;
   }
 
   .crecheGroups {
-    flex-direction: column;
-    gap: 0;
+    gap: 16px;
   }
 }
