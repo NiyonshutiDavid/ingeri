@@ -7,9 +7,13 @@
 
 .admTop {
   display: grid;
-  grid-template-columns: 1.2fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   gap: 20px;
   margin-top: 44px;
+}
+
+.crecheBlock {
+  grid-column: 1 / -1;
 }
 
 /* Floating white card */
@@ -32,6 +36,17 @@
   margin-bottom: 14px;
   padding-bottom: 8px;
   border-bottom: 2px solid var(--teal-l);
+}
+
+/* Creche age groups, laid out as columns */
+.crecheGroups {
+  display: flex;
+  gap: 24px;
+}
+
+.crecheGroupCol {
+  flex: 1;
+  min-width: 0;
 }
 
 /* Tuition table */
@@ -94,7 +109,7 @@
   color: #fff;
   border-radius: 50%;
   font-family: 'Montserrat', sans-serif;
-  font-weight: 900;
+  font-weight: 700;
   font-size: 12px;
   display: flex;
   align-items: center;
@@ -108,28 +123,52 @@
   padding-top: 3px;
 }
 
-/* Open days */
-.portesDesc {
-  font-size: 13px;
-  color: var(--body);
-  margin-bottom: 13px;
-}
-
-.portesCard {
-  background: var(--teal-l);
+/* Age group bar (crèche) */
+.ageGroupBar {
+  background: var(--teal-d);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  text-align: center;
+  padding: 7px 10px;
   border-radius: var(--r-sm);
-  padding: 14px 16px;
-  margin-bottom: 14px;
-  border-left: 3px solid var(--teal-d);
+  margin-bottom: 8px;
 }
 
-.portesCard p {
+/* Maternelle */
+.rateSubheading {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--teal-d);
+  margin-bottom: 12px;
+}
+
+.rateAmount {
+  font-weight: 800;
+  font-size: 14px;
+  color: var(--teal-d);
+  white-space: nowrap;
+}
+
+.regFee {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  background: var(--off);
+  border: 1px solid var(--teal-l);
+  border-radius: var(--r-sm);
+  padding: 12px 14px;
+  margin-top: 16px;
+}
+
+.regFee strong {
   font-size: 13px;
   color: var(--teal-d);
 }
 
 /* FAQ */
-#faq{
+#faq {
   background: var(--white);
 }
 
@@ -192,8 +231,51 @@
   padding-top: 12px;
 }
 
+/* FAQ "what to bring" list */
+.faqBringList {
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px 16px;
+  margin: 0;
+  padding: 0;
+}
+
+.faqBringList li {
+  position: relative;
+  padding-left: 16px;
+  font-size: 13px;
+  color: var(--body);
+}
+
+.faqBringList li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 7px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--teal-d);
+}
+
+@media (max-width: 480px) {
+  .faqBringList {
+    grid-template-columns: 1fr;
+  }
+}
+
 @media (max-width: 960px) {
   .admTop {
     grid-template-columns: 1fr;
+  }
+
+  .crecheBlock {
+    grid-column: auto;
+  }
+
+  .crecheGroups {
+    flex-direction: column;
+    gap: 0;
   }
 }

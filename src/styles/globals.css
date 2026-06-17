@@ -5,8 +5,9 @@
   --teal-d: #1A8C86;
   --pink:   #F093B0;
   --pink-l: #FDDAE9;
-  --pink-d: #C8336E;
+  --pink-d: #c8336fd0;
   --gold:   #F5A623;
+  --gold-m: #ffd52cde;
   --gold-l: #FDEBC8;
   --white:  #fff;
   --off:    #F6FAFA;
@@ -46,7 +47,7 @@ body {
 
 h1, h2, h3, h4 {
   font-family: 'Montserrat', sans-serif;
-  font-weight: 900;
+  font-weight: 750;
   line-height: 1.2;
   text-transform: capitalize;
   letter-spacing: -0.5px;

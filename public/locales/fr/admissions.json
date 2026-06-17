@@ -4,17 +4,44 @@
   "subtitle": "Tout ce que vous devez savoir pour inscrire votre enfant.",
 
   "tuition": {
-    "heading": "Frais de scolarité",
-    "colProgramme": "Programme",
-    "colFees": "Frais / mois",
-    "note": "* Des facilités de paiement sont possibles.",
-    "rows": [
-      { "programme": "Crèche (6 mois – 3 ans)", "frais": "À compléter" },
-      { "programme": "Petite section (3 ans)", "frais": "À compléter" },
-      { "programme": "Moyenne section", "frais": "À compléter" },
-      { "programme": "Grande section", "frais": "À compléter" },
-      { "programme": "Frais d'inscription", "frais": "À compléter" }
-    ]
+    "heading-creche": "Crèche — Frais mensuels",
+    "colSchedule": "Emploi du temps",
+    "colPrivate": "Tarif parent",
+    "colCompany": "tarif entreprise",
+    "note-creche": "Tous les prix sont des frais mensuels en francs rwandais (RWF).",
+    "creche": {
+      "groups": [
+        {
+          "ageGroup": "Groupe d'âge : 1 – 3 ans",
+          "rows": [
+            { "schedule": "5 jours / semaine, 8h00 – 16h00", "private": "200,000 RWF", "company": "400,000 RWF" },
+            { "schedule": "3 jours / semaine, 8h00 – 16h00", "private": "170,000 RWF", "company": "320,000 RWF" },
+            { "schedule": "5 jours / semaine, 8h00 – 13h00", "private": "170,000 RWF", "company": "320,000 RWF" }
+          ]
+        },
+        {
+          "ageGroup": "Groupe d'âge : 6 mois – 1 an",
+          "rows": [
+            { "schedule": "5 jours / semaine, 8h00 – 16h00", "private": "250,000 RWF", "company": "500,000 RWF" },
+            { "schedule": "3 jours / semaine, 8h00 – 16h00", "private": "200,000 RWF", "company": "400,000 RWF" },
+            { "schedule": "5 jours / semaine, 8h00 – 13h00", "private": "200,000 RWF", "company": "400,000 RWF" }
+          ]
+        }
+      ]
+    },
+    "heading-maternelle": "Maternelle — Frais par trimestre",
+    "colType": "Emploi du temps",
+    "colCompanyRate": "Tarif entreprise",
+    "colParentRate": "Tarif parent",
+    "maternelle": {
+      "rates": [
+        { "label": "Full day", "company": "1,500,000 RWF", "parent": "900,000 RWF" },
+        { "label": "Half day", "company": "1,400,000 RWF", "parent": "800,000 RWF" }
+      ],
+      "registrationLabel": "Frais d'inscription",
+      "registrationNote": "Ressources pédagogiques incluses",
+      "registrationFee": "100,000 RWF"
+    }
   },
 
   "steps": {
@@ -29,13 +56,6 @@
     "btn": "Commencer l'inscription"
   },
 
-  "openDays": {
-    "heading": "Portes ouvertes",
-    "desc": "Venez visiter nos campus et rencontrer l'équipe.",
-    "nextDate": "Prochaine date",
-    "placeholder": "Date à compléter\nHeure à compléter\nAdresse à compléter",
-    "btn": "Réserver ma place"
-  },
 
   "faq": {
     "tag": "Questions fréquentes",
@@ -44,6 +64,17 @@
       {
         "q": "À partir de quel âge acceptez-vous les enfants ?",
         "a": "À la crèche dès 6 mois, à la maternelle à partir de 3 ans révolus."
+      },
+      {
+        "q": "Quels objets mon enfant doit-il apporter? — Maternelle",
+        "a": [
+          "Sac à dos",
+          "Chaussures intérieures / crocs",
+          "6 packs de mouchoirs humides",
+          "6 packs de mouchoirs en papier",
+          "2 changes de vêtements",
+          "Bouteille d'eau"
+        ]
       },
       {
         "q": "Quelle langue est utilisée ?",

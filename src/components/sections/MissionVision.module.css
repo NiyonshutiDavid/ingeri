@@ -40,7 +40,7 @@
 }
 
 .mvBlock.pink .mvAccent::after {
-  background: rgba(200, 51, 110, 0.45);
+  background: var(--gold-m);
 }
 
 .mvBody {

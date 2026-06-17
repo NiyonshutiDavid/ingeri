@@ -53,7 +53,7 @@
   content: '';
   position: absolute;
   inset: 0;
-  background: rgba(200, 51, 110, 0.38);
+  background: var(--teal-l);
 }
 
 /* Icon badge sits over the accent */

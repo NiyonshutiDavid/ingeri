@@ -29,7 +29,7 @@ export default function CampusStrip() {
             <ArrowRight size={18} className={`${styles.csArrow} ${styles.teal}`} />
           </Link>
 
-          <Link href="/campus#maternelle" className={`${styles.csBlock} ${styles.pink}`}>
+          <Link href="/campus#maternelle" className={`${styles.csBlock} ${styles.teal}`}>
             <div className={styles.csAccent}>
               <div className={`${styles.csThumb} ${styles.pink}`}>
                 <GraduationCap size={22} />

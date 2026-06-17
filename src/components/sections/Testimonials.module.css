@@ -54,7 +54,7 @@
 }
 
 .echoBlock:nth-child(3n+1) .echoAccent::after { content: ''; position: absolute; inset: 0; background: rgba(78,205,196,0.55); }
-.echoBlock:nth-child(3n+2) .echoAccent::after { content: ''; position: absolute; inset: 0; background: rgba(200,51,110,0.45); }
+.echoBlock:nth-child(3n+2) .echoAccent::after { content: ''; position: absolute; inset: 0; background: var(--gold-m); }
 .echoBlock:nth-child(3n+3) .echoAccent::after { content: ''; position: absolute; inset: 0; background: rgba(245,166,35,0.50); }
 
 .echoBody {

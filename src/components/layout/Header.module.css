@@ -41,6 +41,11 @@
   letter-spacing: -1px;
 }
 
+/* Hides the second logo + its divider on mobile */
+.desktopOnly {
+  display: flex;
+}
+
 /* Desktop nav links */
 .navLinks {
   display: flex;
@@ -288,6 +293,10 @@
 }
 
 @media (max-width: 960px) {
+  .nav {
+    padding: 0 20px;
+  }
+
   .navLinks {
     display: none;
   }
@@ -298,5 +307,10 @@
 
   .ham {
     display: flex;
+  }
+
+  /* Hide second logo and its divider on mobile */
+  .desktopOnly {
+    display: none;
   }
 }
