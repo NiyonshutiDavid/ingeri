@@ -1,7 +1,7 @@
 {
   "tag": "Join Ingeri",
   "title": "Admissions",
-  "subtitle": "Everything you need to know to enrol your child.",
+  "subtitle": "Everything you need to know to enroll your child.",
   "tuition": {
     "heading-creche": "Crèche — Monthly Fees",
     "colSchedule": "Schedule",
@@ -44,15 +44,15 @@
     }
   },
   "steps": {
-    "heading": "How to enrol",
+    "heading": "How to enroll",
     "items": [
       "Fill in the contact form",
       "Campus visit appointment",
-      "Submit the enrolment file",
+      "Submit the enrollment file",
       "Place confirmation",
       "Progressive settling-in period"
     ],
-    "btn": "Start enrolment"
+    "btn": "Start enrollment"
   },
 
   "faq": {
