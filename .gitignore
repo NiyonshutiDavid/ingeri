@@ -28,3 +28,4 @@
 *.cer
 *.p12
 .next
+node_modules
