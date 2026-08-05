@@ -69,120 +69,26 @@ export default function AdmissionsPage() {
         <p className="sec-sub">{t('subtitle')}</p>
 
         <div className={styles.admTop}>
-          {/* Creche */}
-          <div className={styles.admBlock} id="frais-creche">
-            <h3>{t('tuition.heading-creche')}</h3>
-
-            <div className={styles.crecheGroups}>
-              {crecheGroups.map((group, i) => {
-                const isOpen = !!openCreche[i]
-                return (
-                  <div className={styles.crecheGroupCol} key={group.ageGroup}>
-                    <button
-                      type="button"
-                      className={styles.ageGroupBar}
-                      aria-expanded={isOpen}
-                      onClick={() => toggleCreche(i)}
-                    >
-                      <span>{group.ageGroup}</span>
-                      {isOpen
-                        ? <ChevronUp size={14} className={styles.arrow} />
-                        : <ChevronDown size={14} className={styles.arrow} />}
-                    </button>
-                    <div
-                      className={`${styles.collapseWrap} ${isOpen ? styles.collapseOpen : ''}`}
-                    >
-                      <div className={styles.collapseInner}>
-                        <table className={styles.fraisTable}>
-                          <thead>
-                            <tr>
-                              <th>{t('tuition.colSchedule')}</th>
-                              <th>{t('tuition.colPrivate')}</th>
-                              <th>{t('tuition.colCompany')}</th>
-                            </tr>
-                          </thead>
-                          <tbody>
-                            {group.rows.map((r) => (
-                              <tr key={r.schedule}>
-                                <td>{r.schedule}</td>
-                                <td>{r.private}</td>
-                                <td>{r.company}</td>
-                              </tr>
-                            ))}
-                          </tbody>
-                        </table>
-                      </div>
-                    </div>
-                  </div>
-                )
-              })}
-            </div>
-
-            <p className={styles.note}>{t('tuition.note-creche')}</p>
-
-            <div className={styles.enrollBtnWrap}>
-              <Link href="/contact" className="btn btn-teal">
-                {t('steps.btn')}
-              </Link>
-            </div>
-          </div>
-
-          {/* Maternelle */}
+          {/* Steps */}
           <div className={styles.admBlock} id="frais-maternelle">
-            <h3 className={styles.toggleHeading}>
-              <button
-                type="button"
-                className={styles.blockToggle}
-                aria-expanded={maternelleOpen}
-                onClick={() => setMaternelleOpen((v) => !v)}
-              >
-                <span>{t('tuition.heading-maternelle')}</span>
-                {maternelleOpen
-                  ? <ChevronUp size={16} className={styles.arrow} />
-                  : <ChevronDown size={16} className={styles.arrow} />}
-              </button>
-            </h3>
-
-            <div
-              className={`${styles.collapseWrap} ${maternelleOpen ? styles.collapseOpen : ''}`}
+            <h3 className={styles.admBlockTitle}>{t('steps.heading')}</h3>
+            <ol className={styles.stepsList}>
+              {steps.map((step, i) => (
+                <li key={i} className={styles.stepItem}>
+                  <span className={styles.stepNum}>{i + 1}</span>
+                  <p>{step}</p>
+                </li>
+              ))}
+            </ol>
+            <Link
+              href="/contact"
+              className="btn btn-teal"
+              style={{ marginTop: 16, alignSelf: 'center' }}
             >
-              <div className={styles.collapseInner}>
-                <table className={styles.fraisTable}>
-                  <thead>
-                    <tr>
-                      <th>{t('tuition.colType')}</th>
-                      <th>{t('tuition.colCompanyRate')}</th>
-                      <th>{t('tuition.colParentRate')}</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {maternelle.rates.map((r) => (
-                      <tr key={r.label}>
-                        <td>{r.label}</td>
-                        <td>{r.company}</td>
-                        <td>{r.parent}</td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
-
-                <div className={styles.regFee}>
-                  <div>
-                    <strong>{maternelle.registrationLabel}</strong>
-                    <p className={styles.note} style={{ marginTop: 2 }}>
-                      {maternelle.registrationNote}
-                    </p>
-                  </div>
-                  <span className={styles.rateAmount}>{maternelle.registrationFee}</span>
-                </div>
-              </div>
-            </div>
-
-            <div className={styles.enrollBtnWrap}>
-              <Link href="/contact" className="btn btn-teal">
-                {t('steps.btn')}
-              </Link>
-            </div>
+              <p>
+              {t('steps.btn')}
+              </p>
+            </Link>
           </div>
         </div>
 
@@ -217,43 +123,6 @@ export default function AdmissionsPage() {
                 )}
               </div>
             ))}
-
-            {/* How To Enroll — moved here from the right column, rendered
-                as one more FAQ accordion entry with its numbered-steps
-                layout in place of plain text/list answer content. */}
-            <div
-              id="inscription"
-              className={`${styles.faqItem} ${openFaq === enrollFaqIndex ? styles.open : ''}`}
-            >
-              <button
-                className={styles.faqQ}
-                onClick={() => setOpenFaq(openFaq === enrollFaqIndex ? null : enrollFaqIndex)}
-              >
-                {t('steps.heading')}
-                {openFaq === enrollFaqIndex
-                  ? <ChevronUp size={14} className={styles.arrow} />
-                  : <ChevronDown size={14} className={styles.arrow} />}
-              </button>
-              {openFaq === enrollFaqIndex && (
-                <div className={styles.faqA}>
-                  <div className={styles.stepsList}>
-                    {steps.map((step, i) => (
-                      <div key={i} className={styles.stepItem}>
-                        <span className={styles.stepNum}>{i + 1}</span>
-                        <p>{step}</p>
-                      </div>
-                    ))}
-                  </div>
-                  <Link
-                    href="/contact"
-                    className="btn btn-teal"
-                    style={{ marginTop: 18, fontSize: 13, padding: '10px 18px' }}
-                  >
-                    {t('steps.btn')}
-                  </Link>
-                </div>
-              )}
-            </div>
           </div>
         </div>
       </div>

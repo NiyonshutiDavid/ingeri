@@ -1,56 +1,14 @@
 {
   "tag": "Join Ingeri",
   "title": "Admissions",
-  "subtitle": "Everything you need to know to enroll your child.",
-  "tuition": {
-    "heading-creche": "Crèche — Monthly Fees",
-    "colSchedule": "Schedule",
-    "colPrivate": "Parent Rate",
-    "colCompany": "Company rate",
-    "note-creche": "All prices are monthly fees in Rwandan Francs (RWF).",
-    "creche": {
-      "groups": [
-        {
-          "ageGroup": "Age group: 1 – 3 years",
-          "rows": [
-            { "schedule": "5 days / week, 8:00 am – 4:00 pm", "private": "200,000 RWF", "company": "400,000 RWF" },
-            { "schedule": "3 days / week, 8:00 am – 4:00 pm", "private": "170,000 RWF", "company": "320,000 RWF" },
-            { "schedule": "5 days / week, 8:00 am – 1:00 pm", "private": "170,000 RWF", "company": "320,000 RWF" }
-          ]
-        },
-        {
-          "ageGroup": "Age group: 6 months – 1 year",
-          "rows": [
-            { "schedule": "5 days / week, 8:00 am – 4:00 pm", "private": "250,000 RWF", "company": "500,000 RWF" },
-            { "schedule": "3 days / week, 8:00 am – 4:00 pm", "private": "200,000 RWF", "company": "400,000 RWF" },
-            { "schedule": "5 days / week, 8:00 am – 1:00 pm", "private": "200,000 RWF", "company": "400,000 RWF" }
-          ]
-        }
-      ]
-    },
-    "heading-maternelle": "Nursery — Fees per Term",
-    "colType": "Schedule",
-    "colCompanyRate": "Company rate",
-    "colParentRate": "Parent rate",
-    "maternelle": {
-      "heading": "Early Years",
-      "rates": [
-        { "label": "Full day", "company": "1,500,000 RWF", "parent": "900,000 RWF" },
-        { "label": "Half day", "company": "1,400,000 RWF", "parent": "800,000 RWF" }
-      ],
-      "registrationLabel": "Registration fee",
-      "registrationNote": "Teaching resources included",
-      "registrationFee": "100,000 RWF"
-    }
-  },
+  "subtitle": "Would you like to join the Ingeri family? We would be delighted to welcome your child and support them through their first steps into learning, in a warm, safe environment rooted in faith.",
   "steps": {
-    "heading": "How to enroll",
+    "heading": "Enroll my child",
     "items": [
-      "Fill in the contact form",
-      "Campus visit appointment",
-      "Submit the enrollment file",
-      "Place confirmation",
-      "Progressive settling-in period"
+      "Fill out the form: follow the button to the form and we will get back to you promptly.",
+      "Schedule a visit: come discover our school, meet our team and ask your questions.",
+      "Complete the enrollment file: we will guide you through the administrative process.",
+      "Confirm your child's place: after the file has been validated."
     ],
     "btn": "Start enrollment"
   },
@@ -64,31 +22,24 @@
         "a": "At the nursery from 6 months, at kindergarten from 3 years old."
       },
       {
-        "q": "What does my child need to bring? — Maternelle",
-        "a": [
-          "Backpack",
-          "Indoor shoes / crocs",
-          "6 packs of wet wipes",
-          "6 packs of tissues",
-          "2 changes of clothes",
-          "Water bottle"
-        ]
+        "q": "Can I visit the school before enrolling?",
+        "a": "Yes, gladly! Contact us to arrange a visit at a time that suits you."
       },
       {
-        "q": "What language is used?",
-        "a": "Ingeri International School follows the French national curriculum. French is the main language, with an opening to English and Kinyarwanda."
+        "q": "What are the tuition fees?",
+        "a": "Fees vary by level. Please contact us directly and we will gladly send you all the information."
       },
       {
-        "q": "Is there catering on site?",
-        "a": "Yes, balanced, varied and locally sourced meals are prepared every day. Children take part in table routines."
+        "q": "What documents do I need to provide?",
+        "a": "The child's birth certificate, vaccination record, ID photos, and the completed enrollment form."
       },
       {
-        "q": "How does the settling-in period work?",
-        "a": "Progressive settling-in: prior visits with parents, short stays that gradually lengthen, respecting the child's own pace."
+        "q": "What are the school hours?",
+        "a": "8am- 4pm, Monday to Friday"
       },
       {
-        "q": "Are payment plans available?",
-        "a": "Yes, we consider each situation individually. Contact us confidentially."
+        "q": "Does my child need to be Christian to be enrolled?",
+        "a": "No, we welcome children of all faiths with respect and care."
       }
     ]
   }

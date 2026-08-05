@@ -68,6 +68,11 @@
   flex-direction: column;
 }
 
+.infoCol .tabs {
+  margin: 14px auto 0;
+  align-self: center;
+}
+
 /* Image strip */
 .contactImg {
   height: 220px;

@@ -3,7 +3,7 @@
     "tag": "Who we are",
     "title": "About",
     "titleSpan": "Us",
-    "subtitle": "Everything that makes up Ingeri's deep identity: our philosophy, our team and our commitments."
+    "subtitle": "Discover everything that shapes Ingeri's deep identity."
   },
 
   "missionVision": {
@@ -12,59 +12,112 @@
     "titleSpan": "Vision",
     "mission": {
       "heading": "Our mission",
-      "body": "Sowing the seeds of excellence from early childhood. We support every child in their holistic development — spiritual, emotional, intellectual, social and motor — within a safe, loving and stimulating environment."
+      "body": "To prepare a generation of servant leaders, called to grow with a character rooted in wisdom, service and empathy, guided by integrity and capable of positively transforming the world around them. We aspire to become a leading network of schools, known for academic excellence and strong Christian values. "
     },
     "vision": {
       "heading": "Our vision",
-      "body": "To become a reference network of educational spaces in Rwanda and Africa, recognised for pedagogical quality, Christian values and innovation adapted to our local context."
+      "body": "To sow the seeds of excellence from early childhood, by offering quality education rooted in Christian values. From the earliest stages of a child's life, we provide learning adapted to each child's own pace, stimulating their curiosity, creativity and social interactions. We support each child's holistic development : spiritual, emotional, intellectual, social and physical in a safe, loving and stimulating environment."
     }
   },
-
+  "campus": {
+    "tag": "Our campuses",
+    "title": "Our",
+    "titleSpan": "campuses",
+    "subtitle": "Two campuses, one philosophy: to provide a safe, loving and stimulating environment for your child.",
+    "creche": {
+      "name": "La P'tite Crèche Ingeri",
+      "message": "A loving and nurturing space for little ones, where children feel safe, grow in confidence, develop independence, and discover at their own pace. ",
+      "address": "KK 389 St Kagarama, Kicukiro, Kigali, Rwanda",
+      "phone": "+250 783 812 618",
+      "hours": "Mon–Fri: 7:00 am – 4:00 pm",
+      "btn": "Contact us"
+    },
+    "maternelle": {
+      "name": "Ingeri International School",
+      "message": "A French-speaking preschool where educational excellence meets a nurturing environment, empowering every child to thrive.",
+      "address": "KK 468 n°12, Kagarama – Kigali, Rwanda",
+      "phone": "+250 795 826 080",
+      "hours": "Mon–Fri: 7:00 am – 5:30 pm",
+      "btn": "Contact us"
+    }
+  },
+  "leadership": {
+    "tag": "Word of the Director",
+    "title": "Our",
+    "titleSpan": "Director",
+    "p1": "Welcome to Ingeri International School, a school founded on the belief that every child is unique and deserves a warm, caring, and nurturing environment. Rooted in Christian values, our school welcomes families from all backgrounds and faiths, united by a shared desire to see every child thrive in an environment filled with love, respect, and faith.",
+    "p2": "From daycare to preschool, we nurture our students’curiosity, creativity, and independence through play, exploration, and meaningful relationships with others. At Ingeri, our hallways are filled with laughter, joyful play, and cheerful songs, where every child discovers their unique worth and their ability to love and serve the world around them.",
+    "p3": "Believing that education is built hand in hand with families, we look forward to welcoming you into the Ingeri family!",
+    "quote": "Every child is a promise of the future. Our role is to honour that promise.",
+    "quoteCite": "— Founder, Ingeri Schools",
+    "photoAlt": "Founder / Director"
+  },
   "principes": {
-    "tag": "Our philosophy",
-    "title": "Our core",
-    "titleSpan": "principles",
-    "items": [
+    "pillars": {
+      "tag": "Our educational pillars and core principles",
+      "title": "Our ",
+      "titleSpan": "pillars",
+      "items": [
+        { "title": "Growing with Confidence", "desc": "Each child develops their potential in a safe and nurturing environment where they learn, explore, and thrive at their own pace." },
+        { "title": "Growing with values", "desc": "We nurture love, respect, kindness, sharing, and gratitude through an education inspired by Christian values." },
+        { "title": "Growing open to the world", "desc": "We encourage children to discover the richness of different cultures, explore the world around them, and embrace others with kindness, love, and respect." },
+        { "title": "Growing together", "desc": "We build a trusting partnership with families to support each child’s development and overall well-being." }
+      ]
+    },
+    "core": {
+      "title": "Our ",
+      "titleSpan": "core principles",
+      "items": [
       { "title": "Child-centred", "desc": "Every child is unique. The adult observes, encourages and supports without imposing." },
       { "title": "Christian foundation", "desc": "Patience, respect, humility, joy and forgiveness at the heart of every day." },
       { "title": "The bond", "desc": "Child–educator, child–family: shared trust creates security." },
       { "title": "Connection to nature", "desc": "Gardening, natural objects: nature nurtures wonder." },
       { "title": "Autonomy and dignity", "desc": "The child learns to 'do it alone' and to trust themselves." }
     ]
+    }
   },
-
   "domaines": {
-    "tag": "What we cultivate",
-    "title": "Learning ",
-    "titleSpan": "Areas",
+    "tag": "Our Programs",
+    "title": "Our ",
+    "titleSpan": "Programs",
+    "subtitle": "At Ingeri, we support each child according to their age, pace, and individual needs. Our program combines structured learning, hands-on experiences, and moments of exploration to nurture the child's overall development.",
+    "nursery": {
+      "name": "The Nursery (6 months – 3 years)",
+      "tagline": "Awakening, security, and gentle growth",
+      "items": [
+        { "title": "Sensory and motor awakening:", "desc": "exploration through the senses, movement, manipulation, and discovery of the environment." },
+        { "title": "Language development:", "desc": "conversation, stories, songs, and daily interactions to enrich communication." },
+        { "title": "Growing independence:", "desc": "supporting the child in their first steps toward independence, at their own pace." },
+        { "title": "Emotional and social development:", "desc": "creating a secure setting where the child learns to express emotions and interact with others." },
+        { "title": "Spiritual awakening:", "desc": "discovering Christian values through songs, prayers, and moments suited to young children." }
+      ]
+    },
+    "preschool": {
+      "name": "Preschool (3 – 6 years)",
+      "tagline": "Exploring, learning, and unlocking potential",
+      "items": [
+        { "title": "Early academic learning:", "desc": "language, pre-reading, writing, mathematics, discovery of the world, and first scientific concepts." },
+        { "title": "Creativity and expression:", "desc": "artistic activities, music, physical expression, and creative projects." },
+        { "title": "Thinking and curiosity:", "desc": "observation, experimentation, problem-solving, and learning through play." },
+        { "title": "Social skills:", "desc": "cooperation, communication, self-confidence, and group life." },
+        { "title": "Cultural and spiritual openness:", "desc": "discovering the world, cultures, and Christian values." }
+      ]
+    },
+    "pedagogyTitle": "An active pedagogy centered on every child",
+    "pedagogyBody": "Inspired by active learning pedagogies, our approach puts the child at the center of their own learning. We create an environment where every child can explore, experiment, create, and grow with confidence.",
     "items": [
-      "Language & expression",
-      "Logic & first numbers",
-      "Creativity & meaning",
-      "Practical life & autonomy",
-      "Living together & faith",
-      "Nature awareness",
-      "Motor development",
-      "Music & rhythm"
+      { "title": "Language & Expression", "desc": "Stories, songs, prayers, and guided conversations." },
+      { "title": "Logic & First Numbers", "desc": "Objects, shapes, and quantities to discover the order of the world." },
+      { "title": "Creativity & Meaning", "desc": "Painting, singing, modelling, dance." },
+      { "title": "Practical Life & Autonomy", "desc": "Getting dressed, tidying up, serving, taking care of oneself and others." },
+      { "title": "Spiritual Awakening & Values", "desc": "Prayers, Bible stories, songs, gratitude, and respect for others." }
     ]
   },
-
-  "leadership": {
-    "tag": "Leadership",
-    "title": "The",
-    "titleSpan": "Leadership",
-    "p1": "At Ingeri, leadership is in the service of the child. Every pedagogical decision is guided by a single question: is this the best for the child?",
-    "p2": "Our leadership team deeply believes that early childhood education is the most precious investment one can make for a generation.",
-    "quote": "Every child is a promise of the future. Our role is to honour that promise.",
-    "quoteCite": "— Founder, Ingeri Schools",
-    "photoAlt": "Founder / Director"
-  },
-
   "equipe": {
     "tag": "The faces of Ingeri",
     "title": "Our",
     "titleSpan": "team",
-    "subtitle": "Committed women — mothers and professionals — in the service of your children.",
+    "subtitle": "Committed professionals in the service of your children.",
     "members": [
       { "name": "First Last", "role": "Pedagogical Director" },
       { "name": "First Last", "role": "Nursery educator" },

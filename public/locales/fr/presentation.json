@@ -3,7 +3,7 @@
     "tag": "Qui sommes-nous",
     "title": "Notre",
     "titleSpan": "présentation",
-    "subtitle": "Tout ce qui fait l'identité profonde d'Ingeri : notre philosophie, notre équipe et nos engagements."
+    "subtitle": "Découvrez tout ce qui fait l'identité profonde d'Ingeri"
   },
 
   "missionVision": {
@@ -12,59 +12,112 @@
     "titleSpan": "Vision",
     "mission": {
       "heading": "Notre mission",
-      "body": "Semer les graines de l'excellence dès la petite enfance. Nous accompagnons chaque enfant dans son développement global — spirituel, affectif, intellectuel, social et moteur — dans un environnement sécurisé, aimant et stimulant."
+      "body": "Préparer une génération de leaders-serviteurs, appelés à grandir avec un caractère empreint de sagesse, de service et d'empathie, guidés par l'intégrité et capables de transformer positivement le monde qui les entoure. Nous aspirons à devenir un réseau d'espaces éducatifs de référence,reconnus pour la qualité de notre enseignement, ancré dans la foi chrétienne."
     },
     "vision": {
       "heading": "Notre vision",
-      "body": "Devenir un réseau d'espaces éducatifs de référence au Rwanda et en Afrique, reconnus pour la qualité pédagogique, l'ancrage chrétien et l'innovation adaptée à notre contexte local."
+      "body": "Semer les graines de l'excellence dès la petite enfance, en offrant un accompagnement éducatif de qualité fondé sur les valeurs chrétiennes. Dès les premières étapes de la vie de l'enfant, nous proposons un apprentissage adapté à son rythme, qui stimule sa curiosité, sa créativité et ses interactions sociales. Nous accompagnons chaque enfant dans son développement global : spirituel, affectif, intellectuel, social et moteur  dans un environnement sécurisé, aimant et stimulant."
     }
   },
-
+  "campus": {
+    "tag": "Notre campus",
+    "title": "Notre",
+    "titleSpan": "campus",
+    "subtitle": "Two campuses, one philosophy: to provide a safe, loving and stimulating environment for your child.",
+    "creche": {
+      "name": "La P'tite Crèche Ingeri",
+      "message": "Un cocon bienveillant pour les tout-petits, où sécurité affective, autonomie et éveil en douceur favorisent un développement harmonieux.",
+      "address": "KK 389 St Kagarama, Kicukiro, Kigali, Rwanda",
+      "phone": "+250 783 812 618",
+      "hours": "Mon–Fri: 7:00 am – 4:00 pm",
+      "btn": "Contact us"
+    },
+    "maternelle": {
+      "name": "Ingeri International School",
+      "message": "Une maternelle francophone où l'excellence éducative rencontre la bienveillance. ",
+      "address": "KK 468 n°12, Kagarama – Kigali, Rwanda",
+      "phone": "+250 795 826 080",
+      "hours": "Mon–Fri: 7:00 am – 5:30 pm",
+      "btn": "Contact us"
+    }
+  },
+  "leadership": {
+    "tag": "De la part de notre directeur",
+    "title": "Notre",
+    "titleSpan": "Directeur",
+    "p1": "Bienvenue à Ingeri International School, une école née de la conviction que chaque enfant est unique et mérite un accompagnement chaleureux et bienveillant. Fondée sur des valeurs chrétiennes, notre école accueille les familles de toutes confessions, unies par le désir commun de voir chaque enfant s'épanouir dans un environnement d'amour, de respect et de foi.",
+    "p2": "De la crèche à la maternelle,nous cultivons la curiosité, la créativité et l'autonomie de nos élèves à travers le jeu, l'exploration et la relation aux autres. Chez Ingeri, les couloirs résonnent de rires, de jeux et de chants joyeux, et chaque enfant y découvre sa valeur unique et sa capacité à aimer et à servir le monde qui l'entoure.",
+    "p3": "Convaincus que l'éducation se construit main dans la main avec les parents, nous avons hâte de vous accueillir au sein de la famille Ingeri!",
+    "quote": "Chaque enfant est une promesse d'avenir. Notre rôle est d'honorer cette promesse.",
+    "quoteCite": "— Fondatrice, Ingeri Schools",
+    "photoAlt": "Fondatrice / Directrice"
+  },
   "principes": {
-    "tag": "Notre philosophie",
-    "title": "Nos grands",
-    "titleSpan": "principes",
-    "items": [
+    "pillars":{
+      "tag": "Nos piliers éducatifs et notre philosophie",
+      "title": "Nos ",
+      "titleSpan": "piliers",
+      "items": [
+        { "title": "Grandir en confiance", "desc": "Chaque enfant développe son potentiel dans un environnement sécurisant où il apprend, explore et s’épanouit à son propre rythme." },
+        { "title": "Grandir avec des valeurs", "desc": "Nous cultivons l’amour, le respect, la bienveillance, le partage et la gratitude à travers une éducation inspirée des valeurs chrétiennes." },
+        { "title": "Grandir ouvert sur le monde", "desc": "Nous éveillons les enfants à la richesse des cultures, à la découverte du monde qui les entoure et à l’importance d’accueillir les autres avec bienveillance, amour et respect." },
+        { "title": "Grandir ensemble", "desc": "Nous construisons une relation de confiance avec les familles afin d’accompagner chaque enfant dans son développement et son épanouissement." }
+      ]
+    },
+    "core": {
+      "title": "Notre ",
+      "titleSpan": "philosophie",
+      "items": [
       { "title": "Centré sur l'enfant", "desc": "Chaque enfant est unique. L'adulte observe, encourage et soutient sans imposer." },
       { "title": "Fondation chrétienne", "desc": "Patience, respect, humilité, joie et pardon au cœur de chaque journée." },
       { "title": "Le lien", "desc": "Enfant–éducateur, enfant–famille : la confiance partagée sécurise." },
       { "title": "Lien à la nature", "desc": "Jardinage, objets naturels : la nature nourrit l'émerveillement." },
       { "title": "Autonomie et dignité", "desc": "L'enfant apprend à « faire seul » et à se faire confiance." }
     ]
+    }
   },
-
   "domaines": {
-    "tag": "Ce que nous cultivons",
-    "title": "Domaines d'",
-    "titleSpan": "apprentissage",
+    "tag": "Nos programmes",
+    "title": "Nos ",
+    "titleSpan": "programmes",
+    "subtitle": "À Ingeri, nous accompagnons chaque enfant selon son âge, son rythme et ses besoins individuels. Notre programme combine des apprentissages structurés, des expériences pratiques et des moments d'exploration afin de favoriser le développement global de l'enfant.",
+    "nursery": {
+      "name": "La Petite Crèche (6 mois – 3 ans)",
+      "tagline": "Éveiller, sécuriser et grandir en douceur",
+      "items": [
+        { "title": "L'éveil sensoriel et moteur :", "desc": "exploration par les sens, mouvement, manipulation et découverte de l'environnement." },
+        { "title": "Le développement du langage :", "desc": "échanges, histoires, chansons et interactions quotidiennes pour enrichir la communication." },
+        { "title": "L'autonomie progressive :", "desc": "accompagner l'enfant dans ses premiers gestes d'indépendance selon son rythme." },
+        { "title": "Le développement affectif et social :", "desc": "créer un cadre sécurisant où l'enfant apprend à exprimer ses émotions et à interagir avec les autres." },
+        { "title": "L'éveil spirituel :", "desc": "découverte des valeurs chrétiennes à travers des chants, des prières et des moments adaptés aux tout-petits." }
+      ]
+    },
+    "preschool": {
+      "name": "La Maternelle (3 – 6 ans)",
+      "tagline": "Explorer, apprendre et révéler son potentiel",
+      "items": [
+        { "title": "Les premiers apprentissages académiques :", "desc": "langage, pré-lecture, écriture, mathématiques, découverte du monde et premières notions scientifiques." },
+        { "title": "La créativité et l'expression :", "desc": "activités artistiques, musique, expression corporelle et projets créatifs." },
+        { "title": "La pensée et la curiosité :", "desc": "observation, expérimentation, résolution de problèmes et apprentissage par le jeu." },
+        { "title": "Les compétences sociales :", "desc": "coopération, communication, confiance en soi et vie en groupe." },
+        { "title": "L'ouverture culturelle et spirituelle :", "desc": "découverte du monde, des cultures et des valeurs chrétiennes." }
+      ]
+    },
+    "pedagogyTitle": "Une pédagogie active au service de chaque enfant",
+    "pedagogyBody": "Inspirée des pédagogies actives, notre approche place l'enfant au centre de ses apprentissages. Nous créons un environnement où chaque enfant peut explorer, expérimenter, créer et grandir avec confiance.",
     "items": [
-      "Langage & expression",
-      "Logique & premiers nombres",
-      "Créativité & sens",
-      "Vie pratique & autonomie",
-      "Vivre ensemble & foi",
-      "Éveil à la nature",
-      "Développement moteur",
-      "Musique & rythme"
+      { "title": "Langage & Expression", "desc": "Histoires, chansons, prières et échanges guidés." },
+      { "title": "Logique & Premiers nombres", "desc": "Objets, formes et quantités pour découvrir l'ordre du monde." },
+      { "title": "Créativité & Sens", "desc": "Peinture, chant, modelage, danse." },
+      { "title": "Vie Pratique & Autonomie", "desc": "S'habiller, ranger, servir, prendre soin de soi et des autres." },
+      { "title": "Éveil Spirituel & Valeurs", "desc": "Prières, histoires bibliques, chants, gratitude et respect de l'autre." }
     ]
   },
-
-  "leadership": {
-    "tag": "Direction",
-    "title": "Le",
-    "titleSpan": "Leadership",
-    "p1": "Chez Ingeri, le leadership est au service de l'enfant. Chaque décision pédagogique est guidée par une seule question : est-ce le meilleur pour l'enfant ?",
-    "p2": "Notre équipe dirigeante croit profondément que l'éducation précoce est l'investissement le plus précieux que l'on puisse faire pour une génération.",
-    "quote": "Chaque enfant est une promesse d'avenir. Notre rôle est d'honorer cette promesse.",
-    "quoteCite": "— Fondatrice, Ingeri Schools",
-    "photoAlt": "Fondatrice / Directrice"
-  },
-
   "equipe": {
     "tag": "Les visages d'Ingeri",
     "title": "Notre",
     "titleSpan": "équipe",
-    "subtitle": "Des femmes engagées, mères et professionnelles, au service de vos enfants.",
+    "subtitle": "Des professionnels engagées au service de vos enfants.",
     "members": [
       { "name": "Prénom Nom", "role": "Directrice pédagogique" },
       { "name": "Prénom Nom", "role": "Éducatrice crèche" },

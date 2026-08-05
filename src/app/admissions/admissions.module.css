@@ -9,10 +9,15 @@
    margin-top:auto. */
 .admTop {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns:  1fr;
   gap: 20px;
   margin-top: 44px;
   align-items: stretch;
+}
+
+.admTop p {
+  font-size: 13px;
+  margin-bottom: 0;
 }
 
 /* Floating white card. Flex column + stretch (from .admTop) lets the

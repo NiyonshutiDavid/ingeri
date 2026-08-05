@@ -8,12 +8,15 @@ import { FaXTwitter as XTwitter, FaInstagram as Instagram } from 'react-icons/fa
 import { useTranslation } from 'react-i18next'
 import styles from './contact.module.css'
 
-type Tab = 'creche' | 'maternelle'
-
+type Campus = 'creche' | 'maternelle'
 
 export default function ContactPage() {
   const { t } = useTranslation('contact')
-  const [activeTab, setActiveTab] = useState<Tab>('creche')
+  const [activeCampus, setActiveCampus] = useState<Campus>('creche')
+  const isCreche = activeCampus === 'creche'
+
+  const imgSrc = isCreche ? '/campus.jpg' : '/campus.jpg'
+  const imgAlt = isCreche ? t('info.crecheImgAlt') : t('info.maternelleImgAlt')
 
   return (
     <section className={styles.section} id="contact">
@@ -24,75 +27,52 @@ export default function ContactPage() {
         </h2>
         <div className={styles.headerRow}>
           <p className="sec-sub" style={{ marginBottom: 0 }}>{t('subtitle')}</p>
-          <div className={styles.tabs}>
-            <button
-              className={`${styles.tab} ${activeTab === 'creche' ? styles.actTeal : styles.inactTeal}`}
-              onClick={() => setActiveTab('creche')}
-            >
-              {t('tabs.creche')}
-            </button>
-            <button
-              className={`${styles.tab} ${activeTab === 'maternelle' ? styles.actPink : styles.inactPink}`}
-              onClick={() => setActiveTab('maternelle')}
-            >
-              {t('tabs.maternelle')}
-            </button>
-          </div>
         </div>
 
-        {activeTab === 'creche' && (
-          <div className={styles.panel} id="creche">
-            <div className={styles.formWrap}>
-              <h3>{t('form.headingCreche')}</h3>
-              <ContactForm campus="creche" accentClass="btn-teal" />
-            </div>
-            <div className={styles.infoCol}>
-              <div className={`${styles.contactImg} ${styles.teal}`}>
-                <Image
-                  src="/campus.jpg"
-                  fill
-                  style={{ objectFit: 'cover' }}
-                  alt={t('info.crecheImgAlt')}
-                />
-              </div>
-              <ContactInfo
-                campus="creche"
-                headingColor="var(--teal-d)"
-                socialBg="var(--teal-l)"
-                socialHeadingColor="var(--teal-d)"
-                socialBorderColor="var(--teal)"
-                bgStyle={{}}
+        {/* Panel */}
+        <div className={styles.panel}>
+          <div className={styles.formWrap}>
+            <h3>{t('form.headingCreche')}</h3>
+            <ContactForm campus={activeCampus} accentClass="btn-teal" />
+          </div>
+          <div className={styles.infoCol}>
+            <div className={`${styles.contactImg} `}>
+              <Image
+                src={imgSrc}
+                fill
+                style={{ objectFit: 'cover' }}
+                alt={imgAlt}
               />
             </div>
-          </div>
-        )}
-
-        {activeTab === 'maternelle' && (
-          <div className={styles.panel} id="maternelle">
-            <div className={styles.formWrap}>
-              <h3 style={{ color: 'var(--pink-d)' }}>{t('form.headingMaternelle')}</h3>
-              <ContactForm campus="maternelle" accentClass="btn-pink" />
+            {/* Tabs — scoped to this column, switches contact info only */}
+            <div className={styles.tabs} role="tablist">
+              {(['creche', 'maternelle'] as Campus[]).map((campus) => {
+                const active = activeCampus === campus
+                const activeClass = campus === 'creche' ? styles.actTeal : styles.actPink
+                const inactiveClass = campus === 'creche' ? styles.inactTeal : styles.inactPink
+                return (
+                  <button
+                    key={campus}
+                    role="tab"
+                    aria-selected={active}
+                    className={`${styles.tab} ${active ? activeClass : inactiveClass}`}
+                    onClick={() => setActiveCampus(campus)}
+                  >
+                    {campus === 'creche' ? t('info.crecheName') : t('info.maternelleName')}
+                  </button>
+                )
+              })}
             </div>
-            <div className={styles.infoCol}>
-              <div className={`${styles.contactImg} ${styles.pink}`}>
-                <Image
-                  src="/campus.jpg"
-                  fill
-                  style={{ objectFit: 'cover' }}
-                  alt={t('info.maternelleImgAlt')}
-                />
-              </div>
-              <ContactInfo
-                campus="maternelle"
-                headingColor="var(--pink-d)"
-                socialBg="var(--pink-l)"
-                socialHeadingColor="var(--pink-d)"
-                socialBorderColor="var(--pink)"
-                bgStyle={{ background: '#fff8fb' }}
-              />
-            </div>
+            <ContactInfo
+              campus={activeCampus}
+              headingColor={isCreche ? 'var(--teal-d)' : 'var(--pink-d)'}
+              socialBg={isCreche ? 'var(--teal-l)' : 'var(--pink-l)'}
+              socialHeadingColor={isCreche ? 'var(--teal-d)' : 'var(--pink-d)'}
+              socialBorderColor={isCreche ? 'var(--teal)' : 'var(--pink)'}
+              bgStyle={{}}
+            />
           </div>
-        )}
+        </div>
       </div>
     </section>
   )
@@ -103,8 +83,7 @@ function ContactForm({ campus, accentClass }: { campus: string; accentClass: str
   const isCreche = campus === 'creche'
   const CONTACT_EMAIL = isCreche ? 'info@ingerischool.org' : 'maternelle@ingeri.rw'
 
-  const ageOptions = t('form.ageOptions', { returnObjects: true }) as string[]
-  const sectionOptions = t('form.sectionOptions', { returnObjects: true }) as string[]
+  const levelOptions = t('form.levelOptions', { returnObjects: true }) as string[]
   const labels = t('form.emailBodyLabels', { returnObjects: true }) as Record<string, string>
 
   function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
@@ -117,13 +96,13 @@ function ContactForm({ campus, accentClass }: { campus: string; accentClass: str
     )
     const body = encodeURIComponent(
       [
-        `${labels.firstName} : ${get('prenom')}`,
-        `${labels.lastName} : ${get('nom')}`,
-        `${labels.email} : ${get('email')}`,
+        `${labels.childName} : ${get('childName')}`,
+        `${labels.dob} : ${get('dob') || '—'}`,
+        `${labels.parentName} : ${get('parentName')}`,
         `${labels.phone} : ${get('tel') || '—'}`,
-        isCreche
-          ? `${labels.childAge} : ${get('age') || '—'}`
-          : `${labels.section} : ${get('section') || '—'}`,
+        `${labels.email} : ${get('email')}`,
+        `${labels.level} : ${get('level') || '—'}`,
+        `${labels.startDate} : ${get('startDate') || '—'}`,
         ``,
         `${labels.message} :`,
         get('message') || '—',
@@ -135,32 +114,40 @@ function ContactForm({ campus, accentClass }: { campus: string; accentClass: str
 
   return (
     <form onSubmit={handleSubmit} className={styles.form}>
+      <div className={styles.fg}>
+        <label>{t('form.childName')}</label>
+        <input type="text" name="childName" placeholder={t('form.childNamePlaceholder')} required />
+      </div>
+      <div className={styles.fg}>
+        <label>{t('form.dob')}</label>
+        <input type="date" name="dob" required />
+      </div>
+      <div className={styles.fg}>
+        <label>{t('form.parentName')}</label>
+        <input type="text" name="parentName" placeholder={t('form.parentNamePlaceholder')} required />
+      </div>
       <div className={styles.formRow}>
         <div className={styles.fg}>
-          <label>{t('form.firstName')}</label>
-          <input type="text" name="prenom" placeholder={t('form.firstNamePlaceholder')} required />
+          <label>{t('form.phone')}</label>
+          <input type="tel" name="tel" placeholder={t('form.phonePlaceholder')} required />
         </div>
         <div className={styles.fg}>
-          <label>{t('form.lastName')}</label>
-          <input type="text" name="nom" placeholder={t('form.lastNamePlaceholder')} required />
+          <label>{t('form.email')}</label>
+          <input type="email" name="email" placeholder={t('form.emailPlaceholder')} required />
         </div>
       </div>
       <div className={styles.fg}>
-        <label>{t('form.email')}</label>
-        <input type="email" name="email" placeholder={t('form.emailPlaceholder')} required />
-      </div>
-      <div className={styles.fg}>
-        <label>{t('form.phone')}</label>
-        <input type="tel" name="tel" placeholder={t('form.phonePlaceholder')} />
-      </div>
-      <div className={styles.fg}>
-        <label>{isCreche ? t('form.childAge') : t('form.section')}</label>
-        <select name={isCreche ? 'age' : 'section'}>
+        <label>{t('form.level')}</label>
+        <select name="level" required>
           <option value="">{t('form.selectPlaceholder')}</option>
-          {(isCreche ? ageOptions : sectionOptions).map((opt) => (
+          {levelOptions.map((opt) => (
             <option key={opt}>{opt}</option>
           ))}
         </select>
+      </div>
+      <div className={styles.fg}>
+        <label>{t('form.startDate')}</label>
+        <input type="date" name="startDate" />
       </div>
       <div className={styles.fg}>
         <label>{t('form.message')}</label>
@@ -185,7 +172,7 @@ function ContactInfo({
   const isCreche = campus === 'creche'
   const campusName = isCreche ? t('info.crecheName') : t('info.maternelleName')
   const hours = isCreche ? t('info.hoursCreche') : t('info.hoursMaternelle')
-  const email = isCreche ? 'info@ingerischool.org' : 'info@ingerischool.org'
+  const email = isCreche ? 'info@ingerischool.org' : 'maternelle@ingeri.rw'
   const address = isCreche ? t('info.crecheAddress') : t('info.maternelleAddress')
   const socialUrls = isCreche
   ? {
