@@ -21,7 +21,7 @@
     "email": "Email",
     "emailPlaceholder": "parent@gmail.com",
     "level": "Desired level",
-    "levelOptions": ["Nursery", "PS", "MS"],
+    "levelOptions": ["Nursery", "Petit Section", "Moyenne Section"],
     "selectPlaceholder": "Select a level",
     "startDate": "Desired start date",
     "message": "Message",

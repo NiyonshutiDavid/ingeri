@@ -21,7 +21,7 @@
     "email": "Email",
     "emailPlaceholder": "parent@gmail.com",
     "level": "Niveau souhaité",
-    "levelOptions": ["Crèche", "PS", "MS"],
+    "levelOptions": ["Crèche", "Petit Section", "Moyenne Section"],
     "selectPlaceholder": "Sélectionnez un niveau",
     "startDate": "Date de rentrée souhaitée",
     "message": "Message",
