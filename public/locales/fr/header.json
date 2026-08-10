@@ -16,23 +16,20 @@
     "programmes": {
       "desc": "Des programmes adaptés à chaque étape du développement de votre enfant.",
       "creche": "Crèche (6 mois – 3 ans)",
-      "maternelle": "Maternelle(3 – 5 ans)"
+      "maternelle": "Maternelle(3 – 6 ans)"
     },
     "presentation": {
       "desc": "Notre mission, notre équipe et nos valeurs pédagogiques.",
       "mission": "Mission & Vision",
-      "principes": "Nos grands principes",
-      "domaines": "Domaines d'apprentissage",
-      "leadership": "Le Leadership",
+      "campus": "Nos campus",
+      "leadership": "De la part de la Directuer",
+      "pillars": "Nos piliers éducatifs",
       "equipe": "Notre équipe",
-      "localisations": "Nos localisations",
       "carrieres": "Carrières"
     },
     "admissions": {
       "desc": "Tout ce que vous devez savoir pour inscrire votre enfant.",
-      "frais": "Frais de scolarité",
       "inscription": "Comment s'inscrire",
-      "portes": "Portes ouvertes",
       "faq": "FAQ"
     }
   }

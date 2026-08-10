@@ -54,7 +54,7 @@
   },
   "principes": {
     "pillars": {
-      "tag": "Our educational pillars and core principles",
+      "tag": "Our educational pillars",
       "title": "Our ",
       "titleSpan": "pillars",
       "items": [
@@ -85,11 +85,11 @@
       "name": "The Nursery (6 months – 3 years)",
       "tagline": "Awakening, security, and gentle growth",
       "items": [
-        { "title": "Sensory and motor awakening:", "desc": "exploration through the senses, movement, manipulation, and discovery of the environment." },
-        { "title": "Language development:", "desc": "conversation, stories, songs, and daily interactions to enrich communication." },
-        { "title": "Growing independence:", "desc": "supporting the child in their first steps toward independence, at their own pace." },
-        { "title": "Emotional and social development:", "desc": "creating a secure setting where the child learns to express emotions and interact with others." },
-        { "title": "Spiritual awakening:", "desc": "discovering Christian values through songs, prayers, and moments suited to young children." }
+        { "title": "Sensory and motor awakening:", "desc": "Exploration through the senses, movement, manipulation, and discovery of the environment." },
+        { "title": "Language development:", "desc": "Conversation, stories, songs, and daily interactions to enrich communication." },
+        { "title": "Growing independence:", "desc": "Supporting the child in their first steps toward independence, at their own pace." },
+        { "title": "Emotional and social development:", "desc": "Creating a secure setting where the child learns to express emotions and interact with others." },
+        { "title": "Spiritual awakening:", "desc": "Discovering Christian values through songs, prayers, and moments suited to young children." }
       ]
     },
     "preschool": {
@@ -122,7 +122,8 @@
       { "name": "First Last", "role": "Pedagogical Director" },
       { "name": "First Last", "role": "Nursery educator" },
       { "name": "First Last", "role": "Kindergarten teacher" },
-      { "name": "First Last", "role": "Coordinator" }
+      { "name": "First Last", "role": "Coordinator" },
+      { "name": "First Last", "role": "School Director" }
     ]
   },
 

@@ -7,28 +7,84 @@ import Image from 'next/image'
 import {
   Target, Eye, Leaf, Church, Handshake, TreePine, Sparkles,
   MessageSquare, Hash, Palette, Hand, Globe, Dumbbell, Music4,
-  MapPin, Phone, Clock, Star, Briefcase, GraduationCap, Users, Quote,
+  MapPin, Phone, Clock, Star, Briefcase, GraduationCap, Users, ChevronLeft, ChevronRight,
 } from 'lucide-react'
 import { useTranslation } from 'react-i18next'
 import styles from './presentation.module.css'
+import CampusStrip from '@/components/sections/CampusStrip'
+import MissionVision from '@/components/sections/MissionVision'
+import { useRef, useState, useEffect, useCallback } from 'react'
 
 const PRINCIPE_ICONS = [Leaf, Church, Handshake, TreePine, Sparkles]
 const DOMAINE_ICONS = [MessageSquare, Hash, Palette, Hand, Users, Globe, Dumbbell, Music4]
-const TEAM_PHOTOS = ['/teacher-1.jpg', '/teacher-2.jpg', '/teacher-3.jpg', '/teacher-4.jpg']
+const TEAM_PHOTOS = ['/teacher-1.jpg', '/teacher-2.jpg', '/teacher-3.jpg', '/teacher-4.jpg', '/principal.jpg']
+
+function useResponsiveColumns(memberCount: number) {
+  const [target, setTarget] = useState(4)
+
+  useEffect(() => {
+    const mqDesktop = window.matchMedia('(min-width: 961px)')
+    const mqTablet = window.matchMedia('(min-width: 641px) and (max-width: 960px)')
+
+    const update = () => {
+      if (mqDesktop.matches) setTarget(4)
+      else if (mqTablet.matches) setTarget(2)
+      else setTarget(1)
+    }
+
+    update()
+    mqDesktop.addEventListener('change', update)
+    mqTablet.addEventListener('change', update)
+    return () => {
+      mqDesktop.removeEventListener('change', update)
+      mqTablet.removeEventListener('change', update)
+    }
+  }, [])
+
+  return Math.max(1, Math.min(target, memberCount))
+}
+
 
 export default function PresentationPage() {
   const { t } = useTranslation('presentation')
 
-  const principes = t('principes.core.items', { returnObjects: true }) as Array<{ title: string; desc: string }>
   const pillars = t('principes.pillars.items', { returnObjects: true }) as Array<{ title: string; desc: string }>
-
-  const domaines  = t('domaines.items',  { returnObjects: true }) as Array<{ title: string; desc: string }>
-  const nurseryItems   = t('domaines.nursery.items',   { returnObjects: true }) as Array<{ title: string; desc: string }>
-  const preschoolItems = t('domaines.preschool.items', { returnObjects: true }) as Array<{ title: string; desc: string }>
   const members   = t('equipe.members',  { returnObjects: true }) as Array<{ name: string; role: string }>
   const jobs      = t('carrieres.jobs',  { returnObjects: true }) as Array<{
     title: string; location: string; badge: string; type: string
   }>
+
+  const trackRef = useRef<HTMLDivElement>(null)
+  const [canScrollPrev, setCanScrollPrev] = useState(false)
+  const [canScrollNext, setCanScrollNext] = useState(false)
+  const columns = useResponsiveColumns(members.length)
+
+  const updateScrollState = useCallback(() => {
+    const el = trackRef.current
+    if (!el) return
+    setCanScrollPrev(el.scrollLeft > 8)
+    setCanScrollNext(el.scrollLeft < el.scrollWidth - el.clientWidth - 8)
+  }, [])
+
+  useEffect(() => {
+    updateScrollState()
+    const el = trackRef.current
+    if (!el) return
+    el.addEventListener('scroll', updateScrollState, { passive: true })
+    window.addEventListener('resize', updateScrollState)
+    return () => {
+      el.removeEventListener('scroll', updateScrollState)
+      window.removeEventListener('resize', updateScrollState)
+    }
+  }, [updateScrollState, columns])
+
+  const scrollByCard = (direction: 1 | -1) => {
+    const el = trackRef.current
+    if (!el) return
+    const card = el.querySelector<HTMLElement>(`.${styles.teamBlock}`)
+    const cardWidth = card ? card.offsetWidth + 16 : el.clientWidth * 0.8
+    el.scrollBy({ left: direction * cardWidth, behavior: 'smooth' })
+  }
 
   return (
     <>
@@ -40,22 +96,10 @@ export default function PresentationPage() {
           <p className="sec-sub">{t('intro.subtitle')}</p>
         </div>
       </section>
-
       {/* Mission & Vision — off-white */}
       <section className={`${styles.section} ${styles.alt}`} id="mission">
         <div className="container">
-          <span className="tag">{t('missionVision.tag')}</span>
-          <h2 className="sec-title">{t('missionVision.title')} <span>{t('missionVision.titleSpan')}</span></h2>
-          <div className={styles.mvGrid}>
-            <div className={styles.mvBlock}>
-              <h3><Target size={16} style={{ display:'inline', verticalAlign:'middle', marginRight:8 }} />{t('missionVision.mission.heading')}</h3>
-              <p>{t('missionVision.mission.body')}</p>
-            </div>
-            <div className={`${styles.mvBlock} ${styles.pk}`}>
-              <h3><Eye size={16} style={{ display:'inline', verticalAlign:'middle', marginRight:8 }} />{t('missionVision.vision.heading')}</h3>
-              <p>{t('missionVision.vision.body')}</p>
-            </div>
-          </div>
+          <MissionVision withContainer={false} background="transparent" />
         </div>
       </section>
       {/* Campus - white */}
@@ -63,16 +107,7 @@ export default function PresentationPage() {
         <div className="container">
           <span className="tag">{t('campus.tag')}</span>
           <h2 className="sec-title">{t('campus.title')} <span>{t('campus.titleSpan')}</span></h2>
-          <div className={styles.mvGrid}>
-            <div className={styles.mvBlock}>
-              <h3>{t('campus.creche.name')}</h3>
-              <p>{t('campus.creche.message')}</p>
-            </div>
-            <div className={`${styles.mvBlock} ${styles.pk}`}>
-              <h3>{t('campus.maternelle.name')}</h3>
-              <p>{t('campus.maternelle.message')}</p>
-            </div>
-          </div>
+          <CampusStrip withContainer={false} background="transparent"/>
         </div>
       </section>
       {/* Leadership — off -white */}
@@ -118,7 +153,7 @@ export default function PresentationPage() {
             })}
           </div>
           {/* Core Values */}
-          <h2 className={styles.pillarTitle}>{t('principes.core.title')} <span>{t('principes.core.titleSpan')}</span></h2>
+          {/* <h2 className={styles.pillarTitle}>{t('principes.core.title')} <span>{t('principes.core.titleSpan')}</span></h2>
           <div className={styles.principesGrid}>
             {principes.map((p, i) => {
               const Icon = PRINCIPE_ICONS[i]
@@ -130,11 +165,11 @@ export default function PresentationPage() {
                 </div>
               )
             })}
-          </div>
+          </div> */}
         </div>
       </section>
       {/* Programmes — off-white */}
-      <section className={`${styles.section} ${styles.alt}`} id="domaines">
+      {/* <section className={`${styles.section} ${styles.alt}`} id="domaines">
         <div className="container">
           <span className="tag">{t('domaines.tag')}</span>
           <h2 className="sec-title">{t('domaines.title')}<span>{t('domaines.titleSpan')}</span></h2>
@@ -177,7 +212,7 @@ export default function PresentationPage() {
             })}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Équipe — white */}
       <section className={`${styles.section} `} id="equipe">
@@ -185,24 +220,51 @@ export default function PresentationPage() {
           <span className="tag">{t('equipe.tag')}</span>
           <h2 className="sec-title">{t('equipe.title')} <span>{t('equipe.titleSpan')}</span></h2>
           <p className="sec-sub">{t('equipe.subtitle')}</p>
-          <div className={styles.equipeGrid}>
-            {members.map((m, i) => (
-              <div key={i} className={styles.teamBlock}>
-                <div className={styles.teamPhoto}>
-                  <Image src={TEAM_PHOTOS[i]} fill style={{ objectFit:'cover' }} alt={m.name} />
+
+          <div className={styles.equipeCarousel}>
+            <button
+              type="button"
+              className={`${styles.equipeNav} ${styles.equipeNavPrev}`}
+              onClick={() => scrollByCard(-1)}
+              disabled={!canScrollPrev}
+              aria-label="Previous"
+            >
+              <ChevronLeft size={20} />
+            </button>
+
+            <div
+              className={styles.equipeGrid}
+              ref={trackRef}
+              style={{ '--cols': columns } as React.CSSProperties}
+            >
+              {members.map((m, i) => (
+                <div key={i} className={`${styles.teamBlock} ${i % 2 === 1 ? styles.pink : ''}`}>
+                  <div className={styles.teamPhoto}>
+                    <Image src={TEAM_PHOTOS[i]} fill style={{ objectFit: 'cover' }} alt={m.name} />
+                  </div>
+                  <div className={styles.teamInfo}>
+                    <h4>{m.name}</h4>
+                    <p>{m.role}</p>
+                  </div>
                 </div>
-                <div className={styles.teamInfo}>
-                  <h4>{m.name}</h4>
-                  <p>{m.role}</p>
-                </div>
-              </div>
-            ))}
+              ))}
+            </div>
+
+            <button
+              type="button"
+              className={`${styles.equipeNav} ${styles.equipeNavNext}`}
+              onClick={() => scrollByCard(1)}
+              disabled={!canScrollNext}
+              aria-label="Next"
+            >
+              <ChevronRight size={20} />
+            </button>
           </div>
         </div>
       </section>
 
       {/* Localisations — off-white */}
-      <section className={`${styles.section} ${styles.alt}`} id="localisations">
+      {/* <section className={`${styles.section} ${styles.alt}`} id="localisations">
         <div className="container">
           <span className="tag">{t('localisations.tag')}</span>
           <h2 className="sec-title">{t('localisations.title')} <span>{t('localisations.titleSpan')}</span></h2>
@@ -224,7 +286,7 @@ export default function PresentationPage() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Carrières — white */}
       <section className={`${styles.section}`} id="carrieres">

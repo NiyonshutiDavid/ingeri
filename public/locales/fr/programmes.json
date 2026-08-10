@@ -2,11 +2,11 @@
   "tag": "Ce que nous enseignons",
   "title": "Nos",
   "titleSpan": "programmes",
-  "subtitle": "Des expériences pédagogiques adaptées à chaque âge.",
+  "subtitle": "À Ingeri, nous accompagnons chaque enfant selon son âge, son rythme et ses besoins individuels. Notre programme combine des apprentissages structurés, des expériences pratiques et des moments d'exploration afin de favoriser le développement global de l'enfant.",
 
   "tabs": {
     "creche": "Crèche(6 mois – 3 ans)",
-    "maternelle": "Maternelle(3 – 5 ans)"
+    "maternelle": "Maternelle(3 – 6 ans)"
   },
 
   "creche": {
@@ -14,21 +14,14 @@
     "imgLabel": "Photo activité crèche",
     "name": "La P'tite Crèche Ingeri",
     "ages": "Enfants de 6 mois à 3 ans",
-    "intro": "La première étape d'une aventure d'éveil unique. Accueil individualisé, respect du rythme de chaque enfant.",
+    "intro": "Éveiller, sécuriser et grandir en douceu.",
     "pillars": [
-      {
-        "title": "L'amour et la sécurité affective",
-        "desc": "Lien stable et bienveillant dans la continuité du cocon familial."
-      },
-      {
-        "title": "L'autonomie dès le plus jeune âge",
-        "desc": "Boire à la tasse, explorer, choisir une activité, se déplacer librement."
-      },
-      {
-        "title": "Stimulation douce et progressive",
-        "desc": "Jeux sensoriels, comptines, exploration motrice, premières interactions."
-      }
-    ],
+        { "title": "L'éveil sensoriel et moteur :", "desc": "Exploration par les sens, mouvement, manipulation et découverte de l'environnement." },
+        { "title": "Le développement du langage :", "desc": "Échanges, histoires, chansons et interactions quotidiennes pour enrichir la communication." },
+        { "title": "L'autonomie progressive :", "desc": "Accompagner l'enfant dans ses premiers gestes d'indépendance selon son rythme." },
+        { "title": "Le développement affectif et social :", "desc": "Créer un cadre sécurisant où l'enfant apprend à exprimer ses émotions et à interagir avec les autres." },
+        { "title": "L'éveil spirituel :", "desc": "Découverte des valeurs chrétiennes à travers des chants, des prières et des moments adaptés aux tout-petits." }
+      ],
     "calendar": "Lun–Ven. Réunions parents & mini-ateliers réguliers.",
     "btn": "Inscrire mon enfant"
   },
@@ -37,26 +30,15 @@
     "imgAlt": "Ingeri International School",
     "imgLabel": "Photo activité maternelle",
     "name": "Ingeri International School",
-    "ages": "Enfants de 3 à 5 ans",
-    "intro": "Programme national français + pédagogie Montessori + approche biblique pour un épanouissement harmonieux et international.",
+    "ages": "Enfants de 3 à 6 ans",
+    "intro": "Explorer, apprendre et révéler son potentiel",
     "pillars": [
-      {
-        "title": "Langage & Expression",
-        "desc": "Histoires, chansons, prières et échanges guidés."
-      },
-      {
-        "title": "Logique & Premiers nombres",
-        "desc": "Objets, formes et quantités pour découvrir l'ordre du monde."
-      },
-      {
-        "title": "Créativité & Sens",
-        "desc": "Peinture, chant, modelage, danse."
-      },
-      {
-        "title": "Vie Pratique & Autonomie",
-        "desc": "S'habiller, ranger, servir, prendre soin de soi et des autres."
-      }
-    ],
+        { "title": "Les premiers apprentissages académiques :", "desc": "Langage, pré-lecture, écriture, mathématiques, découverte du monde et premières notions scientifiques." },
+        { "title": "La créativité et l'expression :", "desc": "Activités artistiques, musique, expression corporelle et projets créatifs." },
+        { "title": "La pensée et la curiosité :", "desc": "Observation, expérimentation, résolution de problèmes et apprentissage par le jeu." },
+        { "title": "Les compétences sociales :", "desc": "Coopération, communication, confiance en soi et vie en groupe." },
+        { "title": "L'ouverture culturelle et spirituelle :", "desc": "Découverte du monde, des cultures et des valeurs chrétiennes." }
+      ],
     "levels": [
       "Petite section (3 ans)",
       "Moyenne section (3–4 ans)",

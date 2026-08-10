@@ -1,6 +1,17 @@
 .wrapper {
-  background: var(--white);
   padding: 72px 0;
+}
+
+.wrapper.off {
+  background: var(--off);
+}
+
+.wrapper.white {
+  background: var(--white);
+}
+
+.wrapper.transparent {
+  background: transparent;
 }
 
 .mvGrid {

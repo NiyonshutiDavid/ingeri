@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <>
       <HeroSection />
-      <CampusStrip />
+      <CampusStrip background="off"/>
       <MissionVision />
       {/* <Valeurs /> */}
       <DirectionQuote />

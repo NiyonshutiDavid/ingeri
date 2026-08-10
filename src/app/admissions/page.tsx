@@ -32,7 +32,7 @@ interface MaternelleData {
   registrationFee: string
 }
 
-interface FaqItem {
+interface Items {
   q: string
   a: string | string[]
 }
@@ -43,8 +43,8 @@ export default function AdmissionsPage() {
 
   const crecheGroups = t('tuition.creche.groups', { returnObjects: true }) as CrecheGroup[]
   const maternelle = t('tuition.maternelle', { returnObjects: true }) as MaternelleData
-  const steps = t('steps.items', { returnObjects: true }) as string[]
-  const faqItems = t('faq.items', { returnObjects: true }) as FaqItem[]
+  const steps = t('steps.items', { returnObjects: true }) as Items[]
+  const faqItems = t('faq.items', { returnObjects: true }) as Items[]
 
   // Accordion state — one entry per crèche age group, keyed by index.
   // Start with the first group open so the section isn't empty on load;
@@ -76,7 +76,10 @@ export default function AdmissionsPage() {
               {steps.map((step, i) => (
                 <li key={i} className={styles.stepItem}>
                   <span className={styles.stepNum}>{i + 1}</span>
-                  <p>{step}</p>
+                  <p>
+                    <strong>{step.q}</strong>
+                    {step.a}
+                  </p>
                 </li>
               ))}
             </ol>

@@ -16,23 +16,20 @@
     "programmes": {
       "desc": "Tailored educational programmes for every stage of your child's development.",
       "creche": "Nursery (6 months – 3 years)",
-      "maternelle": "Kindergarten(3 – 5 years)"
+      "maternelle": "Kindergarten(3 – 6 years)"
     },
     "presentation": {
       "desc": "Our mission, our team and our educational values.",
       "mission": "Mission & Vision",
-      "principes": "Our core principles",
-      "domaines": "Learning areas",
-      "leadership": "Leadership",
+      "campus": "Our campuses",
+      "leadership": "Word from the Director",
+      "pillars": "Educational pillars",
       "equipe": "Our team",
-      "localisations": "Our locations",
       "carrieres": "Careers"
     },
     "admissions": {
       "desc": "Everything you need to know to enroll your child.",
-      "frais": "Tuition fees",
       "inscription": "How to enroll",
-      "portes": "Open days",
       "faq": "FAQ"
     }
   }

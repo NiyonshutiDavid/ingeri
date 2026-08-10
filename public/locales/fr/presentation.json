@@ -54,7 +54,7 @@
   },
   "principes": {
     "pillars":{
-      "tag": "Nos piliers éducatifs et notre philosophie",
+      "tag": "Nos piliers éducatifs",
       "title": "Nos ",
       "titleSpan": "piliers",
       "items": [
@@ -122,7 +122,8 @@
       { "name": "Prénom Nom", "role": "Directrice pédagogique" },
       { "name": "Prénom Nom", "role": "Éducatrice crèche" },
       { "name": "Prénom Nom", "role": "Enseignante maternelle" },
-      { "name": "Prénom Nom", "role": "Coordinatrice" }
+      { "name": "Prénom Nom", "role": "Coordinatrice" },
+      { "name": "Prénom Nom", "role": "Directuer de l'école" }
     ]
   },
 

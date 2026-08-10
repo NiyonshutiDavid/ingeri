@@ -113,40 +113,6 @@
   overflow: hidden;
 }
 
-/* Tuition table */
-.fraisTable {
-  width: 100%;
-  border-collapse: collapse;
-  font-size: 13px;
-}
-
-.fraisTable th {
-  background: var(--teal-d);
-  color: #fff;
-  padding: 8px 11px;
-  text-align: left;
-  font-weight: 700;
-}
-
-.fraisTable td {
-  padding: 8px 11px;
-  border-bottom: 1px solid var(--border);
-  color: var(--body);
-}
-
-.fraisTable tr:last-child td {
-  border-bottom: none;
-}
-
-.fraisTable tr:nth-child(even) td {
-  background: var(--off);
-}
-
-.note {
-  font-size: 11px;
-  color: var(--hint);
-  margin-top: 10px;
-}
 
 /* Wraps the enroll button on the creche/maternelle cards. margin-top:
    auto pushes it to the bottom of the card's flex column (relevant
@@ -196,6 +162,8 @@
   font-size: 13px;
   color: var(--body);
   padding-top: 3px;
+  display: flex;
+  flex-direction: column;
 }
 
 /* Age group bar (crèche) — now a clickable accordion header */

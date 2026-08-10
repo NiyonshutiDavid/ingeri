@@ -181,15 +181,36 @@
 .ldQuote p { font-style: italic; color: var(--teal-d) !important; font-size: 15px; margin-bottom: 8px; }
 .ldQuote cite { font-size: 12px; font-weight: 700; color: var(--teal-d); font-style: normal; }
 
-/* Équipe */
-.equipeGrid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 16px;
+/* Équipe — carousel */
+.equipeCarousel {
+  position: relative;
   margin-top: 44px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.equipeGrid {
+  flex: 1 1 0%;
+  min-width: 0; /* prevents flex item from refusing to shrink below content size */
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  padding-bottom: 4px;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.equipeGrid::-webkit-scrollbar {
+  display: none;
 }
 
 .teamBlock {
+  flex: 0 0 auto;
+  width: calc((100% - (var(--cols) - 1) * 16px) / var(--cols));
+  scroll-snap-align: start;
   background: #fff;
   border-radius: var(--r-lg);
   box-shadow: var(--sh);
@@ -201,18 +222,50 @@
 .teamBlock:hover { box-shadow: var(--sh-up); transform: translateY(-3px); }
 
 .teamPhoto {
-  height: 160px;
+  aspect-ratio: 4 / 3.4;
   background: var(--teal-l);
   position: relative;
   overflow: hidden;
 }
 
-.teamBlock:nth-child(even) .teamPhoto { background: var(--pink-l); }
+.teamBlock.pink .teamPhoto { background: var(--pink-l); }
 
 .teamInfo { padding: 16px 18px; }
 .teamInfo h4 { font-size: 14px; margin-bottom: 2px; color: var(--teal-d); }
-.teamBlock:nth-child(even) .teamInfo h4 { color: var(--pink-d); }
+.teamBlock.pink .teamInfo h4 { color: var(--pink-d); }
 .teamInfo p { font-size: 12px; color: var(--hint); }
+
+.equipeNav {
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1.5px solid var(--border);
+  background: #fff;
+  box-shadow: var(--sh);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: var(--teal-d);
+  transition: box-shadow 0.22s, opacity 0.22s;
+}
+
+.equipeNav:hover:not(:disabled) { box-shadow: var(--sh-up); }
+
+.equipeNav:disabled {
+  opacity: 0.35;
+  cursor: default;
+}
+
+@media (max-width: 960px) {
+  .teamBlock { width: calc((100% - 16px) / 2); }
+}
+
+@media (max-width: 640px) {
+  .teamBlock { width: 78%; }
+  .equipeNav { width: 34px; height: 34px; }
+}
 
 /* Localisations */
 .locsGrid {

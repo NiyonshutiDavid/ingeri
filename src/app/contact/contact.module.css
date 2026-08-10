@@ -194,7 +194,7 @@
 
 .socLinks {
   display: flex;
-  gap: 8px;
+  gap: 80px;
   flex-wrap: wrap;
 }
 
@@ -208,7 +208,7 @@
   text-decoration: none;
   display: inline-flex;
   align-items: center;
-  gap: 4px;
+  gap: 6px;
 }
 
 .socLink.socTeal {

@@ -1,7 +1,17 @@
-/* Sits on a white section — no background */
 .campusStrip {
-  background: var(--off);
   padding: 64px 0;
+}
+
+.campusStrip.off {
+  background: var(--off);
+}
+
+.campusStrip.white {
+  background: #fff;
+}
+
+.campusStrip.transparent {
+  background: transparent;
 }
 
 .campusGrid {

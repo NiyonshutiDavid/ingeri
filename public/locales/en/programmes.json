@@ -2,11 +2,11 @@
   "tag": "What we teach",
   "title": "Our",
   "titleSpan": "programmes",
-  "subtitle": "Tailored educational experiences for every age.",
+  "subtitle": "At Ingeri, we support each child according to their age, pace, and individual needs. Our program combines structured learning, hands-on experiences, and moments of exploration to nurture the child's overall development.",
 
   "tabs": {
     "creche": "Nursery(6 months – 3 years)",
-    "maternelle": "Kindergarten(3 – 5 years)"
+    "maternelle": "Kindergarten(3 – 6 years)"
   },
 
   "creche": {
@@ -14,21 +14,14 @@
     "imgLabel": "Photo – nursery activity",
     "name": "La P'tite Crèche Ingeri",
     "ages": "Children aged 6 months to 3 years",
-    "intro": "The first step in a unique journey of discovery. Personalised welcome, respect for each child's own rhythm.",
+    "intro": "Awakening, security, and gentle growth",
     "pillars": [
-      {
-        "title": "Love and emotional security",
-        "desc": "A stable, caring bond that continues the family cocoon."
-      },
-      {
-        "title": "Autonomy from an early age",
-        "desc": "Drinking from a cup, exploring, choosing an activity, moving freely."
-      },
-      {
-        "title": "Gentle, progressive stimulation",
-        "desc": "Sensory play, nursery rhymes, motor exploration, first interactions."
-      }
-    ],
+        { "title": "Sensory and motor awakening:", "desc": "Exploration through the senses, movement, manipulation, and discovery of the environment" },
+        { "title": "Language development:", "desc": "Conversation, stories, songs, and daily interactions to enrich communication" },
+        { "title": "Growing independence:", "desc": "Supporting the child in their first steps toward independence, at their own pace" },
+        { "title": "Emotional and social development:", "desc": "Creating a secure setting where the child learns to express emotions and interact with others" },
+        { "title": "Spiritual awakening:", "desc": "Discovering Christian values through songs, prayers, and moments suited to young children" }
+      ],
     "calendar": "Mon–Fri. Parent meetings & mini-workshops held regularly.",
     "btn": "Enroll my child"
   },
@@ -37,26 +30,15 @@
     "imgAlt": "Ingeri International School",
     "imgLabel": "Photo – kindergarten activity",
     "name": "Ingeri International School",
-    "ages": "Children aged 3 to 5 years",
-    "intro": "French national curriculum + Montessori pedagogy + Biblical approach for harmonious, international development.",
+    "ages": "Children aged 3 to 6 years",
+    "intro": "Exploring, learning, and unlocking potential.",
     "pillars": [
-      {
-        "title": "Language & Expression",
-        "desc": "Stories, songs, prayers and guided exchanges."
-      },
-      {
-        "title": "Logic & First Numbers",
-        "desc": "Objects, shapes and quantities to discover the order of the world."
-      },
-      {
-        "title": "Creativity & Meaning",
-        "desc": "Painting, singing, modelling, dance."
-      },
-      {
-        "title": "Practical Life & Autonomy",
-        "desc": "Getting dressed, tidying up, serving, taking care of oneself and others."
-      }
-    ],
+        { "title": "Early academic learning:", "desc": "Language, pre-reading, writing, mathematics, discovery of the world, and first scientific concepts." },
+        { "title": "Creativity and expression:", "desc": "Artistic activities, music, physical expression, and creative projects." },
+        { "title": "Thinking and curiosity:", "desc": "Observation, experimentation, problem-solving, and learning through play." },
+        { "title": "Social skills:", "desc": "Cooperation, communication, self-confidence, and group life." },
+        { "title": "Cultural and spiritual openness:", "desc": "Discovering the world, cultures, and Christian values." }
+      ],
     "levels": [
       "Little section (3 years)",
       "Middle section (3–4 years)",

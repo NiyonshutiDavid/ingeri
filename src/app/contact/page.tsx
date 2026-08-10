@@ -176,12 +176,12 @@ function ContactInfo({
   const address = isCreche ? t('info.crecheAddress') : t('info.maternelleAddress')
   const socialUrls = isCreche
   ? {
-      twitter: 'https://x.com/creche_account',
+      // twitter: 'https://x.com/creche_account',
       instagram: 'https://www.instagram.com/crecheingeri/',
       whatsapp: 'https://wa.me/2507XXXXXXXX',
     }
   : {
-      twitter: 'https://x.com/maternelle_account',
+      // twitter: 'https://x.com/maternelle_account',
       instagram: 'https://www.instagram.com/ingeri_international_school/',
       whatsapp: 'https://wa.me/2507YYYYYYYY',
     }
@@ -210,11 +210,11 @@ function ContactInfo({
       <div className={styles.ciSoc} style={{ background: socialBg }}>
         <p style={{ color: socialHeadingColor }}>{t('info.social')}</p>
         {[
-          {
-            label: 'X (Twitter)',
-            icon: XTwitter,
-            href: socialUrls.twitter,
-          },
+          // {
+          //   label: 'X (Twitter)',
+          //   icon: XTwitter,
+          //   href: socialUrls.twitter,
+          // },
           {
             label: 'Instagram',
             icon: Instagram,
@@ -231,9 +231,7 @@ function ContactInfo({
             href={href}
             target="_blank"
             rel="noopener noreferrer"
-            className={`${styles.socLink} ${
-              isCreche ? styles.socTeal : styles.socPink
-            }`}
+            className={`${styles.socLink} ${ isCreche ? styles.socTeal : styles.socPink }`}
           >
             <Icon size={12} /> {label}
           </a>

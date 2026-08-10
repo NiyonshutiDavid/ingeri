@@ -69,11 +69,10 @@ export default function Header() {
       desc: t('dropdowns.presentation.desc'),
       dropdown: [
         { href: '/presentation#mission', label: t('dropdowns.presentation.mission') },
-        { href: '/presentation#principes', label: t('dropdowns.presentation.principes') },
-        { href: '/presentation#domaines', label: t('dropdowns.presentation.domaines') },
+        { href: '/presentation#campus', label: t('dropdowns.presentation.campus') },
         { href: '/presentation#leadership', label: t('dropdowns.presentation.leadership') },
+        { href: '/presentation#pillars', label: t('dropdowns.presentation.pillars') },
         { href: '/presentation#equipe', label: t('dropdowns.presentation.equipe') },
-        { href: '/presentation#localisations', label: t('dropdowns.presentation.localisations') },
         { href: '/presentation#carrieres', label: t('dropdowns.presentation.carrieres') },
       ],
     },
@@ -82,9 +81,7 @@ export default function Header() {
       label: t('links.admissions'),
       desc: t('dropdowns.admissions.desc'),
       dropdown: [
-        { href: '/admissions#frais', label: t('dropdowns.admissions.frais') },
         { href: '/admissions#inscription', label: t('dropdowns.admissions.inscription') },
-        { href: '/admissions#portes', label: t('dropdowns.admissions.portes') },
         { href: '/admissions#faq', label: t('dropdowns.admissions.faq') },
       ],
     },

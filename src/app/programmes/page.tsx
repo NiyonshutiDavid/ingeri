@@ -4,15 +4,15 @@
 import { useState } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
-import { Heart, Sprout, Sparkles, MessageSquare, Hash, Palette, Hand, Calendar } from 'lucide-react'
+import { Heart, Sprout, Sparkles, MessageSquare, Hash, Palette, Hand, Church, Handshake } from 'lucide-react'
 import { useTranslation } from 'react-i18next'
 import styles from './programmes.module.css'
 
 type Tab = 'creche' | 'maternelle'
 
 // Pillar icons are positional — order must match locale arrays
-const CRECHE_ICONS = [Heart, Sprout, Sparkles]
-const MAT_ICONS = [MessageSquare, Hash, Palette, Hand]
+const CRECHE_ICONS = [Handshake, MessageSquare, Sparkles, Heart, Church]
+const MAT_ICONS = [MessageSquare, Hash, Palette, Hand, Church]
 
 export default function ProgrammesPage() {
   const { t } = useTranslation('programmes')
@@ -71,10 +71,10 @@ export default function ProgrammesPage() {
                   )
                 })}
               </div>
-              <div className={styles.calCard}>
+              {/* <div className={styles.calCard}>
                 <Calendar size={14} style={{ display: 'inline', verticalAlign: 'middle', marginRight: 6 }} />
                 <strong>{t('calendarLabel')}</strong> {t('creche.calendar')}
-              </div>
+              </div> */}
               <Link href="/admissions" className="btn btn-teal">{t('creche.btn')}</Link>
             </div>
           </div>
@@ -104,7 +104,7 @@ export default function ProgrammesPage() {
                   )
                 })}
               </div>
-              <div className={styles.levels}>
+              {/* <div className={styles.levels}>
                 {matLevels.map((level, i) => (
                   <span
                     key={i}
@@ -113,7 +113,7 @@ export default function ProgrammesPage() {
                     {level}
                   </span>
                 ))}
-              </div>
+              </div> */}
               <Link href="/admissions" className="btn btn-pink">{t('maternelle.btn')}</Link>
             </div>
           </div>

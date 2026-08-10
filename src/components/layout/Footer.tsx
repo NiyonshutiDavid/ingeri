@@ -49,7 +49,7 @@ export default function Footer() {
           <ul>
             <li><Link href="/#accueil">{t('cols.home.welcome')}</Link></li>
             <li><Link href="/#mission">{t('cols.home.mission')}</Link></li>
-            <li><Link href="/#valeurs">{t('cols.home.values')}</Link></li>
+            {/* <li><Link href="/#valeurs">{t('cols.home.values')}</Link></li> */}
             <li><Link href="/#direction">{t('cols.home.direction')}</Link></li>
             <li><Link href="/#temoignages">{t('cols.home.testimonials')}</Link></li>
           </ul>
