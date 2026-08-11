@@ -6,10 +6,22 @@
   "steps": {
     "heading": "Comment s'inscrire",
     "items": [
-      {"q": "Remplissez le formulaire:", "a": "Suivez le bouton pour accéder au formulaire et nous vous recontacterons rapidement."},
-      {"q": "Planifiez une visite :", "a": "Venez découvrir notre école, rencontrer notre équipe et poser vos questions."},
-      {"q": "Complétez le dossier d'inscription :", "a": " Nous vous accompagnons dans les démarches administratives."},
-      {"q": "Confirmez la place de votre enfant  :", "a": "Après validation du dossier, on vous confirmera la place de votre enfant à Ingeri."}
+      {
+        "q": "Remplissez le formulaire",
+        "a": "Suivez le bouton pour accéder au formulaire et nous vous recontacterons rapidement."
+      },
+      {
+        "q": "Planifiez une visite ",
+        "a": "Venez découvrir notre école, rencontrer notre équipe et poser vos questions."
+      },
+      {
+        "q": "Complétez le dossier d'inscription",
+        "a": " Nous vous accompagnons dans les démarches administratives."
+      },
+      {
+        "q": "Confirmez la place de votre enfant",
+        "a": "Après validation du dossier, on vous confirmera la place de votre enfant à Ingeri."
+      }
     ],
     "btn": "Commencer l'inscription"
   },

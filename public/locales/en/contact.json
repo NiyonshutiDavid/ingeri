@@ -11,6 +11,10 @@
 
   "form": {
     "headingCreche": "Register your child.",
+    "headingContact": "Contact Us",
+    "subjectCreche": "Registration request for La P'tite Crèche Ingeri",
+    "subjectMaternelle": "Registration request for Ingeri International School",
+    "subjectContact": "Contact Form Submission",
     "childName": "Child's name",
     "childNamePlaceholder": "Your child's full name",
     "dob": "Date of birth",
@@ -46,7 +50,8 @@
     "crecheAddress": "KK 389 St Kagarama, Kicukiro, Kigali, Rwanda",
     "maternelleAddress": "KK 468 n°12, Kagarama – Kigali, Rwanda",
     "phone": "Phone",
-    "phoneValue": "+250 795 826 080",
+    "crechePhone": "+250 783 812 618",
+    "maternellePhone": "+250 795 826 080",
     "email": "Email",
     "hours": "Hours",
     "hoursCreche": "Mon–Fri: 8:00 am – 4:00 pm",

@@ -160,6 +160,23 @@
     "teamQuote": "Working at Ingeri means feeling every day that your work has meaning.",
     "ctaTitle": "Join the Ingeri family",
     "ctaDesc": "Do you share our values of kindness, excellence and faith? Send us your application.",
-    "ctaBtn": "Send my application"
+    "ctaBtn": "Send my application",
+    "form": {
+    "fullName": "Full name",
+    "fullNamePlaceholder": "Your full name",
+    "email": "Email",
+    "emailPlaceholder": "you@example.com",
+    "phone": "Phone",
+    "phonePlaceholder": "+250 xxx xxx xxx",
+    "position": "Position applying for",
+    "selectPlaceholder": "Select a position",
+    "positionFallback": "Open position",
+    "portfolio": "CV / Portfolio link",
+    "portfolioPlaceholder": "https://...",
+    "message": "Cover message",
+    "messagePlaceholder": "Tell us why you'd be a great fit",
+    "submit": "Send my application",
+    "subject": "Job application — {{position}}"
+  }
   }
 }

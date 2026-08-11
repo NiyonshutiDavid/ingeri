@@ -4,7 +4,11 @@
   "titleSpan": "Vision",
   "mission": {
     "heading": "Our mission",
-    "body": "To prepare a generation of servant leaders, called to grow with a character rooted in wisdom, service and empathy, guided by integrity and capable of positively transforming the world around them. We aspire to become a leading network of schools, known for academic excellence and strong Christian values. "
+    "body": "To prepare a generation of servant leaders, called to grow with a character rooted in wisdom, service and empathy, guided by integrity and capable of positively transforming the world around them. We aspire to become a leading network of schools, known for academic excellence and strong Christian values. ",
+    "items": [
+      "Prepare a generation of servant leaders",
+      "Become a leading network of schools, known for academic excellence and strong Christian values."
+    ]
   },
   "vision": {
     "heading": "Our vision",

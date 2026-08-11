@@ -101,16 +101,10 @@
   flex-direction: column;
 }
 
-.formRow {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 13px;
-}
-
 .fg {
   display: flex;
   flex-direction: column;
-  gap: 5px;
+  gap: 15px;
   margin-bottom: 13px;
 }
 
@@ -143,7 +137,12 @@
 
 .fg textarea {
   resize: vertical;
-  min-height: 100px;
+  min-height: 220px;
+}
+
+.form button {
+  margin-top: 10px;
+  justify-content: center;
 }
 
 /* Contact info panel */

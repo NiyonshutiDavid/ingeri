@@ -160,6 +160,23 @@
     "teamQuote": "Travailler chez Ingeri, c'est sentir chaque jour que son travail a du sens.",
     "ctaTitle": "Rejoignez la famille Ingeri",
     "ctaDesc": "Vous partagez nos valeurs de bienveillance, d'excellence et de foi ? Envoyez-nous votre candidature.",
-    "ctaBtn": "Envoyer ma candidature"
+    "ctaBtn": "Envoyer ma candidature",
+    "form": {
+    "fullName": "Nom complet",
+    "fullNamePlaceholder": "Votre nom complet",
+    "email": "Email",
+    "emailPlaceholder": "you@example.com",
+    "phone": "Téléphone",
+    "phonePlaceholder": "+250 xxx xxx xxx",
+    "position": "Poste pour lequel vous postulez",
+    "selectPlaceholder": "Sélectionnez un poste",
+    "positionFallback": "Poste ouvert",
+    "portfolio": "CV / Lien vers le portfolio",
+    "portfolioPlaceholder": "https://...",
+    "message": "Message de motivation",
+    "messagePlaceholder": "Dites-nous pourquoi vous seriez un excellent candidat",
+    "submit": "Envoyer ma candidature",
+    "subject": "Candidature à un poste — {{position}}"
+  }
   }
 }

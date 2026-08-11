@@ -4,7 +4,11 @@
   "titleSpan": "Vision",
   "mission": {
     "heading": "Notre mission",
-    "body": "Préparer une génération de leaders-serviteurs, appelés à grandir avec un caractère empreint de sagesse, de service et d'empathie, guidés par l'intégrité et capables de transformer positivement le monde qui les entoure. Nous aspirons à devenir un réseau d'espaces éducatifs de référence,reconnus pour la qualité de notre enseignement, ancré dans la foi chrétienne."
+    "body": "Préparer une génération de leaders-serviteurs, appelés à grandir avec un caractère empreint de sagesse, de service et d'empathie, guidés par l'intégrité et capables de transformer positivement le monde qui les entoure. Nous aspirons à devenir un réseau d'espaces éducatifs de référence,reconnus pour la qualité de notre enseignement, ancré dans la foi chrétienne.",
+    "items": [
+      "Préparer une génération de leaders-serviteurs",
+      "Devenir un réseau d'espaces éducatifs de référence, reconnus pour la qualité de notre enseignement et ancrés dans la foi chrétienne."
+    ]
   },
   "vision": {
     "heading": "Notre vision",

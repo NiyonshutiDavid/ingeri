@@ -1,10 +1,11 @@
 // src/app/admissions/page.tsx
 'use client'
 
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import Link from 'next/link'
-import { ChevronDown, ChevronUp } from 'lucide-react'
+import { ChevronDown, ChevronUp, X } from 'lucide-react'
 import { useTranslation } from 'react-i18next'
+import ContactForm, { type Campus } from '@/components/sections/ContactForm'
 import styles from './admissions.module.css'
 
 interface CrecheRow {
@@ -39,27 +40,37 @@ interface Items {
 
 export default function AdmissionsPage() {
   const { t } = useTranslation('admissions')
+  const { t: tContact } = useTranslation('contact')
   const [openFaq, setOpenFaq] = useState<number | null>(null)
+
+  // Quick-apply side panel state
+  const [applyOpen, setApplyOpen] = useState(false)
+  const [activeCampus, setActiveCampus] = useState<Campus>('creche')
+  const isCreche = activeCampus === 'creche'
 
   const crecheGroups = t('tuition.creche.groups', { returnObjects: true }) as CrecheGroup[]
   const maternelle = t('tuition.maternelle', { returnObjects: true }) as MaternelleData
   const steps = t('steps.items', { returnObjects: true }) as Items[]
   const faqItems = t('faq.items', { returnObjects: true }) as Items[]
 
-  // Accordion state — one entry per crèche age group, keyed by index.
-  // Start with the first group open so the section isn't empty on load;
-  // change to {} if every group should start collapsed.
   const [openCreche, setOpenCreche] = useState<Record<number, boolean>>({ 0: true })
   const toggleCreche = (i: number) =>
     setOpenCreche((prev) => ({ ...prev, [i]: !prev[i] }))
 
-  // Single toggle for the whole maternelle table + registration fee box
   const [maternelleOpen, setMaternelleOpen] = useState(true)
-
-  // "How To Enroll" now lives as the final entry in the FAQ accordion list.
-  // Using faqItems.length as its index keeps it after all translated FAQ
-  // entries without needing to merge it into the i18n faq.items array.
   const enrollFaqIndex = faqItems.length
+
+  // Close on Escape, lock body scroll while open
+  useEffect(() => {
+    if (!applyOpen) return
+    const onKey = (e: KeyboardEvent) => e.key === 'Escape' && setApplyOpen(false)
+    document.addEventListener('keydown', onKey)
+    document.body.style.overflow = 'hidden'
+    return () => {
+      document.removeEventListener('keydown', onKey)
+      document.body.style.overflow = ''
+    }
+  }, [applyOpen])
 
   return (
     <section className={styles.section} id="admissions">
@@ -83,15 +94,16 @@ export default function AdmissionsPage() {
                 </li>
               ))}
             </ol>
-            <Link
-              href="/contact"
-              className="btn btn-teal"
-              style={{ marginTop: 16, alignSelf: 'center' }}
-            >
-              <p>
-              {t('steps.btn')}
-              </p>
-            </Link>
+            <div className={styles.enrollBtnWrap}>
+              <button
+                type="button"
+                className="btn btn-teal"
+                style={{ alignSelf: 'center' }}
+                onClick={() => setApplyOpen(true)}
+              >
+                <p>{t('steps.btn')}</p>
+              </button>
+            </div>
           </div>
         </div>
 
@@ -102,10 +114,7 @@ export default function AdmissionsPage() {
           <div className={styles.faqList}>
             {faqItems.map((item, i) => (
               <div key={i} className={`${styles.faqItem} ${openFaq === i ? styles.open : ''}`}>
-                <button
-                  className={styles.faqQ}
-                  onClick={() => setOpenFaq(openFaq === i ? null : i)}
-                >
+                <button className={styles.faqQ} onClick={() => setOpenFaq(openFaq === i ? null : i)}>
                   {item.q}
                   {openFaq === i
                     ? <ChevronUp size={14} className={styles.arrow} />
@@ -115,9 +124,7 @@ export default function AdmissionsPage() {
                   <div className={styles.faqA}>
                     {Array.isArray(item.a) ? (
                       <ul className={styles.faqBringList}>
-                        {item.a.map((line, idx) => (
-                          <li key={idx}>{line}</li>
-                        ))}
+                        {item.a.map((line, idx) => <li key={idx}>{line}</li>)}
                       </ul>
                     ) : (
                       item.a
@@ -129,6 +136,50 @@ export default function AdmissionsPage() {
           </div>
         </div>
       </div>
+
+      {/* Quick-apply side modal */}
+      <div
+        className={`${styles.overlay} ${applyOpen ? styles.overlayOpen : ''}`}
+        onClick={() => setApplyOpen(false)}
+        aria-hidden={!applyOpen}
+      />
+      <aside
+        className={`${styles.drawer} ${applyOpen ? styles.drawerOpen : ''}`}
+        role="dialog"
+        aria-modal="true"
+        aria-hidden={!applyOpen}
+      >
+        <div className={styles.drawerHead}>
+          <div className={styles.tabs} role="tablist">
+            {(['creche', 'maternelle'] as Campus[]).map((campus) => {
+              const active = activeCampus === campus
+              return (
+                <button
+                  key={campus}
+                  role="tab"
+                  aria-selected={active}
+                  className={`${styles.tab} ${active ? styles.tabActive : styles.tabInactive}`}
+                  onClick={() => setActiveCampus(campus)}
+                >
+                  {campus === 'creche' ? tContact('info.crecheName') : tContact('info.maternelleName')}
+                </button>
+              )
+            })}
+          </div>
+          <button
+            type="button"
+            className={styles.drawerClose}
+            onClick={() => setApplyOpen(false)}
+            aria-label="Close"
+          >
+            <X size={18} />
+          </button>
+        </div>
+        <div className={styles.drawerBody}>
+          <h3 className={styles.quickApplyHeading}>{tContact('form.headingCreche')}</h3>
+          <ContactForm campus={activeCampus} accentClass={isCreche ? 'btn-teal' : 'btn-pink'} />
+        </div>
+      </aside>
     </section>
   )
 }

@@ -26,6 +26,7 @@ export default function MissionVision({
 }: MissionVisionProps) {
   const { t } = useTranslation('missionVision')
   const visionItems = t('vision.items', { returnObjects: true }) as string[]
+  const missionItems = t('mission.items', { returnObjects: true }) as string[]
 
   const content = (
     <>
@@ -47,6 +48,18 @@ export default function MissionVision({
               {t('mission.heading')}
             </h3>
             <p>{t('mission.body')}</p>
+            <ul className={styles.mvList}>
+              {missionItems.map((item, i) => (
+                <li key={i}>
+                  <CheckCircle2
+                    size={14}
+                    color="var(--teal-d)"
+                    style={{ flexShrink: 0, marginTop: 4 }}
+                  />
+                  {item}
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
 

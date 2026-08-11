@@ -7,7 +7,6 @@ import { MapPin, Phone, Mail, Clock, MessageCircle } from 'lucide-react'
 import { FaXTwitter as XTwitter, FaInstagram as Instagram } from 'react-icons/fa6'
 import { useTranslation } from 'react-i18next'
 import styles from './contact.module.css'
-
 type Campus = 'creche' | 'maternelle'
 
 export default function ContactPage() {
@@ -32,8 +31,8 @@ export default function ContactPage() {
         {/* Panel */}
         <div className={styles.panel}>
           <div className={styles.formWrap}>
-            <h3>{t('form.headingCreche')}</h3>
-            <ContactForm campus={activeCampus} accentClass="btn-teal" />
+            <h3>{t('form.headingContact')}</h3>
+            <ContactForm accentClass="btn-teal" />
           </div>
           <div className={styles.infoCol}>
             <div className={`${styles.contactImg} `}>
@@ -78,12 +77,10 @@ export default function ContactPage() {
   )
 }
 
-function ContactForm({ campus, accentClass }: { campus: string; accentClass: string }) {
+function ContactForm({accentClass }: {accentClass: string }) {
   const { t } = useTranslation('contact')
-  const isCreche = campus === 'creche'
-  const CONTACT_EMAIL = isCreche ? 'info@ingerischool.org' : 'maternelle@ingeri.rw'
+  const CONTACT_EMAIL = 'info@ingerischool.org'
 
-  const levelOptions = t('form.levelOptions', { returnObjects: true }) as string[]
   const labels = t('form.emailBodyLabels', { returnObjects: true }) as Record<string, string>
 
   function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
@@ -91,18 +88,12 @@ function ContactForm({ campus, accentClass }: { campus: string; accentClass: str
     const data = new FormData(e.currentTarget)
     const get = (k: string) => (data.get(k) as string) || ''
 
-    const subject = encodeURIComponent(
-      isCreche ? t('form.subjectCreche') : t('form.subjectMaternelle')
-    )
+    const subject = encodeURIComponent( t('form.subjectContact') )
     const body = encodeURIComponent(
       [
-        `${labels.childName} : ${get('childName')}`,
-        `${labels.dob} : ${get('dob') || '—'}`,
         `${labels.parentName} : ${get('parentName')}`,
         `${labels.phone} : ${get('tel') || '—'}`,
         `${labels.email} : ${get('email')}`,
-        `${labels.level} : ${get('level') || '—'}`,
-        `${labels.startDate} : ${get('startDate') || '—'}`,
         ``,
         `${labels.message} :`,
         get('message') || '—',
@@ -115,39 +106,16 @@ function ContactForm({ campus, accentClass }: { campus: string; accentClass: str
   return (
     <form onSubmit={handleSubmit} className={styles.form}>
       <div className={styles.fg}>
-        <label>{t('form.childName')}</label>
-        <input type="text" name="childName" placeholder={t('form.childNamePlaceholder')} required />
-      </div>
-      <div className={styles.fg}>
-        <label>{t('form.dob')}</label>
-        <input type="date" name="dob" required />
-      </div>
-      <div className={styles.fg}>
         <label>{t('form.parentName')}</label>
         <input type="text" name="parentName" placeholder={t('form.parentNamePlaceholder')} required />
       </div>
-      <div className={styles.formRow}>
-        <div className={styles.fg}>
-          <label>{t('form.phone')}</label>
-          <input type="tel" name="tel" placeholder={t('form.phonePlaceholder')} required />
-        </div>
-        <div className={styles.fg}>
-          <label>{t('form.email')}</label>
-          <input type="email" name="email" placeholder={t('form.emailPlaceholder')} required />
-        </div>
+      <div className={styles.fg}>
+        <label>{t('form.phone')}</label>
+        <input type="tel" name="tel" placeholder={t('form.phonePlaceholder')} required />
       </div>
       <div className={styles.fg}>
-        <label>{t('form.level')}</label>
-        <select name="level" required>
-          <option value="">{t('form.selectPlaceholder')}</option>
-          {levelOptions.map((opt) => (
-            <option key={opt}>{opt}</option>
-          ))}
-        </select>
-      </div>
-      <div className={styles.fg}>
-        <label>{t('form.startDate')}</label>
-        <input type="date" name="startDate" />
+        <label>{t('form.email')}</label>
+        <input type="email" name="email" placeholder={t('form.emailPlaceholder')} required />
       </div>
       <div className={styles.fg}>
         <label>{t('form.message')}</label>
@@ -174,16 +142,17 @@ function ContactInfo({
   const hours = isCreche ? t('info.hoursCreche') : t('info.hoursMaternelle')
   const email = isCreche ? 'info@ingerischool.org' : 'maternelle@ingeri.rw'
   const address = isCreche ? t('info.crecheAddress') : t('info.maternelleAddress')
+  const phone = isCreche ? t('info.crechePhone') : t('info.maternellePhone')
   const socialUrls = isCreche
   ? {
       // twitter: 'https://x.com/creche_account',
       instagram: 'https://www.instagram.com/crecheingeri/',
-      whatsapp: 'https://wa.me/2507XXXXXXXX',
+      whatsapp: 'https://wa.me/250783812618',
     }
   : {
       // twitter: 'https://x.com/maternelle_account',
       instagram: 'https://www.instagram.com/ingeri_international_school/',
-      whatsapp: 'https://wa.me/2507YYYYYYYY',
+      whatsapp: 'https://wa.me/250795826080',
     }
 
   return (
@@ -196,7 +165,7 @@ function ContactInfo({
         </div>
         <div className={styles.ciRow}>
           <Phone size={15} />
-          <div><strong>{t('info.phone')}</strong>{t('info.phoneValue')}</div>
+          <div><strong>{t('info.phone')}</strong>{phone}</div>
         </div>
         <div className={styles.ciRow}>
           <Mail size={15} />
