@@ -36,7 +36,9 @@ export default function DirectionQuote() {
           {/* Quote panel */}
           <div className={styles.text}>
             <div className={styles.quoteMark}>&ldquo;</div>
-            <blockquote>{t('quote')}</blockquote>
+            <blockquote>{t('p1')}</blockquote>
+            <blockquote>{t('p2')}</blockquote>
+            <blockquote>{t('p3')}</blockquote>
             {/* <p className={styles.dirName}>{t('name')}</p>
             <p className={styles.dirRole}>{t('role')}</p> */}
             <div className={styles.quoteMarkEnd}>&ldquo;</div>

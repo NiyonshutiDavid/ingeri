@@ -111,12 +111,14 @@ export default function PresentationPage() {
           <p className="sec-sub">{t('intro.subtitle')}</p>
         </div>
       </section>
+      
       {/* Mission & Vision — off-white */}
       <section className={`${styles.section} ${styles.alt}`} id="mission">
         <div className="container">
           <MissionVision withContainer={false} background="transparent" />
         </div>
       </section>
+
       {/* Campus - white */}
       <section className={`${styles.section}`} id="campus">
         <div className="container">
@@ -125,31 +127,9 @@ export default function PresentationPage() {
           <CampusStrip withContainer={false} background="transparent"/>
         </div>
       </section>
-      {/* Leadership — off -white */}
-      <section className={`${styles.section} ${styles.alt}`} id="leadership">
-        <div className="container">
-          <span className="tag">{t('leadership.tag')}</span>
-          <h2 className="sec-title">{t('leadership.title')} <span>{t('leadership.titleSpan')}</span></h2>
-          <div className={styles.ldGrid}>
-            <div className={styles.ldPhoto}>
-              <Image src="/principal.jpg" fill style={{ objectFit:'cover' }} alt={t('leadership.photoAlt')} />
-            </div>
-            <div className={styles.ldText}>
-              <p>{t('leadership.p1')}</p>
-              <p>{t('leadership.p2')}</p>
-              <p>{t('leadership.p3')}</p>
-              {/* <div className={styles.ldQuote}>
-                
-                <p>&ldquo;{t('leadership.quote')}&rdquo;</p>
-                <cite>{t('leadership.quoteCite')}</cite>
-    
-              </div> */}
-            </div>
-          </div>
-        </div>
-      </section>
-      {/* Pillars — white */}
-      <section className={styles.section} id="principes">
+
+      {/* Pillars — off-white */}
+      <section className={`${styles.section} ${styles.alt}`} id="principes">
         <div className="container">
           <span className="tag">{t('principes.pillars.tag')}</span>
           <h2 className="sec-title">{t('principes.pillars.title')} <span>{t('principes.pillars.titleSpan')}</span></h2>
@@ -167,70 +147,11 @@ export default function PresentationPage() {
               )
             })}
           </div>
-          {/* Core Values */}
-          {/* <h2 className={styles.pillarTitle}>{t('principes.core.title')} <span>{t('principes.core.titleSpan')}</span></h2>
-          <div className={styles.principesGrid}>
-            {principes.map((p, i) => {
-              const Icon = PRINCIPE_ICONS[i]
-              return (
-                <div key={i} className={styles.ppBlock}>
-                  <div className={styles.pbIcon}><Icon size={24} strokeWidth={1.5} /></div>
-                  <h4>{p.title}</h4>
-                  <p>{p.desc}</p>
-                </div>
-              )
-            })}
-          </div> */}
         </div>
       </section>
-      {/* Programmes — off-white */}
-      {/* <section className={`${styles.section} ${styles.alt}`} id="domaines">
-        <div className="container">
-          <span className="tag">{t('domaines.tag')}</span>
-          <h2 className="sec-title">{t('domaines.title')}<span>{t('domaines.titleSpan')}</span></h2>
-          <p className="sec-sub">{t('domaines.subtitle')}</p>
-
-          <div className={styles.mvGrid}>
-            <div className={styles.mvBlock}>
-              <h3>{t('domaines.nursery.name')}</h3>
-              <p><em>{t('domaines.nursery.tagline')}</em></p>
-              {nurseryItems.map((item, i) => (
-                <p key={i}><strong>{item.title}</strong> {item.desc}</p>
-              ))}
-            </div>
-            <div className={`${styles.mvBlock} ${styles.pk}`}>
-              <h3>{t('domaines.preschool.name')}</h3>
-              <p><em>{t('domaines.preschool.tagline')}</em></p>
-              {preschoolItems.map((item, i) => (
-                <p key={i}><strong>{item.title}</strong> {item.desc}</p>
-              ))}
-            </div>
-          </div>
-
-          <div className={styles.mvBlock} style={{ marginTop: 32, textAlign: 'center' }}>
-            <h3>{t('domaines.pedagogyTitle')}</h3>
-            <p>{t('domaines.pedagogyBody')}</p>
-          </div>
-
-          <div className={styles.principesGrid}>
-            {domaines.map((d, i) => {
-              const Icon = DOMAINE_ICONS[i]
-              return (
-                <div key={i} className={styles.ppBlock}>
-                  <div className={styles.pbIcon}>
-                    <Icon size={24} strokeWidth={1.5} />
-                  </div>
-                  <h4>{d.title}</h4>
-                  <p>{d.desc}</p>
-                </div>
-              )
-            })}
-          </div>
-        </div>
-      </section> */}
 
       {/* Équipe — white */}
-      <section className={`${styles.section} `} id="equipe">
+      {/* <section className={`${styles.section} `} id="equipe">
         <div className="container">
           <span className="tag">{t('equipe.tag')}</span>
           <h2 className="sec-title">{t('equipe.title')} <span>{t('equipe.titleSpan')}</span></h2>
@@ -276,35 +197,10 @@ export default function PresentationPage() {
             </button>
           </div>
         </div>
-      </section>
-
-      {/* Localisations — off-white */}
-      {/* <section className={`${styles.section} ${styles.alt}`} id="localisations">
-        <div className="container">
-          <span className="tag">{t('localisations.tag')}</span>
-          <h2 className="sec-title">{t('localisations.title')} <span>{t('localisations.titleSpan')}</span></h2>
-          <div className={styles.locsGrid}>
-            {(['creche', 'maternelle'] as const).map((key) => (
-              <div key={key} className={styles.locBlock}>
-                <div className={styles.locInfo}>
-                  <h3 style={key === 'maternelle' ? { color:'var(--pink-d)' } : undefined}>
-                    {t(`localisations.${key}.name`)}
-                  </h3>
-                  <p className={styles.locDetail}><MapPin size={13} style={{ display:'inline', verticalAlign:'middle', marginRight:4 }} />{t(`localisations.${key}.address`)}</p>
-                  <p className={styles.locDetail}><Phone size={13} style={{ display:'inline', verticalAlign:'middle', marginRight:4 }} />{t(`localisations.${key}.phone`)}</p>
-                  <p className={styles.locDetail}><Clock size={13} style={{ display:'inline', verticalAlign:'middle', marginRight:4 }} />{t(`localisations.${key}.hours`)}</p>
-                  <Link href={`/contact#${key}`} className={`btn ${key === 'creche' ? 'btn-teal' : 'btn-pink'}`} style={{ marginTop:14, fontSize:13, padding:'9px 18px' }}>
-                    {t(`localisations.${key}.btn`)}
-                  </Link>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
       </section> */}
 
       {/* Carrières — white */}
-      <section className={`${styles.section}`} id="carrieres">
+      <section className={`${styles.section} `} id="carrieres">
       <div className="container">
         <span className="tag">{t('carrieres.tag')}</span>
         <h2 className="sec-title">{t('carrieres.title')} <span>{t('carrieres.titleSpan')}</span></h2>
