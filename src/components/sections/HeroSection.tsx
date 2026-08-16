@@ -39,7 +39,7 @@ export default function HeroSection() {
           {/* Right — teal image panel */}
           <div className={styles.heroImg}>
             <Image
-              src="/at-school.jpg"
+              src="/creche-2.jpg"
               alt={t('imgAlt')}
               fill
               style={{ objectFit: 'cover' }}

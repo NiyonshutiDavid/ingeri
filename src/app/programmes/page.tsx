@@ -50,7 +50,12 @@ export default function ProgrammesPage() {
         {activeTab === 'creche' && (
           <div className={styles.progLayout} id="creche">
             <div className={`${styles.progImg} ${styles.teal}`}>
-              <Image src="/creche.jpg" fill style={{ objectFit: 'cover' }} alt={t('creche.imgAlt')} />
+              <Image 
+                src="/creche-2.jpg" 
+                fill 
+                style={{ objectFit: 'cover' }} 
+                alt={t('creche.imgAlt')} 
+              />
               {t('creche.imgLabel')}
             </div>
             <div className={styles.progInfo}>
@@ -83,7 +88,12 @@ export default function ProgrammesPage() {
         {activeTab === 'maternelle' && (
           <div className={styles.progLayout} id="maternelle">
             <div className={`${styles.progImg} ${styles.pink}`}>
-              <Image src="/maternelle.jpg" fill style={{ objectFit: 'cover' }} alt={t('maternelle.imgAlt')} />
+              <Image 
+                src="/creche-3.jpg" 
+                fill 
+                style={{ objectFit: 'cover' }} 
+                alt={t('maternelle.imgAlt')} 
+              />
               {t('maternelle.imgLabel')}
             </div>
             <div className={styles.progInfo}>

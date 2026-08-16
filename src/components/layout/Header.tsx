@@ -70,9 +70,8 @@ export default function Header() {
       dropdown: [
         { href: '/presentation#mission', label: t('dropdowns.presentation.mission') },
         { href: '/presentation#campus', label: t('dropdowns.presentation.campus') },
-        { href: '/presentation#leadership', label: t('dropdowns.presentation.leadership') },
         { href: '/presentation#pillars', label: t('dropdowns.presentation.pillars') },
-        { href: '/presentation#equipe', label: t('dropdowns.presentation.equipe') },
+        // { href: '/presentation#equipe', label: t('dropdowns.presentation.equipe') },
         { href: '/presentation#carrieres', label: t('dropdowns.presentation.carrieres') },
       ],
     },
