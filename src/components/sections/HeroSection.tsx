@@ -43,6 +43,7 @@ export default function HeroSection() {
               alt={t('imgAlt')}
               fill
               style={{ objectFit: 'cover' }}
+              loading="lazy"
             />
             <div className={styles.heroImgInner}>
               <span>{t('imgCaption')}</span>

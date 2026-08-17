@@ -26,6 +26,7 @@ export default function DirectionQuote() {
               alt={t('photoAlt')}
               fill
               style={{ objectFit: 'cover' }}
+              loading="lazy"
             />
             <div className={styles.photoLabel}>
               {t('name')}

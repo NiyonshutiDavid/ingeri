@@ -55,6 +55,7 @@ export default function ProgrammesPage() {
                 fill 
                 style={{ objectFit: 'cover' }} 
                 alt={t('creche.imgAlt')} 
+                loading='lazy'
               />
               {t('creche.imgLabel')}
             </div>
@@ -93,6 +94,7 @@ export default function ProgrammesPage() {
                 fill 
                 style={{ objectFit: 'cover' }} 
                 alt={t('maternelle.imgAlt')} 
+                loading='lazy'
               />
               {t('maternelle.imgLabel')}
             </div>

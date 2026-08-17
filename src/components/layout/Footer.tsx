@@ -22,12 +22,14 @@ export default function Footer() {
               alt="INGERI logo"
               width={175}
               height={175}
+              loading="lazy"
             />
             <Image
               src="/creche-logo.png"
               alt="INGERI creche logo"
               width={175}
               height={175}
+              loading="lazy"
             />
           </div>
           <p>{t('brand.tagline')}</p>

@@ -41,6 +41,7 @@ export default function ContactPage() {
                 fill
                 style={{ objectFit: 'cover' }}
                 alt={imgAlt}
+                loading='lazy'
               />
             </div>
             {/* Tabs — scoped to this column, switches contact info only */}

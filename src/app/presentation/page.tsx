@@ -3,7 +3,6 @@
 'use client'
 
 import Link from 'next/link'
-import Image from 'next/image'
 import {
   Leaf, Church, Handshake, TreePine, Sparkles,
   MessageSquare, Hash, Palette, Hand, Globe, Dumbbell, Music4, Star, Briefcase, GraduationCap, Users, ChevronLeft, ChevronRight, X

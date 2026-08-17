@@ -98,6 +98,7 @@ export default function Header() {
             width={180}
             height={180}
             className={styles.logoImg}
+            loading="lazy"
           />
         </Link>
 
@@ -110,6 +111,7 @@ export default function Header() {
             width={180}
             height={160}
             className={styles.logoImg}
+            loading="lazy"
           />
         </Link>
 
