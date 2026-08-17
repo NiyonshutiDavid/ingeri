@@ -24,6 +24,9 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="fr">
+      <head>
+        <link rel="icon" href="/logo.ico" />
+      </head>
       <body className={` ${montserrat.className}`}>
         {/*
           I18nProvider is a 'use client' component that initialises i18next.

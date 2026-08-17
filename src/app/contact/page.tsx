@@ -14,7 +14,7 @@ export default function ContactPage() {
   const [activeCampus, setActiveCampus] = useState<Campus>('creche')
   const isCreche = activeCampus === 'creche'
 
-  const imgSrc = isCreche ? '/campus.jpg' : '/campus.jpg'
+  const imgSrc = isCreche ? '/creche-1.jpg' : '/creche-3.jpg'
   const imgAlt = isCreche ? t('info.crecheImgAlt') : t('info.maternelleImgAlt')
 
   return (
@@ -140,7 +140,7 @@ function ContactInfo({
   const isCreche = campus === 'creche'
   const campusName = isCreche ? t('info.crecheName') : t('info.maternelleName')
   const hours = isCreche ? t('info.hoursCreche') : t('info.hoursMaternelle')
-  const email = isCreche ? 'info@ingerischool.org' : 'maternelle@ingeri.rw'
+  const email = 'info@ingerischool.org'
   const address = isCreche ? t('info.crecheAddress') : t('info.maternelleAddress')
   const phone = isCreche ? t('info.crechePhone') : t('info.maternellePhone')
   const socialUrls = isCreche

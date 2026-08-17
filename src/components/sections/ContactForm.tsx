@@ -15,7 +15,7 @@ accentClass?: string
 }) {
 const { t } = useTranslation('contact')
 const isCreche = campus === 'creche'
-const CONTACT_EMAIL = isCreche ? 'info@ingerischool.org' : 'maternelle@ingeri.rw'
+const CONTACT_EMAIL = 'info@ingerischool.org'
 
 const levelOptions = t('form.levelOptions', { returnObjects: true }) as string[]
 const labels = t('form.emailBodyLabels', { returnObjects: true }) as Record<string, string>
@@ -100,7 +100,7 @@ export interface JobOption {
 export function JobApplicationForm({
   jobs,
   accentClass = 'btn-teal',
-  toEmail = 'carrieres@ingeri.rw',
+  toEmail = 'info@ingerischool.org',
 }: {
   jobs: JobOption[]
   accentClass?: string
