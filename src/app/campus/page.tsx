@@ -63,7 +63,7 @@ export default function CampusPage() {
           <div className={styles.campusBlock} id="maternelle">
             <div className={`${styles.campusImg} ${styles.pink}`}>
               <Image
-                src="/creche-3.jpg"
+                src="/maternelle.jpg"
                 fill
                 style={{ objectFit: 'cover' }}
                 alt={t('maternelle.imgAlt')}

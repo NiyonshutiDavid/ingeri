@@ -52,6 +52,11 @@ h1, h2, h3, h4 {
   line-height: 1.2;
   text-transform: capitalize;
   letter-spacing: -0.5px;
+  text-wrap: pretty;
+}
+
+p{
+  text-wrap: pretty;
 }
 
 a { text-decoration: none; color: inherit; }

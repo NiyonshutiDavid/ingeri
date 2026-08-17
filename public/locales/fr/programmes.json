@@ -16,11 +16,11 @@
     "ages": "Enfants de 6 mois à 3 ans",
     "intro": "Éveiller, sécuriser et grandir en douceu.",
     "pillars": [
-        { "title": "L'éveil sensoriel et moteur :", "desc": "Exploration par les sens, mouvement, manipulation et découverte de l'environnement." },
-        { "title": "Le développement du langage :", "desc": "Échanges, histoires, chansons et interactions quotidiennes pour enrichir la communication." },
-        { "title": "L'autonomie progressive :", "desc": "Accompagner l'enfant dans ses premiers gestes d'indépendance selon son rythme." },
-        { "title": "Le développement affectif et social :", "desc": "Créer un cadre sécurisant où l'enfant apprend à exprimer ses émotions et à interagir avec les autres." },
-        { "title": "L'éveil spirituel :", "desc": "Découverte des valeurs chrétiennes à travers des chants, des prières et des moments adaptés aux tout-petits." }
+        { "title": "L'éveil sensoriel et moteur", "desc": "Exploration par les sens, mouvement, manipulation et découverte de l'environnement." },
+        { "title": "Le développement du langage", "desc": "Échanges, histoires, chansons et interactions quotidiennes pour enrichir la communication." },
+        { "title": "L'autonomie progressive", "desc": "Accompagner l'enfant dans ses premiers gestes d'indépendance selon son rythme." },
+        { "title": "Le développement affectif et social", "desc": "Créer un cadre sécurisant où l'enfant apprend à exprimer ses émotions et à interagir avec les autres." },
+        { "title": "L'éveil spirituel", "desc": "Découverte des valeurs chrétiennes à travers des chants, des prières et des moments adaptés aux tout-petits." }
       ],
     "calendar": "Lun–Ven. Réunions parents & mini-ateliers réguliers.",
     "btn": "Inscrire mon enfant"
@@ -33,11 +33,11 @@
     "ages": "Enfants de 3 à 6 ans",
     "intro": "Explorer, apprendre et révéler son potentiel",
     "pillars": [
-        { "title": "Les premiers apprentissages académiques :", "desc": "Langage, pré-lecture, écriture, mathématiques, découverte du monde et premières notions scientifiques." },
-        { "title": "La créativité et l'expression :", "desc": "Activités artistiques, musique, expression corporelle et projets créatifs." },
-        { "title": "La pensée et la curiosité :", "desc": "Observation, expérimentation, résolution de problèmes et apprentissage par le jeu." },
-        { "title": "Les compétences sociales :", "desc": "Coopération, communication, confiance en soi et vie en groupe." },
-        { "title": "L'ouverture culturelle et spirituelle :", "desc": "Découverte du monde, des cultures et des valeurs chrétiennes." }
+        { "title": "Les premiers apprentissages académiques", "desc": "Langage, pré-lecture, écriture, mathématiques, découverte du monde et premières notions scientifiques." },
+        { "title": "La créativité et l'expression", "desc": "Activités artistiques, musique, expression corporelle et projets créatifs." },
+        { "title": "La pensée et la curiosité", "desc": "Observation, expérimentation, résolution de problèmes et apprentissage par le jeu." },
+        { "title": "Les compétences sociales", "desc": "Coopération, communication, confiance en soi et vie en groupe." },
+        { "title": "L'ouverture culturelle et spirituelle", "desc": "Découverte du monde, des cultures et des valeurs chrétiennes." }
       ],
     "levels": [
       "Petite section (3 ans)",

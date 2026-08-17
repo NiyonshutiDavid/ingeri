@@ -16,11 +16,11 @@
     "ages": "Children aged 6 months to 3 years",
     "intro": "Awakening, security, and gentle growth",
     "pillars": [
-        { "title": "Sensory and motor awakening:", "desc": "Exploration through the senses, movement, manipulation, and discovery of the environment" },
-        { "title": "Language development:", "desc": "Conversation, stories, songs, and daily interactions to enrich communication" },
-        { "title": "Growing independence:", "desc": "Supporting the child in their first steps toward independence, at their own pace" },
-        { "title": "Emotional and social development:", "desc": "Creating a secure setting where the child learns to express emotions and interact with others" },
-        { "title": "Spiritual awakening:", "desc": "Discovering Christian values through songs, prayers, and moments suited to young children" }
+        { "title": "Sensory and motor awakening", "desc": "Exploration through the senses, movement, manipulation, and discovery of the environment" },
+        { "title": "Language development", "desc": "Conversation, stories, songs, and daily interactions to enrich communication" },
+        { "title": "Growing independence", "desc": "Supporting the child in their first steps toward independence, at their own pace" },
+        { "title": "Emotional and social development", "desc": "Creating a secure setting where the child learns to express emotions and interact with others" },
+        { "title": "Spiritual awakening", "desc": "Discovering Christian values through songs, prayers, and moments suited to young children" }
       ],
     "calendar": "Mon–Fri. Parent meetings & mini-workshops held regularly.",
     "btn": "Enroll my child"
@@ -33,11 +33,11 @@
     "ages": "Children aged 3 to 6 years",
     "intro": "Exploring, learning, and unlocking potential.",
     "pillars": [
-        { "title": "Early academic learning:", "desc": "Language, pre-reading, writing, mathematics, discovery of the world, and first scientific concepts." },
-        { "title": "Creativity and expression:", "desc": "Artistic activities, music, physical expression, and creative projects." },
-        { "title": "Thinking and curiosity:", "desc": "Observation, experimentation, problem-solving, and learning through play." },
-        { "title": "Social skills:", "desc": "Cooperation, communication, self-confidence, and group life." },
-        { "title": "Cultural and spiritual openness:", "desc": "Discovering the world, cultures, and Christian values." }
+        { "title": "Early academic learning", "desc": "Language, pre-reading, writing, mathematics, discovery of the world, and first scientific concepts." },
+        { "title": "Creativity and expression", "desc": "Artistic activities, music, physical expression, and creative projects." },
+        { "title": "Thinking and curiosity", "desc": "Observation, experimentation, problem-solving, and learning through play." },
+        { "title": "Social skills", "desc": "Cooperation, communication, self-confidence, and group life." },
+        { "title": "Cultural and spiritual openness", "desc": "Discovering the world, cultures, and Christian values." }
       ],
     "levels": [
       "Little section (3 years)",

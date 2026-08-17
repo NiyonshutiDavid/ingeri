@@ -90,7 +90,7 @@ export default function ProgrammesPage() {
           <div className={styles.progLayout} id="maternelle">
             <div className={`${styles.progImg} ${styles.pink}`}>
               <Image 
-                src="/creche-3.jpg" 
+                src="/maternelle.jpg" 
                 fill 
                 style={{ objectFit: 'cover' }} 
                 alt={t('maternelle.imgAlt')} 
