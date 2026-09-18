@@ -3,53 +3,73 @@
   "title": "Echoes of our",
   "titleSpan": "community",
   "subtitle": "What Ingeri families say about their experience.",
+  "readMore": "Read more",
+  "readLess": "Read less",
   "items": [
     {
-      "quote": "Since our daughter joined La P'tite Crèche Ingeri, she blossoms every day. The team is attentive, caring, and we truly feel our child is in good hands.",
-      "initials": "AM",
-      "name": "Amina M.",
-      "detail": "Parent – Nursery"
+      "quote": "Thank you very much for your thoughtful message and for the wonderful year you have shared with Ikamba. We sincerely appreciate your dedication, care, and support throughout her learning journey. We are pleased to remain part of the Ingeri community and look forward to another successful year together.❤️",
+      "initials": "IM",
+      "name": "Ikamba's Mother",
+      "detail": "Parent"
     },
     {
-      "quote": "The Montessori approach combined with Christian values — that is exactly what we were looking for our son. He comes home from school happy, curious and confident.",
-      "initials": "JK",
-      "name": "Jean K.",
+      "quote": "As we come to the end of our child’s time with you, we just wanted to take a moment to say a very heartfelt thank you to each and every one of you. ❤️\n\nIt is honestly difficult to put into words how grateful we are for everything you have done for our little one. Thank you for the love, care, patience, kindness and attention you have given him throughout his time with you. You were not just a daycare to us you became a very important part of his little world and of our journey as parents.\n\nLeaving is definitely bittersweet because we know he is moving on to a new chapter at nursery school, but we leave with so much gratitude in our hearts. We have watched him grow, learn, become more confident and develop so many beautiful little skills, and we truly appreciate the part you have played in that journey.\n\nThank you for every smile, every lesson, every comforting hug, every little achievement you celebrated with him, and for giving us the reassurance of knowing that he was in caring hands when we were away. These are memories we will always treasure. 🥹❤️\n\nPlease know that we will always look back on his time with you with so much warmth and appreciation. You have helped lay a beautiful foundation for the next chapter of his life, and for that, we will always be grateful.\n\nAs we say goodbye, we wish the entire team nothing but the very best. May you continue touching little lives and making such a beautiful difference in the lives of children and their families. ❤️\n\nOne small request before we completely leave the group 🙈❤️ could you please allow us to remain in the group for a little while longer? There are some lovely pictures that were shared with us through links, and we would really love to have some time to download and keep those memories before leaving.\n\nThank you once again, from the bottom of our hearts, for everything. We will truly miss you all. ❤️🥹\n\nWith so much love and appreciation, papa and mama Elijah.",
+      "initials": "EP",
+      "name": "Elijah's Parents",
       "detail": "Parent – Kindergarten"
     },
     {
-      "quote": "What won me over was the genuine attention given to each child. Not a number, but a unique person. Ingeri is a family.",
-      "initials": "GN",
-      "name": "Gisèle N.",
+      "quote": "Hello Madam and the whole team at La P'tite Crèche Ingeri,\n\nAllow me to thank you from the bottom of my heart for all your love, patience, and gentleness that marked Igabe's first steps. He has really learned so much, and you have always been like his second little home.\n\nThank you for every act of tenderness and every lesson learned. Thank you especially to Miss Deborah for her patience with him, particularly in those first weeks at the daycare, and to Miss Assoumpta and the \"big mamans\" as well. We love you and pray that God blesses you always.\n\n\"For God is not unjust so as to forget your work and the love you have shown…\" — Hebrews 6:10",
+      "initials": "IM",
+      "name": "Igabe's Mother",
       "detail": "Parent – Nursery"
     },
     {
-      "quote": "Bilingualism is a real asset. Our children speak French and English fluently thanks to the daily immersion offered by Ingeri.",
-      "initials": "PU",
-      "name": "Patrick U.",
+      "quote": "Thank you again to the whole Ingeri group. Miah has gained so many good things with you, thank you for your dedication to giving him a good education. We're happy to be able to continue with you too😊🙏🏽\n\nMay God bless you abundantly 😊🙏🏽🙏🏽🙏🏽",
+      "initials": "MD",
+      "name": "Miah's Dad",
       "detail": "Parent – Kindergarten"
     },
     {
-      "quote": "We visited several schools in Kigali, but Ingeri stands out for the quality of its staff and the cleanliness of its facilities. A real favourite.",
-      "initials": "CM",
-      "name": "Claire M.",
+      "quote": "We're happy to continue this wonderful adventure with Ingeri and thank you for your collaboration.",
+      "initials": "KD",
+      "name": "Kaylah's Dad",
       "detail": "Parent – Nursery"
     },
     {
-      "quote": "My son was very shy before joining Ingeri. In a few months, he opened up, made friends and participates enthusiastically in activities.",
-      "initials": "DN",
-      "name": "David N.",
+      "quote": "Thank you so, so much to the whole Ingeri Crèche team. May God bless you.",
+      "initials": "BM",
+      "name": "Briella's Mother",
       "detail": "Parent – Kindergarten"
     },
     {
-      "quote": "Communication with teachers is excellent. We receive photos and regular updates. We really feel involved.",
-      "initials": "SH",
-      "name": "Sandra H.",
+      "quote": "Thank you so much for all the support and attention given to Jans. We have been very satisfied with your work.\n\nAnd for us, no problem at all with leaving this group.\n\nThanks again and all the best to you",
+      "initials": "JM",
+      "name": "Jans's Mother",
       "detail": "Parent – Nursery"
     },
     {
-      "quote": "Ingeri offers a safe and stimulating environment. Our daughter loves going there every morning, and that is the best sign for us.",
-      "initials": "RM",
-      "name": "Rachel M.",
+      "quote": "Thank you Madam Gaella & the entire team at Ingeri, we are very greatful for the fruitful time we had at the day care, witnessing your dedication & sacrifice in nurturing our little ones. May God bless you so richly & bless the days ahead. We hope our paths we cross again\n\nI also wanted to confirm if there's a way i can get all Shallom's pictures/vidios for proper storage (we treasure the memories so much), may be if you could share them on an email of i bring a hard disc..i would greatly appreciate your help",
+      "initials": "SM",
+      "name": "Shalom's Mother",
+      "detail": "Parent – Kindergarten"
+    },
+    {
+      "quote": "Hello! Thanks for taking care of him and accommodating his growth. We meet on the other side of nursery one! When is the start date?",
+      "initials": "YM",
+      "name": "Yuhi's Mother",
+      "detail": "Parent – Kindergarten"
+    },
+    {
+      "quote": "Dear Ingeri Creche Family ❤️🫂\n\nwe just want to say a big thank you for this beautiful year 2025–2026. 🥹\n\nThis year has been so special for us. We watched Yuhi grow and develop in every way, and in our eyes, he has become such a fulfilled little boy, happy, very confidant and full of love, thank you again!\n\nYou really made this year the best year for Yuhi, and we will always be grateful to you for that.🙏\n\nThank you for every smile, every hug, every encouragement and for having taken care of him like one of your own. 🙏\n\nThank you Soooo much again and may God bless you🫂🤍",
+      "initials": "YKM",
+      "name": "Yuhi Kyro's Mother",
+      "detail": "Parent – Kindergarten"
+    },
+    {
+      "quote": "Thank you so much Madam Director for this lovely message and for all the support given to Liel.\n\nWe are very happy to continue this beautiful adventure with Ingeri and grateful to be part of this wonderful community🥳.",
+      "initials": "LM",
+      "name": "Liel's Mother",
       "detail": "Parent – Kindergarten"
     }
   ]

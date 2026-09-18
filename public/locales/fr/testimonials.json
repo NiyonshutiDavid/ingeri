@@ -2,54 +2,86 @@
   "tag": "Notre communauté",
   "title": "Echoes of our",
   "titleSpan": "community",
+  "readMore": "Voir plus",
+  "readLess": "Voir moins",
   "subtitle": "Ce que les familles Ingeri disent de leur expérience.",
   "items": [
     {
-      "quote": "Depuis que notre fille est à la P'tite Crèche Ingeri, elle s'épanouit chaque jour. L'équipe est à l'écoute, bienveillante, et nous sentons vraiment que notre enfant est entre de bonnes mains.",
-      "initials": "AM",
-      "name": "Amina M.",
+      "quote": "Merci beaucoup Madame, pour ce magnifique message, qui nous touche énormément. ❤️\n\nNous sommes très reconnaissants pour tout l’amour, la bienveillance et l’attention accordés à Iliza durant son passage à Ingeri.\n\nUn merci tout particulier à Deborah, Assoumpta et Odette pour leur douceur, patience et accompagnement au quotidien. Elles ont vraiment contribué à son épanouissement. ❤️\n\nNous garderons de très beaux souvenirs de cette belle étape. Merci à toute l’équipe d’Ingeri🌷",
+      "initials": "MI",
+      "name": "Maman Iliza",
+      "detail": "Parent"
+    },
+    {
+      "quote": "Un grand merci pour la merveilleuse année passée ensemble. Nous aussi, on garde de très bons souvenirs d'Ingeri.\n\nMwarakoze kutwigisha uruzungu maintenant on parle français🤣🙏🏽.\n\nOn vous souhaite une heureuse année avec de nouveaux petits Imena. Soyez abondamment bénies❤️😘. \n\nPs: les petits msg de chaque jour nous manqueront en tout cas...",
+      "initials": "MI",
+      "name": "Maman Imena",
+      "detail": "Parent"
+    },
+    {
+      "quote": "On espère qu' on ne perdra pas l'accès aux photos sur Google Drive, que vous partagiez chaque vendredi",
+      "initials": "MA",
+      "name": "Maman Abby",
+      "detail": "Parent"
+    },
+    {
+      "quote": "Oh merci beaucoup pour tout , très chère crèche INGERI ❤️❤️❤️\n\nMerci pour tout l’amour, la patience, l’attention et tous les beaux moments partagés avec notre Ganza. 🥹Nous sommes tellement reconnaissants de l’avoir vu grandir et s’épanouir à vos côtés. Trop hâte de vivre encore de merveilleux moments à la maternelle ! \n\nEncore Merci pour tout et surtout merci de prendre si bien soin de nos petits. ❤️❤️❤️",
+      "initials": "MG",
+      "name": "Maman Ganza",
+      "detail": "Parent"
+    },
+    {
+      "quote": "Bonjour!\n\nMerci beaucoup pour tout ce que vous avez fait pour Timo ❤️ Nous sommes très heureux de continuer cette belle aventure avec vous. 🥰",
+      "initials": "MT",
+      "name": "Maman Timo",
       "detail": "Parent – Crèche"
     },
     {
-      "quote": "L'approche Montessori combinée aux valeurs chrétiennes — c'est exactement ce que nous cherchions pour notre fils. Il rentre de l'école heureux, curieux et confiant.",
-      "initials": "JK",
-      "name": "Jean K.",
+      "quote": "Merci Madame!! On remercie toute l'equipe a la creshe!! On est curieux pour l'aventure a la maternelle! Bon dimanche",
+      "initials": "MA",
+      "name": "Maman Atone",
       "detail": "Parent – Maternelle"
     },
     {
-      "quote": "Ce qui m'a séduite, c'est la vraie attention portée à chaque enfant. Pas un numéro, mais une personne unique. Ingeri, c'est une famille.",
-      "initials": "GN",
-      "name": "Gisèle N.",
+      "quote": "Bonjour,\n\nMerci aussi pour tout l’accompagnement offert à Ishya ces deux dernières années. Elle a énormément appris et s’est vraiment épanouie grâce à votre bienveillance et votre engagement. Nous espérons que cette belle progression va continuer et que la nouvelle aventure à la maternelle Ingeri sera tout aussi enrichissante pour elle.\n\nÀ très bientôt.",
+      "initials": "MI",
+      "name": "Maman Ishya",
       "detail": "Parent – Crèche"
     },
     {
-      "quote": "Le bilinguisme est un vrai atout. Nos enfants parlent français et anglais avec aisance grâce à l'immersion quotidienne proposée par Ingeri.",
-      "initials": "PU",
-      "name": "Patrick U.",
+      "quote": "Oh! Merci bcp nos amis, Ingeri. \n\nNous sommes très heureux d'avoir êté parti de cette aventure avec une equipe magnifique comme la votre. \n\nQue Dieu Vous benisse.",
+      "initials": "PI",
+      "name": "Papa Ian",
       "detail": "Parent – Maternelle"
     },
     {
-      "quote": "Nous avons visité plusieurs écoles à Kigali, mais Ingeri se démarque par la qualité de son personnel et la propreté de ses locaux. Un vrai coup de cœur.",
-      "initials": "CM",
-      "name": "Claire M.",
-      "detail": "Parent – Crèche"
-    },
-    {
-      "quote": "Mon fils était très timide avant d'intégrer Ingeri. En quelques mois, il s'est ouvert, s'est fait des amis et participe avec enthousiasme aux activités.",
-      "initials": "DN",
-      "name": "David N.",
+      "quote": "Merci beaucoup pour ce beau message. Merci à toute l’équipe d’Ingeri pour cette belle année et pour tout l’amour porté à Taizya. Nous sommes heureux de continuer cette aventure avec vous. 🙏",
+      "initials": "MT",
+      "name": "Maman Taizya",
       "detail": "Parent – Maternelle"
     },
     {
-      "quote": "La communication avec les enseignants est excellente. Nous recevons des photos et des mises à jour régulières. On se sent vraiment impliqués.",
-      "initials": "SH",
-      "name": "Sandra H.",
-      "detail": "Parent – Crèche"
+      "quote": "Merci infiniment à vous ! Moriah a bien grandi. Nous sommes tellement reconnaissants pour tout ce que vous avez fait pour elle. Merci encore🤍",
+      "initials": "MM",
+      "name": "Maman Moriah",
+      "detail": "Parent – Maternelle"
     },
     {
-      "quote": "Ingeri offre un environnement sécurisé et stimulant. Notre fille adore y aller chaque matin, et c'est le meilleur signe pour nous.",
-      "initials": "RM",
-      "name": "Rachel M.",
+      "quote": "Merci beaucoup pour ce beau message et pour tout ce que vous faites pour Ellis.  Nous sommes très heureux de poursuivre cette belle aventure avec Ingeri. À très bientôt !",
+      "initials": "ME",
+      "name": "Maman Ellis",
+      "detail": "Parent – Maternelle"
+    },
+    {
+      "quote": "Merci bien, Gaëlle🥹 Sage a hâte de revenir à Ingeri❤️ À très bientôt✨",
+      "initials": "MS",
+      "name": "Maman Sage",
+      "detail": "Parent – Maternelle"
+    },
+    {
+      "quote": "Salut Ingeri group ! Merci bcp à vous aussi, j ai cru que j allais passer un jour avec Esti, mais c etait pas facile ,en 2 cas Esti will miss you so much! God bless you we keep in touch🙏🏻",
+      "initials": "ME",
+      "name": "Maman Esti",
       "detail": "Parent – Maternelle"
     }
   ]

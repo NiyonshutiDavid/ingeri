@@ -109,3 +109,26 @@
 .echoBlock:nth-child(3n+3) .name { color: var(--gold); }
 
 .detail { font-size: 12px; color: var(--hint); }
+
+.track.paused {
+  animation-play-state: paused;
+}
+
+.readMoreBtn {
+  display: inline;
+  margin-left: 4px;
+  padding: 0;
+  border: none;
+  background: none;
+  color: var(--gold);
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  cursor: pointer;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.readMoreBtn:hover {
+  opacity: 0.75;
+}
