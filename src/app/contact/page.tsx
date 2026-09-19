@@ -14,7 +14,7 @@ export default function ContactPage() {
   const [activeCampus, setActiveCampus] = useState<Campus>('creche')
   const isCreche = activeCampus === 'creche'
 
-  const imgSrc = isCreche ? '/creche-1.jpg' : '/maternelle.jpg'
+  const imgSrc = isCreche ? '/campus.jpeg' : '/maternelle.jpg'
   const imgAlt = isCreche ? t('info.crecheImgAlt') : t('info.maternelleImgAlt')
 
   return (
